@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.py
+clarity/__init__.py
+clarity/cli.py
+clarity/scorer.py
+clarity_ai.egg-info/PKG-INFO
+clarity_ai.egg-info/SOURCES.txt
+clarity_ai.egg-info/dependency_links.txt
+clarity_ai.egg-info/entry_points.txt
+clarity_ai.egg-info/requires.txt
+clarity_ai.egg-info/top_level.txt
+tests/__init__.py
+tests/test_scorer.py
