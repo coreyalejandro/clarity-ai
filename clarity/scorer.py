@@ -1,0 +1,215 @@
+import re
+import yaml
+from typing import Dict, Any, Union, List
+from dataclasses import dataclass
+import os
+
+
+@dataclass
+class Rule:
+    """A single scoring rule with a type and parameters."""
+    
+    rule_type: str
+    weight: float
+    params: Dict[str, Any]
+    
+    def evaluate(self, text: str) -> float:
+        """Evaluate this rule against the given text.
+        
+        Returns:
+            float: Score between 0.0 and 1.0
+        """
+        if self.rule_type == "regex_match":
+            pattern = self.params.get("pattern", "")
+            if re.search(pattern, text, re.IGNORECASE):
+                return 1.0
+            return 0.0
+            
+        elif self.rule_type == "contains_phrase":
+            phrase = self.params.get("phrase", "")
+            if phrase.lower() in text.lower():
+                return 1.0
+            return 0.0
+            
+        elif self.rule_type == "cosine_sim":
+            # Simple word overlap for MVP - will enhance with sentence transformers later
+            target = self.params.get("target", "")
+            text_words = set(text.lower().split())
+            target_words = set(target.lower().split())
+            if len(target_words) == 0:
+                return 0.0
+            overlap = len(text_words.intersection(target_words))
+            return min(1.0, overlap / len(target_words))
+        
+        elif self.rule_type == "word_count":
+            min_words = self.params.get("min_words", 0)
+            max_words = self.params.get("max_words", float('inf'))
+            word_count = len(text.split())
+            if min_words <= word_count <= max_words:
+                return 1.0
+            return 0.0
+        
+        elif self.rule_type == "sentiment_positive":
+            # Simple positive word detection for MVP
+            positive_words = ["good", "great", "excellent", "positive", "helpful", "clear"]
+            text_lower = text.lower()
+            matches = sum(1 for word in positive_words if word in text_lower)
+            return min(1.0, matches / 3.0)  # Scale to 0-1
+            
+        else:
+            raise ValueError(f"Unknown rule type: {self.rule_type}")
+
+
+class Template:
+    """A collection of scoring rules that can be applied to text."""
+    
+    def __init__(self, name: str = "default"):
+        self.name = name
+        self.rules: List[Rule] = []
+        self.description = ""
+    
+    def add_rule(self, rule_type: str, weight: float, **params):
+        """Add a new rule to this template.
+        
+        Args:
+            rule_type: Type of rule (regex_match, contains_phrase, cosine_sim, word_count, sentiment_positive)
+            weight: How much this rule counts toward final score
+            **params: Rule-specific parameters
+        """
+        rule = Rule(rule_type=rule_type, weight=weight, params=params)
+        self.rules.append(rule)
+    
+    def evaluate(self, text: str) -> float:
+        """Evaluate all rules against the text and return weighted average.
+        
+        Returns:
+            float: Final score between 0.0 and 1.0
+        """
+        if not self.rules:
+            return 0.0
+        
+        total_score = 0.0
+        total_weight = 0.0
+        
+        for rule in self.rules:
+            try:
+                rule_score = rule.evaluate(text)
+                total_score += rule_score * rule.weight
+                total_weight += rule.weight
+            except Exception as e:
+                print(f"Warning: Rule {rule.rule_type} failed with error: {e}")
+                continue
+        
+        return total_score / total_weight if total_weight > 0 else 0.0
+    
+    def evaluate_detailed(self, text: str) -> Dict[str, Any]:
+        """Evaluate with detailed breakdown of each rule's contribution."""
+        if not self.rules:
+            return {"total_score": 0.0, "rule_scores": []}
+        
+        rule_scores = []
+        total_score = 0.0
+        total_weight = 0.0
+        
+        for rule in self.rules:
+            try:
+                rule_score = rule.evaluate(text)
+                weighted_score = rule_score * rule.weight
+                total_score += weighted_score
+                total_weight += rule.weight
+                
+                rule_scores.append({
+                    "rule_type": rule.rule_type,
+                    "weight": rule.weight,
+                    "raw_score": rule_score,
+                    "weighted_score": weighted_score,
+                    "params": rule.params
+                })
+            except Exception as e:
+                rule_scores.append({
+                    "rule_type": rule.rule_type,
+                    "weight": rule.weight,
+                    "error": str(e),
+                    "params": rule.params
+                })
+        
+        final_score = total_score / total_weight if total_weight > 0 else 0.0
+        
+        return {
+            "total_score": final_score,
+            "total_weight": total_weight,
+            "rule_scores": rule_scores
+        }
+    
+    @classmethod
+    def from_yaml(cls, yaml_path: str):
+        """Load a template from a YAML file."""
+        if not os.path.exists(yaml_path):
+            raise FileNotFoundError(f"Template file not found: {yaml_path}")
+        
+        with open(yaml_path, 'r') as f:
+            data = yaml.safe_load(f)
+        
+        template = cls(name=data.get('name', 'default'))
+        template.description = data.get('description', '')
+        
+        for rule_data in data.get('rules', []):
+            template.add_rule(
+                rule_type=rule_data['type'],
+                weight=rule_data.get('weight', 1.0),
+                **rule_data.get('params', {})
+            )
+        
+        return template
+    
+    def to_yaml(self, yaml_path: str):
+        """Save this template to a YAML file."""
+        data = {
+            'name': self.name,
+            'description': self.description,
+            'rules': []
+        }
+        
+        for rule in self.rules:
+            rule_data = {
+                'type': rule.rule_type,
+                'weight': rule.weight,
+                'params': rule.params
+            }
+            data['rules'].append(rule_data)
+        
+        os.makedirs(os.path.dirname(yaml_path), exist_ok=True)
+        with open(yaml_path, 'w') as f:
+            yaml.dump(data, f, default_flow_style=False, indent=2)
+
+
+def score(text: str, template: Union[str, Template]) -> float:
+    """Main scoring function - the public API.
+    
+    Args:
+        text: Text to evaluate
+        template: Template object or path to YAML template file
+    
+    Returns:
+        float: Score between 0.0 and 1.0
+    """
+    if isinstance(template, str):
+        template = Template.from_yaml(template)
+    
+    return template.evaluate(text)
+
+
+def score_detailed(text: str, template: Union[str, Template]) -> Dict[str, Any]:
+    """Detailed scoring function with rule-by-rule breakdown.
+    
+    Args:
+        text: Text to evaluate
+        template: Template object or path to YAML template file
+    
+    Returns:
+        Dict with total score and detailed rule breakdown
+    """
+    if isinstance(template, str):
+        template = Template.from_yaml(template)
+    
+    return template.evaluate_detailed(text)
