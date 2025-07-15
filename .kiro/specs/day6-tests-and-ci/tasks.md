@@ -20,7 +20,7 @@
     - Test template loading from files and error handling for malformed templates
     - _Requirements: 1.1, 1.5_
 
-  - [ ] 2.3 Create unit tests for scoring functions
+  - [x] 2.3 Create unit tests for scoring functions
     - Test score() and score_detailed() functions with various inputs
     - Verify correct reward calculation and detailed breakdown generation
     - Test edge cases like empty text, missing templates, and invalid inputs
