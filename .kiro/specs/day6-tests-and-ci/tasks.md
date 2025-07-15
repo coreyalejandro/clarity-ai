@@ -39,7 +39,7 @@
     - Test checkpoint saving, run management, and ledger functionality
     - _Requirements: 1.1, 1.5_
 
-  - [ ] 3.3 Create unit tests for training utility functions
+  - [x] 3.3 Create unit tests for training utility functions
     - Test train_model() convenience function with various parameters
     - Verify training ledger loading and run data management
     - Test error handling and recovery mechanisms
