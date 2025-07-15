@@ -27,7 +27,7 @@
     - _Requirements: 1.1, 1.5_
 
 - [ ] 3. Implement unit tests for training module
-  - [ ] 3.1 Create unit tests for TrainingConfig class
+  - [x] 3.1 Create unit tests for TrainingConfig class
     - Test configuration creation, validation, and serialization
     - Verify default values and parameter override functionality
     - Test configuration loading from dictionaries and error handling
