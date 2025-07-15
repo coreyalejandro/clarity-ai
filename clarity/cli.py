@@ -151,6 +151,57 @@ def create_template_command(args):
         return 1
 
 
+def train_command(args):
+    """Handle the 'clarity train' command."""
+    
+    try:
+        from .trainer import train_model
+        
+        # Check that required files exist
+        if not os.path.exists(args.template):
+            print(f"Error: Template file not found: {args.template}")
+            return 1
+        
+        print(f"🚀 Starting ClarityAI training...")
+        print(f"Model: {args.model}")
+        print(f"Template: {args.template}")
+        print(f"Steps: {args.steps}")
+        print(f"Learning rate: {args.learning_rate}")
+        print(f"Batch size: {args.batch_size}")
+        print(f"Output: {args.output}")
+        print("-" * 50)
+        
+        # Start training
+        result = train_model(
+            model_name=args.model,
+            template_path=args.template,
+            max_steps=args.steps,
+            learning_rate=args.learning_rate,
+            batch_size=args.batch_size,
+            output_dir=args.output,
+        )
+        
+        if result["status"] == "success":
+            print(f"\n✅ Training completed successfully!")
+            print(f"Run ID: {result['run_id']}")
+            print(f"Total steps: {result['total_steps']}")
+            print(f"Average reward: {result['average_reward']:.3f}")
+            print(f"Final reward: {result['final_reward']:.3f}")
+            print(f"Output directory: {result['output_dir']}")
+            return 0
+        else:
+            print(f"\n❌ Training failed: {result['error']}")
+            return 1
+            
+    except ImportError as e:
+        print(f"Error: Missing training dependencies: {e}")
+        print("Install with: pip install datasets")
+        return 1
+    except Exception as e:
+        print(f"Error during training: {e}")
+        return 1
+
+
 def main():
     """Main CLI entry point."""
     
@@ -186,6 +237,15 @@ Examples:
     template_parser.add_argument('--description', help='Template description')
     template_parser.add_argument('--output', required=True, help='Output YAML file path')
     
+    # Train command
+    train_parser = subparsers.add_parser('train', help='Train a language model using template-based rewards')
+    train_parser.add_argument('--model', default='microsoft/DialoGPT-small', help='HuggingFace model name (default: microsoft/DialoGPT-small)')
+    train_parser.add_argument('--template', required=True, help='Path to YAML template file for rewards')
+    train_parser.add_argument('--steps', type=int, default=20, help='Number of training steps (default: 20)')
+    train_parser.add_argument('--learning-rate', type=float, default=1.41e-5, help='Learning rate (default: 1.41e-5)')
+    train_parser.add_argument('--batch-size', type=int, default=16, help='Batch size (default: 16)')
+    train_parser.add_argument('--output', default='runs', help='Output directory for training runs (default: runs)')
+    
     # Parse arguments
     args = parser.parse_args()
     
@@ -200,6 +260,8 @@ Examples:
         return demo_command(args)
     elif args.command == 'create-template':
         return create_template_command(args)
+    elif args.command == 'train':
+        return train_command(args)
     else:
         print(f"Unknown command: {args.command}")
         return 1
