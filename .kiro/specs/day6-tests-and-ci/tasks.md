@@ -26,7 +26,7 @@
     - Test edge cases like empty text, missing templates, and invalid inputs
     - _Requirements: 1.1, 1.5_
 
-- [ ] 3. Implement unit tests for training module
+- [x] 3. Implement unit tests for training module
   - [x] 3.1 Create unit tests for TrainingConfig class
     - Test configuration creation, validation, and serialization
     - Verify default values and parameter override functionality
@@ -46,13 +46,13 @@
     - _Requirements: 1.1, 1.5_
 
 - [ ] 4. Implement unit tests for CLI module
-  - [ ] 4.1 Create unit tests for CLI command functions
+  - [x] 4.1 Create unit tests for CLI command functions
     - Test score_command, demo_command, create_template_command, train_command functions
     - Mock file I/O operations and verify correct argument processing
     - Test error handling and user feedback for various failure scenarios
     - _Requirements: 1.1, 1.5_
 
-  - [ ] 4.2 Create unit tests for CLI argument parsing
+  - [x] 4.2 Create unit tests for CLI argument parsing
     - Test argument parser configuration and command routing
     - Verify help text generation and error message formatting
     - Test edge cases like missing arguments and invalid combinations
