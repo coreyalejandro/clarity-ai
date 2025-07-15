@@ -1,0 +1,12 @@
+name: basic_template
+description: Basic template for testing
+rules:
+  - type: contains_phrase
+    weight: 2.0
+    phrase: helpful
+  - type: word_count
+    weight: 1.0
+    min_words: 10
+    max_words: 100
+  - type: sentiment_positive
+    weight: 1.5
