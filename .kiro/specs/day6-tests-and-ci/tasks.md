@@ -14,7 +14,7 @@
     - Verify error handling for invalid rule configurations
     - _Requirements: 1.1, 1.5_
 
-  - [ ] 2.2 Create unit tests for Template class
+  - [x] 2.2 Create unit tests for Template class
     - Test template creation, rule addition, and YAML serialization/deserialization
     - Verify template evaluation with multiple rules and weight calculations
     - Test template loading from files and error handling for malformed templates
