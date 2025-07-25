@@ -14,6 +14,13 @@ setup(
         "pyyaml>=6.0",
         "numpy>=1.21.0",
     ],
+    extras_require={
+        "advanced": [
+            "spacy>=3.4.0",
+            "textstat>=0.7.0",
+            "scikit-learn>=1.0.0",
+        ],
+    },
     entry_points={
         "console_scripts": [
             "clarity=clarity.cli:main",

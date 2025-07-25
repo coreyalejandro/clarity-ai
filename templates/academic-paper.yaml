@@ -1,0 +1,63 @@
+name: academic_paper_evaluation
+description: Comprehensive evaluation of academic writing quality with detailed explanations
+
+rules:
+  # Content Quality Rules
+  - type: domain_expertise
+    weight: 3.0
+    params:
+      domain: "machine_learning"
+      expertise_terms: [
+        "neural network", "gradient descent", "backpropagation", "overfitting",
+        "cross-validation", "regularization", "hyperparameter", "feature engineering",
+        "supervised learning", "unsupervised learning", "reinforcement learning",
+        "deep learning", "convolutional", "recurrent", "transformer", "attention",
+        "loss function", "optimization", "batch normalization", "dropout"
+      ]
+
+  - type: citation_quality
+    weight: 2.5
+    params:
+      min_citations_per_100_words: 0.02
+      preferred_citation_style: "academic"
+
+  - type: argument_structure
+    weight: 2.0
+    params:
+      require_claims: true
+      require_evidence: true
+      require_counterarguments: false
+
+  # Writing Quality Rules
+  - type: readability
+    weight: 1.5
+    params:
+      target_grade_level: 14  # Graduate level
+      tolerance: 2
+
+  - type: semantic_coherence
+    weight: 2.0
+    params:
+      min_coherence_score: 0.6
+
+  # Basic Quality Checks
+  - type: word_count
+    weight: 1.0
+    params:
+      min_words: 500
+      max_words: 8000
+
+  - type: contains_phrase
+    weight: 1.0
+    params:
+      phrase: "methodology"
+
+  - type: contains_phrase
+    weight: 1.0
+    params:
+      phrase: "results"
+
+  - type: regex_match
+    weight: 0.5
+    params:
+      pattern: "Figure\\s+\\d+|Table\\s+\\d+"  # References to figures/tables

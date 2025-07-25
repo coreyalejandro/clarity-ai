@@ -1,0 +1,18 @@
+# Advanced ClarityAI Dependencies
+# Install with: pip install -r requirements-advanced.txt
+
+# Core dependencies (already in setup.py)
+torch>=1.9.0
+transformers>=4.20.0
+trl>=0.4.0
+streamlit>=1.20.0
+pyyaml>=6.0
+numpy>=1.21.0
+
+# Advanced rule dependencies
+spacy>=3.4.0
+textstat>=0.7.0
+scikit-learn>=1.0.0
+
+# Optional: Download spaCy English model
+# Run after installation: python -m spacy download en_core_web_sm

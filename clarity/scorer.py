@@ -4,6 +4,14 @@ from typing import Dict, Any, Union, List
 from dataclasses import dataclass
 import os
 
+# Import advanced rules
+try:
+    from .advanced_rules import create_advanced_rule, ADVANCED_RULE_TYPES, RuleExplanation
+    ADVANCED_RULES_AVAILABLE = True
+except ImportError:
+    ADVANCED_RULES_AVAILABLE = False
+    RuleExplanation = None
+
 
 @dataclass
 class Rule:
@@ -19,6 +27,16 @@ class Rule:
         Returns:
             float: Score between 0.0 and 1.0
         """
+        # Check if this is an advanced rule type
+        if ADVANCED_RULES_AVAILABLE and self.rule_type in ADVANCED_RULE_TYPES:
+            try:
+                advanced_rule = create_advanced_rule(self.rule_type, self.weight, self.params)
+                return advanced_rule.evaluate(text)
+            except Exception as e:
+                print(f"Warning: Advanced rule {self.rule_type} failed: {e}")
+                return 0.0
+        
+        # Basic rule types
         if self.rule_type == "regex_match":
             pattern = self.params.get("pattern", "")
             if re.search(pattern, text, re.IGNORECASE):
@@ -58,6 +76,46 @@ class Rule:
             
         else:
             raise ValueError(f"Unknown rule type: {self.rule_type}")
+    
+    def evaluate_with_explanation(self, text: str) -> Dict[str, Any]:
+        """Evaluate with detailed explanation (for advanced rules)."""
+        # Check if this is an advanced rule type
+        if ADVANCED_RULES_AVAILABLE and self.rule_type in ADVANCED_RULE_TYPES:
+            try:
+                advanced_rule = create_advanced_rule(self.rule_type, self.weight, self.params)
+                explanation = advanced_rule.evaluate_with_explanation(text)
+                return {
+                    "rule_type": self.rule_type,
+                    "weight": self.weight,
+                    "raw_score": explanation.score,
+                    "weighted_score": explanation.score * self.weight,
+                    "reasoning": explanation.reasoning,
+                    "evidence": explanation.evidence,
+                    "confidence": explanation.confidence,
+                    "suggestions": explanation.suggestions,
+                    "params": self.params
+                }
+            except Exception as e:
+                return {
+                    "rule_type": self.rule_type,
+                    "weight": self.weight,
+                    "error": str(e),
+                    "params": self.params
+                }
+        
+        # Basic rule - provide simple explanation
+        score = self.evaluate(text)
+        return {
+            "rule_type": self.rule_type,
+            "weight": self.weight,
+            "raw_score": score,
+            "weighted_score": score * self.weight,
+            "reasoning": f"Basic {self.rule_type} rule evaluation",
+            "evidence": [f"Score: {score}"],
+            "confidence": 0.8,
+            "suggestions": [],
+            "params": self.params
+        }
 
 
 class Template:
@@ -140,6 +198,72 @@ class Template:
             "total_weight": total_weight,
             "rule_scores": rule_scores
         }
+    
+    def evaluate_with_explanations(self, text: str) -> Dict[str, Any]:
+        """Evaluate with rich explanations and actionable feedback."""
+        if not self.rules:
+            return {
+                "total_score": 0.0,
+                "rule_explanations": [],
+                "overall_feedback": {
+                    "strengths": [],
+                    "weaknesses": ["No evaluation rules defined"],
+                    "suggestions": ["Add scoring rules to evaluate text quality"]
+                }
+            }
+        
+        rule_explanations = []
+        total_score = 0.0
+        total_weight = 0.0
+        all_suggestions = []
+        strengths = []
+        weaknesses = []
+        
+        for rule in self.rules:
+            explanation = rule.evaluate_with_explanation(text)
+            rule_explanations.append(explanation)
+            
+            if "error" not in explanation:
+                total_score += explanation["weighted_score"]
+                total_weight += explanation["weight"]
+                
+                # Collect feedback
+                if explanation["raw_score"] >= 0.7:
+                    strengths.append(f"{explanation['rule_type']}: {explanation['reasoning']}")
+                elif explanation["raw_score"] < 0.4:
+                    weaknesses.append(f"{explanation['rule_type']}: {explanation['reasoning']}")
+                
+                all_suggestions.extend(explanation.get("suggestions", []))
+        
+        final_score = total_score / total_weight if total_weight > 0 else 0.0
+        
+        # Generate overall feedback
+        overall_feedback = {
+            "strengths": strengths,
+            "weaknesses": weaknesses,
+            "suggestions": list(set(all_suggestions)),  # Remove duplicates
+            "score_interpretation": self._interpret_score(final_score)
+        }
+        
+        return {
+            "total_score": final_score,
+            "total_weight": total_weight,
+            "rule_explanations": rule_explanations,
+            "overall_feedback": overall_feedback
+        }
+    
+    def _interpret_score(self, score: float) -> str:
+        """Provide human-readable interpretation of the score."""
+        if score >= 0.9:
+            return "Excellent - text meets or exceeds all quality criteria"
+        elif score >= 0.7:
+            return "Good - text meets most quality criteria with minor areas for improvement"
+        elif score >= 0.5:
+            return "Moderate - text meets some criteria but has significant room for improvement"
+        elif score >= 0.3:
+            return "Poor - text fails to meet most quality criteria and needs substantial revision"
+        else:
+            return "Very Poor - text fails to meet basic quality standards and requires complete revision"
     
     @classmethod
     def from_yaml(cls, yaml_path: str):

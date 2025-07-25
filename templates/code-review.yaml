@@ -1,0 +1,71 @@
+name: code_review_evaluation
+description: Evaluates code review comments for constructiveness and technical depth
+
+rules:
+  # Technical Expertise
+  - type: domain_expertise
+    weight: 3.0
+    params:
+      domain: "software_engineering"
+      expertise_terms: [
+        "refactor", "optimization", "performance", "scalability", "maintainability",
+        "design pattern", "SOLID principles", "code smell", "technical debt",
+        "unit test", "integration test", "mock", "dependency injection",
+        "algorithm complexity", "time complexity", "space complexity",
+        "race condition", "deadlock", "thread safety", "concurrency",
+        "API design", "interface", "abstraction", "encapsulation",
+        "security vulnerability", "input validation", "sanitization"
+      ]
+
+  # Review Quality
+  - type: argument_structure
+    weight: 2.5
+    params:
+      require_claims: true
+      require_evidence: true
+      require_counterarguments: false
+
+  - type: semantic_coherence
+    weight: 2.0
+    params:
+      min_coherence_score: 0.7
+
+  # Constructiveness Indicators
+  - type: contains_phrase
+    weight: 2.0
+    params:
+      phrase: "suggestion"
+
+  - type: contains_phrase
+    weight: 1.5
+    params:
+      phrase: "consider"
+
+  - type: contains_phrase
+    weight: 1.5
+    params:
+      phrase: "recommend"
+
+  # Specific Technical Feedback
+  - type: regex_match
+    weight: 1.0
+    params:
+      pattern: "line\\s+\\d+|function\\s+\\w+|class\\s+\\w+"
+
+  # Appropriate Length and Tone
+  - type: word_count
+    weight: 1.0
+    params:
+      min_words: 15
+      max_words: 200
+
+  - type: sentiment_positive
+    weight: 1.5
+    params: {}
+
+  # Readability for Team Communication
+  - type: readability
+    weight: 1.0
+    params:
+      target_grade_level: 10
+      tolerance: 3
