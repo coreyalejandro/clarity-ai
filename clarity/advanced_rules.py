@@ -496,7 +496,14 @@ class CategoryBasedRule(AdvancedRule):
         return {"high": 0.7, "medium": 0.4}
     
     def get_feedback_messages(self, score: float) -> Tuple[str, List[str]]:
-        """Override in subclasses to provide domain-specific feedback."""
+        """Override in subclasses to provide domain-specific feedback.
+        
+        Args:
+            score: The calculated score (0.0-1.0)
+            
+        Returns:
+            Tuple of (reasoning_message, list_of_suggestions)
+        """
         raise NotImplementedError
     
     @lru_cache(maxsize=128)
