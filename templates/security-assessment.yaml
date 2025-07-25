@@ -1,0 +1,67 @@
+name: security_assessment
+description: Evaluates security documentation and code review comments for comprehensive security awareness
+
+rules:
+  # Core Security Assessment
+  - type: security_assessment
+    weight: 4.0
+    params: {}
+
+  # Domain Expertise in Security
+  - type: domain_expertise
+    weight: 3.0
+    params:
+      domain: "cybersecurity"
+      expertise_terms: [
+        "vulnerability", "exploit", "attack vector", "threat model", "risk assessment",
+        "penetration testing", "security audit", "code review", "static analysis",
+        "dynamic analysis", "authentication", "authorization", "encryption", "hashing",
+        "ssl", "tls", "https", "csrf", "xss", "sql injection", "buffer overflow",
+        "privilege escalation", "access control", "firewall", "intrusion detection",
+        "security policy", "incident response", "forensics", "compliance"
+      ]
+
+  # Technical Depth and Accuracy
+  - type: argument_structure
+    weight: 2.5
+    params:
+      require_claims: true
+      require_evidence: true
+      require_counterarguments: false
+
+  # Clear Communication for Security Teams
+  - type: readability
+    weight: 2.0
+    params:
+      target_grade_level: 12
+      tolerance: 2
+
+  # Appropriate Length for Security Documentation
+  - type: word_count
+    weight: 1.5
+    params:
+      min_words: 100
+      max_words: 1000
+
+  # Professional Tone
+  - type: sentiment_positive
+    weight: 1.0
+    params: {}
+
+  # Specific Security Recommendations
+  - type: contains_phrase
+    weight: 2.0
+    params:
+      phrase: "recommend"
+
+  # Risk Awareness
+  - type: contains_phrase
+    weight: 2.0
+    params:
+      phrase: "risk"
+
+  # Mitigation Strategies
+  - type: contains_phrase
+    weight: 1.5
+    params:
+      phrase: "mitigation"

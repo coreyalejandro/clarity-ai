@@ -1,0 +1,78 @@
+name: medical_documentation
+description: Evaluates medical documentation for accuracy, compliance, and professional standards
+
+rules:
+  # Medical Accuracy and Professional Language
+  - type: medical_accuracy
+    weight: 4.0
+    params:
+      medical_terms: [
+        "diagnosis", "treatment", "symptoms", "patient", "clinical", "therapeutic",
+        "medication", "dosage", "contraindication", "side effects", "prognosis",
+        "pathology", "etiology", "differential diagnosis", "comorbidity",
+        "adverse reaction", "therapeutic index", "pharmacokinetics", "bioavailability",
+        "clinical trial", "evidence-based", "protocol", "guideline", "standard of care"
+      ]
+
+  # Legal and Regulatory Compliance
+  - type: legal_compliance
+    weight: 3.5
+    params:
+      jurisdiction: "healthcare"
+      compliance_areas: [
+        "HIPAA", "patient privacy", "informed consent", "medical records",
+        "confidentiality", "data protection", "healthcare regulation",
+        "medical liability", "malpractice", "standard of care"
+      ]
+
+  # Professional Medical Writing
+  - type: readability
+    weight: 2.0
+    params:
+      target_grade_level: 14
+      tolerance: 2
+
+  # Evidence-Based Content
+  - type: citation_quality
+    weight: 2.5
+    params:
+      min_citations_per_100_words: 0.03
+
+  # Appropriate Clinical Structure
+  - type: argument_structure
+    weight: 2.0
+    params:
+      require_claims: true
+      require_evidence: true
+      require_counterarguments: false
+
+  # Professional Length
+  - type: word_count
+    weight: 1.5
+    params:
+      min_words: 200
+      max_words: 2000
+
+  # Clinical Objectivity
+  - type: contains_phrase
+    weight: 1.5
+    params:
+      phrase: "clinical"
+
+  # Patient-Centered Language
+  - type: contains_phrase
+    weight: 1.5
+    params:
+      phrase: "patient"
+
+  # Evidence Reference
+  - type: contains_phrase
+    weight: 1.0
+    params:
+      phrase: "evidence"
+
+  # Medical Disclaimers
+  - type: regex_match
+    weight: 2.0
+    params:
+      pattern: "(consult.*physician|medical.*advice|healthcare.*provider)"

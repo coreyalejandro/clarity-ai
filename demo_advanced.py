@@ -220,6 +220,71 @@ def demo_fine_tuning_accessibility():
     print("\n💡 This rubric can now train AI models to write better support responses!")
 
 
+def demo_domain_specific_rules():
+    """Demonstrate domain-specific advanced rules."""
+    print_separator("DOMAIN-SPECIFIC RULES DEMONSTRATION")
+    
+    print("""
+🎯 NEW ADVANCED RULE TYPES FOR SPECIALIZED DOMAINS:
+   • SecurityAssessmentRule: Cybersecurity awareness and best practices
+   • LegalComplianceRule: Legal risk awareness and compliance
+   • MedicalAccuracyRule: Clinical accuracy and professional standards
+   • FinancialComplianceRule: Financial advice compliance and risk disclosures
+   • AccessibilityRule: Inclusive design and accessibility awareness
+    """)
+    
+    # Security Assessment Demo
+    print("\n🔒 SECURITY ASSESSMENT EXAMPLE:")
+    security_text = """
+    The authentication system has several vulnerabilities that require immediate attention.
+    I recommend implementing input validation to prevent SQL injection attacks and adding
+    CSRF protection to all forms. The current implementation lacks proper encryption for
+    sensitive data transmission. We should also conduct a penetration test to identify
+    additional security risks and ensure compliance with security standards.
+    """
+    
+    try:
+        template = Template.from_yaml("templates/security-assessment.yaml")
+        result = template.evaluate_with_explanations(security_text)
+        print(f"🎯 Security Score: {result['total_score']:.3f}")
+        print(f"   {result['overall_feedback']['score_interpretation']}")
+        
+        # Show top security insights
+        security_rules = [r for r in result['rule_explanations'] 
+                         if r.get('rule_type') == 'security_assessment' and 'error' not in r]
+        if security_rules:
+            rule = security_rules[0]
+            print(f"   Security Analysis: {rule['reasoning']}")
+            print(f"   Evidence: {rule['evidence'][0] if rule['evidence'] else 'N/A'}")
+    except Exception as e:
+        print(f"   ⚠️  Security template not available: {e}")
+    
+    # Medical Documentation Demo
+    print("\n🏥 MEDICAL DOCUMENTATION EXAMPLE:")
+    medical_text = """
+    Patient presents with acute chest pain and shortness of breath. Clinical examination
+    reveals elevated troponin levels and ECG changes consistent with myocardial infarction.
+    Treatment protocol includes immediate anticoagulation therapy and cardiac catheterization.
+    Contraindications include active bleeding and recent surgery. This is not medical advice -
+    consult your healthcare provider for proper diagnosis and treatment.
+    """
+    
+    try:
+        template = Template.from_yaml("templates/medical-documentation.yaml")
+        result = template.evaluate_with_explanations(medical_text)
+        print(f"🎯 Medical Score: {result['total_score']:.3f}")
+        print(f"   {result['overall_feedback']['score_interpretation']}")
+        
+        # Show medical accuracy insights
+        medical_rules = [r for r in result['rule_explanations'] 
+                        if r.get('rule_type') == 'medical_accuracy' and 'error' not in r]
+        if medical_rules:
+            rule = medical_rules[0]
+            print(f"   Medical Analysis: {rule['reasoning']}")
+    except Exception as e:
+        print(f"   ⚠️  Medical template not available: {e}")
+
+
 def main():
     """Run the advanced ClarityAI demonstration."""
     print("🚀 ClarityAI Advanced Demonstration")
@@ -229,6 +294,7 @@ def main():
         demo_fine_tuning_accessibility()
         demo_academic_paper()
         demo_code_review()
+        demo_domain_specific_rules()
         
         print_separator("SUMMARY")
         print("""
@@ -240,7 +306,15 @@ def main():
    • Actionable feedback for continuous improvement  
    • Accessible to non-technical domain experts
    • Enterprise-grade evaluation sophistication
+   • Domain-specific rule types for specialized industries
    • Seamless integration with existing workflows
+
+🏭 INDUSTRY-SPECIFIC CAPABILITIES:
+   • Healthcare: Medical accuracy and compliance validation
+   • Finance: Risk disclosure and regulatory compliance
+   • Security: Vulnerability assessment and best practices
+   • Legal: Risk awareness and compliance checking
+   • Accessibility: Inclusive design and WCAG compliance
 
 🚀 Ready to revolutionize your AI development process?
    Start with: streamlit run app.py

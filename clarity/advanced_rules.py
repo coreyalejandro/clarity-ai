@@ -14,6 +14,7 @@ from typing import Dict, List, Any, Optional, Tuple
 from dataclasses import dataclass
 import numpy as np
 from collections import Counter
+from functools import lru_cache
 
 # Optional dependencies with graceful fallbacks
 try:
@@ -47,6 +48,17 @@ ARGUMENT_COUNTER_WEIGHT = 0.3
 CITATION_LOW_DENSITY = 0.01
 CITATION_MEDIUM_DENSITY = 0.05
 
+# Domain-specific rule constants
+SCORE_THRESHOLD_HIGH = 0.7
+SCORE_THRESHOLD_MEDIUM = 0.4
+CATEGORY_COVERAGE_WEIGHT = 0.7
+TERM_DENSITY_WEIGHT = 0.3
+TERM_DENSITY_MULTIPLIER = 10
+MEDICAL_TERMINOLOGY_THRESHOLD = 0.3
+FINANCIAL_TERMINOLOGY_THRESHOLD = 0.2
+ACCESSIBILITY_PENALTY_PER_ISSUE = 0.1
+MAX_ACCESSIBILITY_PENALTY = 0.5
+
 
 @dataclass
 class RuleExplanation:
@@ -69,11 +81,27 @@ class AdvancedRule:
         
     def evaluate_with_explanation(self, text: str) -> RuleExplanation:
         """Evaluate text and return detailed explanation."""
+        if not isinstance(text, str):
+            raise TypeError(f"Expected string input, got {type(text)}")
+        if not text.strip():
+            return RuleExplanation(
+                rule_type=self.rule_type,
+                score=0.0,
+                reasoning="Empty or whitespace-only text provided",
+                evidence=["No content to evaluate"],
+                confidence=1.0,
+                suggestions=["Provide non-empty text for evaluation"]
+            )
         raise NotImplementedError
         
     def evaluate(self, text: str) -> float:
         """Simple evaluation for backward compatibility."""
-        return self.evaluate_with_explanation(text).score
+        try:
+            return self.evaluate_with_explanation(text).score
+        except Exception as e:
+            # Log error and return neutral score
+            print(f"Warning: Rule {self.rule_type} failed with error: {e}")
+            return 0.5
 
 
 class ReadabilityRule(AdvancedRule):
@@ -444,6 +472,439 @@ class CitationQualityRule(AdvancedRule):
         )
 
 
+# Additional domain-specific advanced rules
+
+class CategoryBasedRule(AdvancedRule):
+    """Base class for rules that evaluate text based on categorized term matching."""
+    
+    def __init__(self, rule_type: str, weight: float, params: Dict[str, Any]):
+        super().__init__(rule_type, weight, params)
+        self.categories = self.get_categories()
+        self.scoring_weights = self.get_scoring_weights()
+        self.thresholds = self.get_thresholds()
+    
+    def get_categories(self) -> Dict[str, List[str]]:
+        """Override in subclasses to define category terms."""
+        raise NotImplementedError
+    
+    def get_scoring_weights(self) -> Dict[str, float]:
+        """Override in subclasses to define scoring weights."""
+        return {"category_coverage": 0.7, "term_density": 0.3, "density_multiplier": 10}
+    
+    def get_thresholds(self) -> Dict[str, float]:
+        """Override in subclasses to define score thresholds."""
+        return {"high": 0.7, "medium": 0.4}
+    
+    def get_feedback_messages(self, score: float) -> Tuple[str, List[str]]:
+        """Override in subclasses to provide domain-specific feedback."""
+        raise NotImplementedError
+    
+    @lru_cache(maxsize=128)
+    def _find_terms_in_text(self, text_lower: str, terms_tuple: Tuple[str, ...]) -> Tuple[str, ...]:
+        """Cached method to find terms in text."""
+        return tuple(term for term in terms_tuple if term in text_lower)
+    
+    def evaluate_with_explanation(self, text: str) -> RuleExplanation:
+        text_lower = text.lower()
+        found_categories = {}
+        total_found = 0
+        
+        for category, terms in self.categories.items():
+            # Use cached method for better performance
+            found_terms = self._find_terms_in_text(text_lower, tuple(terms))
+            found_categories[category] = list(found_terms)
+            total_found += len(found_terms)
+        
+        # Calculate score components
+        category_coverage = len([cat for cat, terms in found_categories.items() if terms]) / len(self.categories)
+        term_density = total_found / len(text.split()) if text.split() else 0
+        
+        weights = self.scoring_weights
+        score = min(1.0, (
+            category_coverage * weights["category_coverage"] + 
+            term_density * weights["density_multiplier"] * weights["term_density"]
+        ))
+        
+        # Build evidence
+        evidence = [
+            f"Categories covered: {len([cat for cat, terms in found_categories.items() if terms])}/{len(self.categories)}",
+            f"Terms found: {total_found}",
+            f"Term density: {term_density:.4f}"
+        ]
+        
+        for category, terms in found_categories.items():
+            if terms:
+                evidence.append(f"{category.title()}: {', '.join(terms[:3])}")
+        
+        reasoning, suggestions = self.get_feedback_messages(score)
+        
+        return RuleExplanation(
+            rule_type=self.rule_type,
+            score=score,
+            reasoning=reasoning,
+            evidence=evidence,
+            confidence=0.85,
+            suggestions=suggestions
+        )
+
+
+class SecurityAssessmentRule(CategoryBasedRule):
+    """Evaluates security awareness and best practices in text."""
+    
+    def get_categories(self) -> Dict[str, List[str]]:
+        return {
+            'vulnerabilities': ['injection', 'xss', 'csrf', 'sql injection', 'buffer overflow', 'authentication', 'authorization'],
+            'best_practices': ['validation', 'sanitization', 'encryption', 'hashing', 'secure', 'https', 'ssl', 'tls'],
+            'security_tools': ['firewall', 'antivirus', 'penetration test', 'vulnerability scan', 'security audit'],
+            'compliance': ['gdpr', 'hipaa', 'pci dss', 'sox', 'compliance', 'privacy', 'data protection']
+        }
+    
+    def get_feedback_messages(self, score: float) -> Tuple[str, List[str]]:
+        if score >= self.thresholds["high"]:
+            return ("Text demonstrates strong security awareness and best practices", [])
+        elif score >= self.thresholds["medium"]:
+            return ("Text shows moderate security awareness with room for improvement", [
+                "Include more security vulnerability discussions",
+                "Add specific security best practices",
+                "Reference security tools and compliance standards"
+            ])
+        else:
+            return ("Text lacks security awareness and best practices", [
+                "Add discussion of common security vulnerabilities",
+                "Include security best practices and mitigation strategies",
+                "Reference relevant compliance requirements",
+                "Mention security tools and assessment methods"
+            ])
+        
+        evidence = [
+            f"Security categories covered: {len([cat for cat, terms in found_categories.items() if terms])}/{len(security_indicators)}",
+            f"Security terms found: {total_found}",
+            f"Term density: {term_density:.4f}"
+        ]
+        
+        for category, terms in found_categories.items():
+            if terms:
+                evidence.append(f"{category.title()}: {', '.join(terms[:3])}")
+        
+        if score >= 0.7:
+            reasoning = "Text demonstrates strong security awareness and best practices"
+            suggestions = []
+        elif score >= 0.4:
+            reasoning = "Text shows moderate security awareness with room for improvement"
+            suggestions = [
+                "Include more security vulnerability discussions",
+                "Add specific security best practices",
+                "Reference security tools and compliance standards"
+            ]
+        else:
+            reasoning = "Text lacks security awareness and best practices"
+            suggestions = [
+                "Add discussion of common security vulnerabilities",
+                "Include security best practices and mitigation strategies",
+                "Reference relevant compliance requirements",
+                "Mention security tools and assessment methods"
+            ]
+        
+        return RuleExplanation(
+            rule_type=self.rule_type,
+            score=score,
+            reasoning=reasoning,
+            evidence=evidence,
+            confidence=0.85,
+            suggestions=suggestions
+        )
+
+
+class LegalComplianceRule(AdvancedRule):
+    """Evaluates legal compliance and risk awareness in text."""
+    
+    def evaluate_with_explanation(self, text: str) -> RuleExplanation:
+        jurisdiction = self.params.get('jurisdiction', 'general')
+        compliance_areas = self.params.get('compliance_areas', [
+            'data privacy', 'employment law', 'contract law', 'intellectual property',
+            'regulatory compliance', 'liability', 'terms of service', 'privacy policy'
+        ])
+        
+        legal_indicators = {
+            'risk_awareness': ['risk', 'liability', 'compliance', 'legal', 'regulation', 'statute', 'law'],
+            'documentation': ['contract', 'agreement', 'terms', 'policy', 'disclosure', 'notice'],
+            'protection': ['indemnification', 'limitation of liability', 'disclaimer', 'warranty'],
+            'process': ['review', 'approval', 'audit', 'assessment', 'due diligence']
+        }
+        
+        text_lower = text.lower()
+        found_indicators = {}
+        compliance_mentions = 0
+        
+        for category, terms in legal_indicators.items():
+            found_terms = [term for term in terms if term in text_lower]
+            found_indicators[category] = found_terms
+        
+        for area in compliance_areas:
+            if area.lower() in text_lower:
+                compliance_mentions += 1
+        
+        # Score based on legal awareness and compliance coverage
+        indicator_score = len([cat for cat, terms in found_indicators.items() if terms]) / len(legal_indicators)
+        compliance_score = compliance_mentions / len(compliance_areas) if compliance_areas else 0
+        
+        score = min(1.0, (indicator_score * 0.6 + compliance_score * 0.4))
+        
+        evidence = [
+            f"Legal indicator categories: {len([cat for cat, terms in found_indicators.items() if terms])}/{len(legal_indicators)}",
+            f"Compliance areas mentioned: {compliance_mentions}/{len(compliance_areas)}",
+            f"Jurisdiction: {jurisdiction}"
+        ]
+        
+        if score >= 0.7:
+            reasoning = f"Text demonstrates strong legal compliance awareness for {jurisdiction} jurisdiction"
+            suggestions = []
+        elif score >= 0.4:
+            reasoning = f"Text shows moderate legal awareness with compliance gaps for {jurisdiction}"
+            suggestions = [
+                "Add more specific legal risk discussions",
+                "Include relevant compliance requirements",
+                "Reference applicable laws and regulations"
+            ]
+        else:
+            reasoning = f"Text lacks adequate legal compliance awareness for {jurisdiction}"
+            suggestions = [
+                "Consult legal counsel for compliance requirements",
+                "Add risk assessment and mitigation strategies",
+                "Include necessary legal disclaimers and notices",
+                "Reference relevant laws and regulatory frameworks"
+            ]
+        
+        return RuleExplanation(
+            rule_type=self.rule_type,
+            score=score,
+            reasoning=reasoning,
+            evidence=evidence,
+            confidence=0.8,
+            suggestions=suggestions
+        )
+
+
+class MedicalAccuracyRule(AdvancedRule):
+    """Evaluates medical accuracy and appropriate clinical language."""
+    
+    def get_default_medical_terms(self) -> List[str]:
+        """Get default medical terminology list."""
+        return [
+            'diagnosis', 'treatment', 'symptoms', 'patient', 'clinical', 'therapeutic',
+            'medication', 'dosage', 'contraindication', 'side effects', 'prognosis'
+        ]
+    
+    def evaluate_with_explanation(self, text: str) -> RuleExplanation:
+        medical_terminology = self.params.get('medical_terms', self.get_default_medical_terms())
+        
+        accuracy_indicators = {
+            'precision': ['specific', 'precise', 'exact', 'measured', 'documented'],
+            'caution': ['may', 'might', 'could', 'potential', 'possible', 'consult', 'physician'],
+            'evidence': ['study', 'research', 'clinical trial', 'evidence', 'data', 'statistics'],
+            'disclaimers': ['not medical advice', 'consult doctor', 'healthcare provider', 'medical professional']
+        }
+        
+        text_lower = text.lower()
+        medical_term_count = sum(1 for term in medical_terminology if term.lower() in text_lower)
+        
+        found_indicators = {}
+        for category, terms in accuracy_indicators.items():
+            found_terms = [term for term in terms if term in text_lower]
+            found_indicators[category] = found_terms
+        
+        # Score based on medical terminology use and accuracy indicators
+        terminology_score = self._calculate_terminology_score(medical_term_count, len(medical_terminology))
+        accuracy_score = self._calculate_accuracy_score(found_indicators, accuracy_indicators)
+        
+        score = min(1.0, (terminology_score * 0.4 + accuracy_score * 0.6))
+        
+        evidence = self._build_medical_evidence(medical_term_count, medical_terminology, found_indicators, accuracy_indicators)
+        reasoning, suggestions = self._get_medical_feedback(score)
+    
+    def _calculate_terminology_score(self, term_count: int, total_terms: int) -> float:
+        """Calculate score based on medical terminology usage."""
+        return min(1.0, term_count / max(1, total_terms * MEDICAL_TERMINOLOGY_THRESHOLD))
+    
+    def _calculate_accuracy_score(self, found_indicators: Dict, accuracy_indicators: Dict) -> float:
+        """Calculate score based on accuracy indicators."""
+        return len([cat for cat, terms in found_indicators.items() if terms]) / len(accuracy_indicators)
+    
+    def _build_medical_evidence(self, term_count: int, total_terms: int, found_indicators: Dict, accuracy_indicators: Dict) -> List[str]:
+        """Build evidence list for medical accuracy evaluation."""
+        evidence = [
+            f"Medical terms used: {term_count}/{total_terms}",
+            f"Accuracy indicators: {len([cat for cat, terms in found_indicators.items() if terms])}/{len(accuracy_indicators)}"
+        ]
+        
+        for category, terms in found_indicators.items():
+            if terms:
+                evidence.append(f"{category.title()}: {', '.join(terms[:3])}")
+        
+        return evidence
+    
+    def _get_medical_feedback(self, score: float) -> Tuple[str, List[str]]:
+        """Get reasoning and suggestions based on medical accuracy score."""
+        if score >= 0.8:
+            return ("Text demonstrates appropriate medical accuracy and professional language", [])
+        elif score >= 0.5:
+            return ("Text shows moderate medical accuracy with room for improvement", [
+                "Add more specific medical terminology where appropriate",
+                "Include appropriate medical disclaimers",
+                "Reference clinical evidence or studies",
+                "Use more cautious language for medical claims"
+            ])
+        else:
+            return ("Text lacks appropriate medical accuracy and professional standards", [
+                "Consult medical professionals for accuracy review",
+                "Add required medical disclaimers",
+                "Use evidence-based medical information",
+                "Avoid definitive medical claims without proper qualification"
+            ])
+        
+        return RuleExplanation(
+            rule_type=self.rule_type,
+            score=score,
+            reasoning=reasoning,
+            evidence=evidence,
+            confidence=0.9,
+            suggestions=suggestions
+        )
+
+
+class FinancialComplianceRule(AdvancedRule):
+    """Evaluates financial advice compliance and risk disclosures."""
+    
+    def evaluate_with_explanation(self, text: str) -> RuleExplanation:
+        financial_terms = [
+            'investment', 'portfolio', 'risk', 'return', 'diversification', 'asset allocation',
+            'market volatility', 'financial advisor', 'securities', 'bonds', 'stocks', 'mutual funds'
+        ]
+        
+        compliance_indicators = {
+            'disclaimers': ['not financial advice', 'consult advisor', 'past performance', 'no guarantee'],
+            'risk_disclosure': ['risk', 'loss', 'volatility', 'market risk', 'investment risk'],
+            'qualifications': ['may', 'might', 'could', 'potential', 'consider', 'evaluate'],
+            'professional_reference': ['financial advisor', 'certified', 'licensed', 'qualified professional']
+        }
+        
+        text_lower = text.lower()
+        financial_term_count = sum(1 for term in financial_terms if term.lower() in text_lower)
+        
+        found_indicators = {}
+        for category, terms in compliance_indicators.items():
+            found_terms = [term for term in terms if term in text_lower]
+            found_indicators[category] = found_terms
+        
+        # Higher compliance requirements for financial content
+        terminology_score = min(1.0, financial_term_count / max(1, len(financial_terms) * 0.2))
+        compliance_score = len([cat for cat, terms in found_indicators.items() if terms]) / len(compliance_indicators)
+        
+        # Financial content requires strong compliance
+        score = min(1.0, (terminology_score * 0.3 + compliance_score * 0.7))
+        
+        evidence = [
+            f"Financial terms used: {financial_term_count}/{len(financial_terms)}",
+            f"Compliance indicators: {len([cat for cat, terms in found_indicators.items() if terms])}/{len(compliance_indicators)}"
+        ]
+        
+        if score >= 0.8:
+            reasoning = "Text demonstrates strong financial compliance and appropriate risk disclosures"
+            suggestions = []
+        elif score >= 0.5:
+            reasoning = "Text shows moderate financial compliance with missing risk disclosures"
+            suggestions = [
+                "Add required financial disclaimers",
+                "Include appropriate risk disclosures",
+                "Reference qualified financial professionals",
+                "Use more cautious language for financial recommendations"
+            ]
+        else:
+            reasoning = "Text lacks adequate financial compliance and risk disclosures"
+            suggestions = [
+                "Add 'not financial advice' disclaimer",
+                "Include comprehensive risk warnings",
+                "Reference past performance disclaimers",
+                "Recommend consultation with qualified financial advisors",
+                "Avoid definitive financial predictions"
+            ]
+        
+        return RuleExplanation(
+            rule_type=self.rule_type,
+            score=score,
+            reasoning=reasoning,
+            evidence=evidence,
+            confidence=0.95,
+            suggestions=suggestions
+        )
+
+
+class AccessibilityRule(AdvancedRule):
+    """Evaluates content accessibility and inclusive language."""
+    
+    def evaluate_with_explanation(self, text: str) -> RuleExplanation:
+        accessibility_indicators = {
+            'inclusive_language': ['accessible', 'inclusive', 'diverse', 'everyone', 'all users'],
+            'clear_structure': ['heading', 'section', 'list', 'step', 'first', 'next', 'finally'],
+            'descriptive': ['describe', 'explain', 'detail', 'specific', 'clear', 'example'],
+            'alternative_formats': ['alt text', 'caption', 'transcript', 'audio', 'visual', 'screen reader']
+        }
+        
+        problematic_language = [
+            'click here', 'see below', 'look at', 'as you can see', 'obviously', 'simply', 'just', 'easy'
+        ]
+        
+        text_lower = text.lower()
+        
+        found_indicators = {}
+        for category, terms in accessibility_indicators.items():
+            found_terms = [term for term in terms if term in text_lower]
+            found_indicators[category] = found_terms
+        
+        problematic_count = sum(1 for phrase in problematic_language if phrase in text_lower)
+        
+        # Score based on accessibility indicators and absence of problematic language
+        positive_score = len([cat for cat, terms in found_indicators.items() if terms]) / len(accessibility_indicators)
+        penalty = min(0.5, problematic_count * 0.1)  # Penalty for problematic language
+        
+        score = max(0.0, positive_score - penalty)
+        
+        evidence = [
+            f"Accessibility indicators: {len([cat for cat, terms in found_indicators.items() if terms])}/{len(accessibility_indicators)}",
+            f"Problematic phrases found: {problematic_count}"
+        ]
+        
+        if score >= 0.8:
+            reasoning = "Text demonstrates strong accessibility awareness and inclusive design"
+            suggestions = []
+        elif score >= 0.5:
+            reasoning = "Text shows moderate accessibility awareness with room for improvement"
+            suggestions = [
+                "Use more descriptive link text instead of 'click here'",
+                "Add clear headings and structure",
+                "Include alternative format considerations",
+                "Use more inclusive language"
+            ]
+        else:
+            reasoning = "Text lacks accessibility awareness and inclusive design principles"
+            suggestions = [
+                "Replace vague references with specific descriptions",
+                "Add clear structural elements (headings, lists)",
+                "Consider users with different abilities",
+                "Provide alternative format information",
+                "Use inclusive and accessible language patterns"
+            ]
+        
+        return RuleExplanation(
+            rule_type=self.rule_type,
+            score=score,
+            reasoning=reasoning,
+            evidence=evidence,
+            confidence=0.85,
+            suggestions=suggestions
+        )
+
+
 # Registry of advanced rule types
 ADVANCED_RULE_TYPES = {
     'readability': ReadabilityRule,
@@ -451,6 +912,11 @@ ADVANCED_RULE_TYPES = {
     'argument_structure': ArgumentStructureRule,
     'domain_expertise': DomainExpertiseRule,
     'citation_quality': CitationQualityRule,
+    'security_assessment': SecurityAssessmentRule,
+    'legal_compliance': LegalComplianceRule,
+    'medical_accuracy': MedicalAccuracyRule,
+    'financial_compliance': FinancialComplianceRule,
+    'accessibility': AccessibilityRule,
 }
 
 
