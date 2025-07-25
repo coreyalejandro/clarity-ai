@@ -1,0 +1,20 @@
+{
+  "enabled": true,
+  "name": "Code Quality Analyzer",
+  "description": "Analyzes modified source code files and suggests improvements for code quality, including identifying code smells, suggesting design patterns, and recommending best practices.",
+  "version": "1",
+  "when": {
+    "type": "fileEdited",
+    "patterns": [
+      "*.py",
+      "*.js",
+      "*.ts",
+      "*.html",
+      "*.css"
+    ]
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "You are a code quality expert. Analyze the following code changes and provide specific, actionable suggestions to improve:\n\n1. Code smells that should be addressed\n2. Design pattern implementations that could be beneficial\n3. Best practices that should be followed\n4. Readability improvements\n5. Maintainability enhancements\n6. Performance optimizations\n\nFor each suggestion:\n- Explain the issue clearly\n- Provide a code example showing the improvement\n- Explain why this change improves the code\n\nFocus on practical improvements while maintaining the existing functionality. Be specific and concise in your recommendations."
+  }
+}

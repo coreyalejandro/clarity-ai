@@ -1,0 +1,21 @@
+{
+  "name": "Update Documentation",
+  "description": "Automatically updates documentation when source code changes",
+  "triggers": [
+    {
+      "type": "fileChange",
+      "patterns": ["**/*.py", "setup.py", "pytest.ini", "mypy.ini", ".flake8", "templates/**/*.yaml"],
+      "excludePatterns": ["**/__pycache__/**", "**/*.pyc", "**/clarity_ai.egg-info/**", "**/.pytest_cache/**"]
+    }
+  ],
+  "action": {
+    "type": "agent",
+    "prompt": "I noticed changes in the source code. Please review the changes and update the documentation accordingly. Focus on these tasks:\n1. Update README.md with any new functionality, API changes, or usage examples\n2. If there are changes to test files, update tests/README.md and tests/SUMMARY.md\n3. Ensure documentation accurately reflects the current state of the code\n4. Add examples for any new features or modified APIs\n\nMake your documentation updates clear, concise, and developer-friendly.",
+    "contextFiles": ["${changedFiles}", "README.md", "tests/README.md", "tests/SUMMARY.md"]
+  },
+  "options": {
+    "debounceMs": 10000,
+    "requireManualApproval": true,
+    "maxFilesToInclude": 5
+  }
+}

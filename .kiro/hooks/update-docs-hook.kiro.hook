@@ -1,0 +1,18 @@
+{
+  "enabled": true,
+  "name": "Update Documentation on Code Changes",
+  "description": "Monitors Python source files and suggests documentation updates in README.md or docs folder when code changes are detected",
+  "version": "1",
+  "when": {
+    "type": "fileEdited",
+    "patterns": [
+      "*.py",
+      "clarity/*.py",
+      "setup.py"
+    ]
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "I noticed changes to Python source files in the project. Please review these changes and suggest appropriate updates to the documentation in README.md to keep it in sync with the current functionality. Consider:\n\n1. Are there new features that should be documented?\n2. Have existing features changed in a way that makes the documentation outdated?\n3. Are there changes to APIs, configuration options, or usage patterns?\n4. Should any examples in the documentation be updated?\n\nPlease provide specific suggestions for documentation updates based on the code changes."
+  }
+}
