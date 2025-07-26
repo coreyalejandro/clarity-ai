@@ -24,121 +24,326 @@ from clarity.trainer import (
     load_training_ledger
 )
 
+# Test constants
+DEFAULT_LEARNING_RATE = 1e-5
+DEFAULT_BATCH_SIZE = 4
+MIN_WORD_COUNT = 5
+MAX_WORD_COUNT = 50
+TRAINING_STEPS_SMALL = 3
+TRAINING_STEPS_MEDIUM = 5
+CONCURRENT_THREADS = 5
+MOCK_TOKEN_IDS = [1, 2, 3, 4, 5, 6]
+
+
+@pytest.fixture
+def basic_template():
+    """Create a basic template for testing."""
+    template = Template("test_template")
+    template.description = "Basic template for integration tests"
+    template.add_rule("contains_phrase", 2.0, phrase="excellent")
+    template.add_rule("word_count", 1.0, min_words=MIN_WORD_COUNT, max_words=MAX_WORD_COUNT)
+    template.add_rule("sentiment_positive", 1.5)
+    return template
+
+
+@pytest.fixture
+def complex_template():
+    """Create a complex template with multiple rule types."""
+    template = Template("complex_test")
+    template.description = "Complex template with multiple rule types"
+    template.add_rule("contains_phrase", 2.0, phrase="innovation")
+    template.add_rule("word_count", 1.0, min_words=20, max_words=200)
+    template.add_rule("sentiment_positive", 1.5)
+    template.add_rule("regex_match", 1.0, pattern=r"\b\w+ing\b")
+    return template
+
+
+@pytest.fixture
+def sample_texts():
+    """Provide sample texts for testing."""
+    return {
+        "positive": "This is an excellent example of high-quality content that demonstrates positive sentiment and meets the word count requirements.",
+        "negative": "Bad.",
+        "complex": """
+        Innovation is driving technological advancement in amazing ways. 
+        Companies are developing cutting-edge solutions that are transforming 
+        industries and creating exciting opportunities for growth and collaboration.
+        This positive trend is continuing to accelerate across multiple sectors.
+        """.strip(),
+        "medium": "This helpful tutorial provides clear instructions for beginners with good examples."
+    }
+
+
+@pytest.fixture
+def mock_model_components():
+    """Provide mocked model components for training tests."""
+    mock_tokenizer = Mock()
+    mock_tokenizer.pad_token = None
+    mock_tokenizer.eos_token = "<eos>"
+    mock_tokenizer.pad_token_id = 0
+    mock_tokenizer.eos_token_id = 1
+    mock_tokenizer.encode.return_value = [MOCK_TOKEN_IDS[:3]]
+    mock_tokenizer.decode.return_value = "helpful response with good content"
+    
+    mock_model = Mock()
+    mock_model.parameters.return_value = [Mock()]
+    mock_model.generate.return_value = [MOCK_TOKEN_IDS]
+    mock_model.to.return_value = mock_model
+    
+    return mock_tokenizer, mock_model
+
+
+class TrainingConfigBuilder:
+    """Builder pattern for creating test training configurations."""
+    
+    def __init__(self):
+        self.reset()
+    
+    def reset(self):
+        """Reset to default configuration."""
+        self._config = {
+            'model_name': "microsoft/DialoGPT-small",
+            'template_path': "test_template.yaml",
+            'max_steps': TRAINING_STEPS_SMALL,
+            'learning_rate': DEFAULT_LEARNING_RATE,
+            'batch_size': DEFAULT_BATCH_SIZE
+        }
+        return self
+    
+    def with_model(self, model_name: str):
+        """Set model name."""
+        self._config['model_name'] = model_name
+        return self
+    
+    def with_template(self, template_path: str):
+        """Set template path."""
+        self._config['template_path'] = template_path
+        return self
+    
+    def with_steps(self, steps: int):
+        """Set training steps."""
+        self._config['max_steps'] = steps
+        return self
+    
+    def with_output_dir(self, output_dir: str):
+        """Set output directory."""
+        self._config['output_dir'] = output_dir
+        return self
+    
+    def build(self) -> TrainingConfig:
+        """Build the training configuration."""
+        return TrainingConfig(**self._config)
+
+
+class TestFileManager:
+    """Context manager for test file operations."""
+    
+    def __init__(self, temp_dir: str):
+        self.temp_dir = temp_dir
+        self.created_files = []
+    
+    def create_template_file(self, template: Template, filename: str = "test_template.yaml") -> str:
+        """Create a template file and track it for cleanup."""
+        file_path = os.path.join(self.temp_dir, filename)
+        template.to_yaml(file_path)
+        self.created_files.append(file_path)
+        return file_path
+    
+    def create_text_file(self, content: str, filename: str = "test_text.txt") -> str:
+        """Create a text file and track it for cleanup."""
+        file_path = os.path.join(self.temp_dir, filename)
+        with open(file_path, 'w') as f:
+            f.write(content)
+        self.created_files.append(file_path)
+        return file_path
+    
+    def create_yaml_file(self, data: dict, filename: str) -> str:
+        """Create a YAML file and track it for cleanup."""
+        file_path = os.path.join(self.temp_dir, filename)
+        with open(file_path, 'w') as f:
+            yaml.dump(data, f)
+        self.created_files.append(file_path)
+        return file_path
+    
+    def verify_file_exists(self, filename: str) -> bool:
+        """Verify a file exists in the temp directory."""
+        return os.path.exists(os.path.join(self.temp_dir, filename))
+    
+    def __enter__(self):
+        return self
+    
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        # Files are automatically cleaned up by tempfile.TemporaryDirectory
+        pass
+
+
+class TestAssertions:
+    """Helper methods for common test assertions."""
+    
+    @staticmethod
+    def assert_valid_score_result(result: dict, expected_rules: int = None):
+        """Assert that a detailed score result has the expected structure."""
+        assert isinstance(result, dict), "Score result should be a dictionary"
+        assert 'total_score' in result, "Result should contain total_score"
+        assert 'total_weight' in result, "Result should contain total_weight"
+        assert 'rule_scores' in result, "Result should contain rule_scores"
+        
+        assert isinstance(result['total_score'], float), "Total score should be float"
+        assert 0.0 <= result['total_score'] <= 1.0, f"Score {result['total_score']} should be between 0.0 and 1.0"
+        
+        if expected_rules:
+            assert len(result['rule_scores']) == expected_rules, f"Expected {expected_rules} rules, got {len(result['rule_scores'])}"
+    
+    @staticmethod
+    def assert_training_result_valid(result: dict):
+        """Assert that a training result has the expected structure."""
+        required_keys = ['status', 'run_id', 'total_steps', 'average_reward', 'final_reward']
+        for key in required_keys:
+            assert key in result, f"Training result should contain {key}"
+        
+        assert result['status'] in ['success', 'error'], f"Invalid status: {result['status']}"
+        assert isinstance(result['total_steps'], int), "Total steps should be integer"
+        assert result['total_steps'] > 0, "Total steps should be positive"
+    
+    @staticmethod
+    def assert_cli_success(result: subprocess.CompletedProcess, expected_output: str = None):
+        """Assert that a CLI command executed successfully."""
+        assert result.returncode == 0, f"CLI command failed with code {result.returncode}: {result.stderr}"
+        
+        if expected_output:
+            assert expected_output in result.stdout, f"Expected '{expected_output}' in output: {result.stdout}"
+    
+    @staticmethod
+    def assert_template_structure(template_data: dict, expected_name: str = None):
+        """Assert that template data has the expected structure."""
+        required_keys = ['name', 'description', 'rules']
+        for key in required_keys:
+            assert key in template_data, f"Template should contain {key}"
+        
+        if expected_name:
+            assert template_data['name'] == expected_name, f"Expected name '{expected_name}', got '{template_data['name']}'"
+        
+        assert isinstance(template_data['rules'], list), "Rules should be a list"
+        assert len(template_data['rules']) > 0, "Template should have at least one rule"
+
+
+class CLITestHelper:
+    """Helper for CLI testing with better performance and error handling."""
+    
+    @staticmethod
+    def run_clarity_command(args: list, cwd: str = None, timeout: int = 30) -> subprocess.CompletedProcess:
+        """Run a clarity CLI command with proper error handling."""
+        full_args = ['python', '-m', 'clarity.cli'] + args
+        
+        try:
+            result = subprocess.run(
+                full_args,
+                capture_output=True,
+                text=True,
+                cwd=cwd or os.getcwd(),
+                timeout=timeout
+            )
+            return result
+        except subprocess.TimeoutExpired:
+            pytest.fail(f"CLI command timed out after {timeout}s: {' '.join(full_args)}")
+        except Exception as e:
+            pytest.fail(f"CLI command failed with exception: {e}")
+    
+    @staticmethod
+    def assert_score_command_success(result: subprocess.CompletedProcess, expected_score_range: tuple = None):
+        """Assert that a score command succeeded and optionally check score range."""
+        TestAssertions.assert_cli_success(result, "Score:")
+        
+        if expected_score_range:
+            # Extract score from output (assuming format "Score: X.XXX")
+            import re
+            score_match = re.search(r'Score:\s*([\d.]+)', result.stdout)
+            if score_match:
+                score = float(score_match.group(1))
+                min_score, max_score = expected_score_range
+                assert min_score <= score <= max_score, f"Score {score} not in range [{min_score}, {max_score}]"
+
 
 class TestScoringWorkflow:
     """Test complete scoring workflow from template creation to result validation."""
     
-    def test_template_creation_and_scoring_workflow(self):
+    def test_template_creation_and_scoring_workflow(self, basic_template, sample_texts):
         """Test complete workflow: create template, save to file, load and score text."""
         with tempfile.TemporaryDirectory() as temp_dir:
-            # Step 1: Create a template programmatically
-            template = Template("integration_test")
-            template.description = "Integration test template for scoring workflow"
-            template.add_rule("contains_phrase", 2.0, phrase="excellent")
-            template.add_rule("word_count", 1.0, min_words=10, max_words=100)
-            template.add_rule("sentiment_positive", 1.5)
-            
-            # Step 2: Save template to file
-            template_path = os.path.join(temp_dir, "test_template.yaml")
-            template.to_yaml(template_path)
-            
-            # Verify template file was created and has correct content
-            assert os.path.exists(template_path)
-            with open(template_path, 'r') as f:
-                template_data = yaml.safe_load(f)
-            
-            assert template_data['name'] == "integration_test"
-            assert template_data['description'] == "Integration test template for scoring workflow"
-            assert len(template_data['rules']) == 3
-            
-            # Step 3: Create test text file
-            text_content = "This is an excellent example of high-quality content that demonstrates positive sentiment and meets the word count requirements."
-            text_path = os.path.join(temp_dir, "test_text.txt")
-            with open(text_path, 'w') as f:
-                f.write(text_content)
-            
-            # Step 4: Score text using the scorer module directly
-            score_result = score(text_content, template_path)
-            assert isinstance(score_result, float)
-            assert score_result > 0  # Should have positive score due to "excellent" and positive sentiment
-            
-            # Step 5: Get detailed scoring results
-            detailed_result = score_detailed(text_content, template_path)
-            assert isinstance(detailed_result, dict)
-            assert 'total_score' in detailed_result
-            assert 'total_weight' in detailed_result
-            assert 'rule_scores' in detailed_result
-            assert len(detailed_result['rule_scores']) == 3
-            
-            # Verify rule scores
-            rule_types = [rule['rule_type'] for rule in detailed_result['rule_scores']]
-            assert 'contains_phrase' in rule_types
-            assert 'word_count' in rule_types
-            assert 'sentiment_positive' in rule_types
+            with TestFileManager(temp_dir) as file_manager:
+                # Step 1: Save template to file
+                template_path = file_manager.create_template_file(basic_template)
+                
+                # Step 2: Verify template file structure
+                with open(template_path, 'r') as f:
+                    template_data = yaml.safe_load(f)
+                TestAssertions.assert_template_structure(template_data, "test_template")
+                
+                # Step 3: Create test text file
+                text_path = file_manager.create_text_file(sample_texts["positive"])
+                
+                # Step 4: Score text using the scorer module directly
+                score_result = score(sample_texts["positive"], template_path)
+                assert isinstance(score_result, float)
+                assert score_result > 0, "Should have positive score due to 'excellent' and positive sentiment"
+                
+                # Step 5: Get detailed scoring results
+                detailed_result = score_detailed(sample_texts["positive"], template_path)
+                TestAssertions.assert_valid_score_result(detailed_result, expected_rules=3)
+                
+                # Verify rule types are present
+                rule_types = {rule['rule_type'] for rule in detailed_result['rule_scores']}
+                expected_types = {'contains_phrase', 'word_count', 'sentiment_positive'}
+                assert expected_types.issubset(rule_types), f"Missing rule types: {expected_types - rule_types}"
     
-    def test_cli_scoring_integration(self):
+    def test_cli_scoring_integration(self, sample_texts):
         """Test CLI scoring commands with real file operations."""
         with tempfile.TemporaryDirectory() as temp_dir:
-            # Create template file
-            template_data = {
-                'name': 'cli_test',
-                'description': 'CLI integration test template',
-                'rules': [
-                    {
-                        'type': 'contains_phrase',
-                        'weight': 1.0,
-                        'params': {'phrase': 'testing'}
-                    },
-                    {
-                        'type': 'word_count',
-                        'weight': 1.0,
-                        'params': {'min_words': 5, 'max_words': 50}
-                    }
-                ]
-            }
-            
-            template_path = os.path.join(temp_dir, "cli_template.yaml")
-            with open(template_path, 'w') as f:
-                yaml.dump(template_data, f)
-            
-            # Create text file
-            text_content = "This is a testing example with sufficient words for validation."
-            text_path = os.path.join(temp_dir, "cli_text.txt")
-            with open(text_path, 'w') as f:
-                f.write(text_content)
-            
-            # Test CLI scoring with text file
-            result = subprocess.run([
-                'python', '-m', 'clarity.cli', 'score', text_path,
-                '--template', template_path
-            ], capture_output=True, text=True, cwd=os.getcwd())
-            
-            assert result.returncode == 0
-            assert "Score:" in result.stdout
-            
-            # Test CLI scoring with direct text input
-            result = subprocess.run([
-                'python', '-m', 'clarity.cli', 'score',
-                '--text', text_content,
-                '--template', template_path
-            ], capture_output=True, text=True, cwd=os.getcwd())
-            
-            assert result.returncode == 0
-            assert "Score:" in result.stdout
-            
-            # Test CLI scoring with detailed output
-            result = subprocess.run([
-                'python', '-m', 'clarity.cli', 'score',
-                '--text', text_content,
-                '--template', template_path,
-                '--detailed'
-            ], capture_output=True, text=True, cwd=os.getcwd())
-            
-            assert result.returncode == 0
-            assert "Overall Score:" in result.stdout
-            assert "Rule Breakdown:" in result.stdout
-            assert "contains_phrase" in result.stdout
-            assert "word_count" in result.stdout
+            with TestFileManager(temp_dir) as file_manager:
+                # Create template using helper
+                template_data = {
+                    'name': 'cli_test',
+                    'description': 'CLI integration test template',
+                    'rules': [
+                        {
+                            'type': 'contains_phrase',
+                            'weight': 1.0,
+                            'params': {'phrase': 'testing'}
+                        },
+                        {
+                            'type': 'word_count',
+                            'weight': 1.0,
+                            'params': {'min_words': MIN_WORD_COUNT, 'max_words': MAX_WORD_COUNT}
+                        }
+                    ]
+                }
+                
+                template_path = file_manager.create_yaml_file(template_data, "cli_template.yaml")
+                text_content = "This is a testing example with sufficient words for validation."
+                text_path = file_manager.create_text_file(text_content)
+                
+                # Test CLI scoring with text file
+                result = CLITestHelper.run_clarity_command([
+                    'score', text_path, '--template', template_path
+                ])
+                CLITestHelper.assert_score_command_success(result, (0.0, 1.0))
+                
+                # Test CLI scoring with direct text input
+                result = CLITestHelper.run_clarity_command([
+                    'score', '--text', text_content, '--template', template_path
+                ])
+                CLITestHelper.assert_score_command_success(result, (0.0, 1.0))
+                
+                # Test CLI scoring with detailed output
+                result = CLITestHelper.run_clarity_command([
+                    'score', '--text', text_content, '--template', template_path, '--detailed'
+                ])
+                TestAssertions.assert_cli_success(result, "Overall Score:")
+                
+                # Verify detailed output contains expected elements
+                expected_elements = ["Rule Breakdown:", "contains_phrase", "word_count"]
+                for element in expected_elements:
+                    assert element in result.stdout, f"Missing '{element}' in detailed output"
     
     def test_template_creation_cli_integration(self):
         """Test CLI template creation and subsequent usage."""
@@ -674,12 +879,13 @@ class TestTrainingWorkflow:
                 assert rewards[1] > rewards[0]  # "good response" > "bad response"
                 assert rewards[3] > rewards[0]  # "excellent good response" > "bad response"
 
-cl
-ass TestTrainingWorkflow:
-    """Test complete training workflow from template loading to model saving."""
+
+class TestTrainingWorkflowAdvanced:
+    """Test advanced training workflow scenarios and edge cases."""
     
-    def test_training_config_creation_and_serialization(self):
-        """Test TrainingConfig creation, serialization, and deserialization."""
+    def test_training_config_validation_and_edge_cases(self):
+        """Test TrainingConfig validation, edge cases, and error handling."""
+        # Test valid configuration
         config = TrainingConfig(
             model_name="microsoft/DialoGPT-small",
             template_path="test_template.yaml",
