@@ -1,0 +1,735 @@
+{
+  "test_results": [
+    {
+      "query": "sustainable fashion",
+      "filter_type": "brand",
+      "status_code": 400,
+      "response_time": 0.216225,
+      "success": false,
+      "error": "{\"errors\":[{\"message\":\"Recommendation insights requires signal.interests.entities\"}]}"
+    },
+    {
+      "query": "sustainable fashion",
+      "filter_type": "product",
+      "status_code": 400,
+      "response_time": 0.227671,
+      "success": false,
+      "error": "{\"errors\":[{\"message\":\"Recommendation insights requires signal.interests.entities\"}]}"
+    },
+    {
+      "query": "sustainable fashion",
+      "filter_type": "person",
+      "status_code": 400,
+      "response_time": 0.214393,
+      "success": false,
+      "error": "{\"errors\":[{\"message\":\"Recommendation insights requires signal.interests.entities\"}]}"
+    },
+    {
+      "query": "sustainable fashion",
+      "filter_type": "location",
+      "status_code": 400,
+      "response_time": 0.212896,
+      "success": false,
+      "error": "{\"errors\":[{\"message\":\"Recommendation insights requires signal.interests.entities\"}]}"
+    },
+    {
+      "query": "sustainable fashion",
+      "filter_type": "music",
+      "status_code": 400,
+      "response_time": 0.186175,
+      "success": false,
+      "error": "{\"errors\":[{\"message\":\"Recommendation insights requires signal.interests.entities\"}]}"
+    },
+    {
+      "query": "sustainable fashion",
+      "filter_type": "film",
+      "status_code": 400,
+      "response_time": 0.198937,
+      "success": false,
+      "error": "{\"errors\":[{\"message\":\"Recommendation insights requires signal.interests.entities\"}]}"
+    },
+    {
+      "query": "sustainable fashion",
+      "filter_type": "tv",
+      "status_code": 400,
+      "response_time": 0.191829,
+      "success": false,
+      "error": "{\"errors\":[{\"message\":\"Recommendation insights requires signal.interests.entities\"}]}"
+    },
+    {
+      "query": "sustainable fashion",
+      "filter_type": "book",
+      "status_code": 400,
+      "response_time": 0.209441,
+      "success": false,
+      "error": "{\"errors\":[{\"message\":\"Recommendation insights requires signal.interests.entities\"}]}"
+    },
+    {
+      "query": "sustainable fashion",
+      "filter_type": "restaurant",
+      "status_code": 400,
+      "response_time": 0.211422,
+      "success": false,
+      "error": "{\"errors\":[{\"message\":\"Recommendation insights requires signal.interests.entities\"}]}"
+    },
+    {
+      "query": "minimalist clothing",
+      "filter_type": "brand",
+      "status_code": 400,
+      "response_time": 0.221741,
+      "success": false,
+      "error": "{\"errors\":[{\"message\":\"Recommendation insights requires signal.interests.entities\"}]}"
+    },
+    {
+      "query": "minimalist clothing",
+      "filter_type": "product",
+      "status_code": 400,
+      "response_time": 0.203669,
+      "success": false,
+      "error": "{\"errors\":[{\"message\":\"Recommendation insights requires signal.interests.entities\"}]}"
+    },
+    {
+      "query": "minimalist clothing",
+      "filter_type": "person",
+      "status_code": 400,
+      "response_time": 0.205931,
+      "success": false,
+      "error": "{\"errors\":[{\"message\":\"Recommendation insights requires signal.interests.entities\"}]}"
+    },
+    {
+      "query": "minimalist clothing",
+      "filter_type": "location",
+      "status_code": 400,
+      "response_time": 0.225458,
+      "success": false,
+      "error": "{\"errors\":[{\"message\":\"Recommendation insights requires signal.interests.entities\"}]}"
+    },
+    {
+      "query": "minimalist clothing",
+      "filter_type": "music",
+      "status_code": 400,
+      "response_time": 0.278732,
+      "success": false,
+      "error": "{\"errors\":[{\"message\":\"Recommendation insights requires signal.interests.entities\"}]}"
+    },
+    {
+      "query": "minimalist clothing",
+      "filter_type": "film",
+      "status_code": 400,
+      "response_time": 0.204762,
+      "success": false,
+      "error": "{\"errors\":[{\"message\":\"Recommendation insights requires signal.interests.entities\"}]}"
+    },
+    {
+      "query": "minimalist clothing",
+      "filter_type": "tv",
+      "status_code": 400,
+      "response_time": 0.210415,
+      "success": false,
+      "error": "{\"errors\":[{\"message\":\"Recommendation insights requires signal.interests.entities\"}]}"
+    },
+    {
+      "query": "minimalist clothing",
+      "filter_type": "book",
+      "status_code": 400,
+      "response_time": 0.223009,
+      "success": false,
+      "error": "{\"errors\":[{\"message\":\"Recommendation insights requires signal.interests.entities\"}]}"
+    },
+    {
+      "query": "minimalist clothing",
+      "filter_type": "restaurant",
+      "status_code": 400,
+      "response_time": 0.284349,
+      "success": false,
+      "error": "{\"errors\":[{\"message\":\"Recommendation insights requires signal.interests.entities\"}]}"
+    },
+    {
+      "query": "adaptive clothing",
+      "filter_type": "brand",
+      "status_code": 400,
+      "response_time": 0.197817,
+      "success": false,
+      "error": "{\"errors\":[{\"message\":\"Recommendation insights requires signal.interests.entities\"}]}"
+    },
+    {
+      "query": "adaptive clothing",
+      "filter_type": "product",
+      "status_code": 400,
+      "response_time": 0.228267,
+      "success": false,
+      "error": "{\"errors\":[{\"message\":\"Recommendation insights requires signal.interests.entities\"}]}"
+    },
+    {
+      "query": "adaptive clothing",
+      "filter_type": "person",
+      "status_code": 400,
+      "response_time": 0.212923,
+      "success": false,
+      "error": "{\"errors\":[{\"message\":\"Recommendation insights requires signal.interests.entities\"}]}"
+    },
+    {
+      "query": "adaptive clothing",
+      "filter_type": "location",
+      "status_code": 400,
+      "response_time": 0.212016,
+      "success": false,
+      "error": "{\"errors\":[{\"message\":\"Recommendation insights requires signal.interests.entities\"}]}"
+    },
+    {
+      "query": "adaptive clothing",
+      "filter_type": "music",
+      "status_code": 400,
+      "response_time": 0.206328,
+      "success": false,
+      "error": "{\"errors\":[{\"message\":\"Recommendation insights requires signal.interests.entities\"}]}"
+    },
+    {
+      "query": "adaptive clothing",
+      "filter_type": "film",
+      "status_code": 400,
+      "response_time": 0.222171,
+      "success": false,
+      "error": "{\"errors\":[{\"message\":\"Recommendation insights requires signal.interests.entities\"}]}"
+    },
+    {
+      "query": "adaptive clothing",
+      "filter_type": "tv",
+      "status_code": 400,
+      "response_time": 0.225434,
+      "success": false,
+      "error": "{\"errors\":[{\"message\":\"Recommendation insights requires signal.interests.entities\"}]}"
+    },
+    {
+      "query": "adaptive clothing",
+      "filter_type": "book",
+      "status_code": 400,
+      "response_time": 0.205182,
+      "success": false,
+      "error": "{\"errors\":[{\"message\":\"Recommendation insights requires signal.interests.entities\"}]}"
+    },
+    {
+      "query": "adaptive clothing",
+      "filter_type": "restaurant",
+      "status_code": 400,
+      "response_time": 0.234317,
+      "success": false,
+      "error": "{\"errors\":[{\"message\":\"Recommendation insights requires signal.interests.entities\"}]}"
+    },
+    {
+      "query": "accessible fashion",
+      "filter_type": "brand",
+      "status_code": 400,
+      "response_time": 0.229801,
+      "success": false,
+      "error": "{\"errors\":[{\"message\":\"Recommendation insights requires signal.interests.entities\"}]}"
+    },
+    {
+      "query": "accessible fashion",
+      "filter_type": "product",
+      "status_code": 400,
+      "response_time": 0.223003,
+      "success": false,
+      "error": "{\"errors\":[{\"message\":\"Recommendation insights requires signal.interests.entities\"}]}"
+    },
+    {
+      "query": "accessible fashion",
+      "filter_type": "person",
+      "status_code": 400,
+      "response_time": 0.210556,
+      "success": false,
+      "error": "{\"errors\":[{\"message\":\"Recommendation insights requires signal.interests.entities\"}]}"
+    },
+    {
+      "query": "accessible fashion",
+      "filter_type": "location",
+      "status_code": 400,
+      "response_time": 0.205652,
+      "success": false,
+      "error": "{\"errors\":[{\"message\":\"Recommendation insights requires signal.interests.entities\"}]}"
+    },
+    {
+      "query": "accessible fashion",
+      "filter_type": "music",
+      "status_code": 400,
+      "response_time": 0.207148,
+      "success": false,
+      "error": "{\"errors\":[{\"message\":\"Recommendation insights requires signal.interests.entities\"}]}"
+    },
+    {
+      "query": "accessible fashion",
+      "filter_type": "film",
+      "status_code": 400,
+      "response_time": 0.203071,
+      "success": false,
+      "error": "{\"errors\":[{\"message\":\"Recommendation insights requires signal.interests.entities\"}]}"
+    },
+    {
+      "query": "accessible fashion",
+      "filter_type": "tv",
+      "status_code": 400,
+      "response_time": 0.206154,
+      "success": false,
+      "error": "{\"errors\":[{\"message\":\"Recommendation insights requires signal.interests.entities\"}]}"
+    },
+    {
+      "query": "accessible fashion",
+      "filter_type": "book",
+      "status_code": 400,
+      "response_time": 0.207415,
+      "success": false,
+      "error": "{\"errors\":[{\"message\":\"Recommendation insights requires signal.interests.entities\"}]}"
+    },
+    {
+      "query": "accessible fashion",
+      "filter_type": "restaurant",
+      "status_code": 400,
+      "response_time": 0.220053,
+      "success": false,
+      "error": "{\"errors\":[{\"message\":\"Recommendation insights requires signal.interests.entities\"}]}"
+    },
+    {
+      "query": "sensory friendly clothing",
+      "filter_type": "brand",
+      "status_code": 400,
+      "response_time": 0.200221,
+      "success": false,
+      "error": "{\"errors\":[{\"message\":\"Recommendation insights requires signal.interests.entities\"}]}"
+    },
+    {
+      "query": "sensory friendly clothing",
+      "filter_type": "product",
+      "status_code": 400,
+      "response_time": 0.213155,
+      "success": false,
+      "error": "{\"errors\":[{\"message\":\"Recommendation insights requires signal.interests.entities\"}]}"
+    },
+    {
+      "query": "sensory friendly clothing",
+      "filter_type": "person",
+      "status_code": 400,
+      "response_time": 0.205603,
+      "success": false,
+      "error": "{\"errors\":[{\"message\":\"Recommendation insights requires signal.interests.entities\"}]}"
+    },
+    {
+      "query": "sensory friendly clothing",
+      "filter_type": "location",
+      "status_code": 400,
+      "response_time": 0.211424,
+      "success": false,
+      "error": "{\"errors\":[{\"message\":\"Recommendation insights requires signal.interests.entities\"}]}"
+    },
+    {
+      "query": "sensory friendly clothing",
+      "filter_type": "music",
+      "status_code": 400,
+      "response_time": 0.209373,
+      "success": false,
+      "error": "{\"errors\":[{\"message\":\"Recommendation insights requires signal.interests.entities\"}]}"
+    },
+    {
+      "query": "sensory friendly clothing",
+      "filter_type": "film",
+      "status_code": 400,
+      "response_time": 0.213971,
+      "success": false,
+      "error": "{\"errors\":[{\"message\":\"Recommendation insights requires signal.interests.entities\"}]}"
+    },
+    {
+      "query": "sensory friendly clothing",
+      "filter_type": "tv",
+      "status_code": 400,
+      "response_time": 0.196567,
+      "success": false,
+      "error": "{\"errors\":[{\"message\":\"Recommendation insights requires signal.interests.entities\"}]}"
+    },
+    {
+      "query": "sensory friendly clothing",
+      "filter_type": "book",
+      "status_code": 400,
+      "response_time": 0.233169,
+      "success": false,
+      "error": "{\"errors\":[{\"message\":\"Recommendation insights requires signal.interests.entities\"}]}"
+    },
+    {
+      "query": "sensory friendly clothing",
+      "filter_type": "restaurant",
+      "status_code": 400,
+      "response_time": 0.203071,
+      "success": false,
+      "error": "{\"errors\":[{\"message\":\"Recommendation insights requires signal.interests.entities\"}]}"
+    },
+    {
+      "query": "Japanese minimalist fashion",
+      "filter_type": "brand",
+      "status_code": 400,
+      "response_time": 0.215433,
+      "success": false,
+      "error": "{\"errors\":[{\"message\":\"Recommendation insights requires signal.interests.entities\"}]}"
+    },
+    {
+      "query": "Japanese minimalist fashion",
+      "filter_type": "product",
+      "status_code": 400,
+      "response_time": 0.20286,
+      "success": false,
+      "error": "{\"errors\":[{\"message\":\"Recommendation insights requires signal.interests.entities\"}]}"
+    },
+    {
+      "query": "Japanese minimalist fashion",
+      "filter_type": "person",
+      "status_code": 400,
+      "response_time": 0.214302,
+      "success": false,
+      "error": "{\"errors\":[{\"message\":\"Recommendation insights requires signal.interests.entities\"}]}"
+    },
+    {
+      "query": "Japanese minimalist fashion",
+      "filter_type": "location",
+      "status_code": 400,
+      "response_time": 0.201461,
+      "success": false,
+      "error": "{\"errors\":[{\"message\":\"Recommendation insights requires signal.interests.entities\"}]}"
+    },
+    {
+      "query": "Japanese minimalist fashion",
+      "filter_type": "music",
+      "status_code": 400,
+      "response_time": 0.203983,
+      "success": false,
+      "error": "{\"errors\":[{\"message\":\"Recommendation insights requires signal.interests.entities\"}]}"
+    },
+    {
+      "query": "Japanese minimalist fashion",
+      "filter_type": "film",
+      "status_code": 400,
+      "response_time": 0.210178,
+      "success": false,
+      "error": "{\"errors\":[{\"message\":\"Recommendation insights requires signal.interests.entities\"}]}"
+    },
+    {
+      "query": "Japanese minimalist fashion",
+      "filter_type": "tv",
+      "status_code": 400,
+      "response_time": 0.206675,
+      "success": false,
+      "error": "{\"errors\":[{\"message\":\"Recommendation insights requires signal.interests.entities\"}]}"
+    },
+    {
+      "query": "Japanese minimalist fashion",
+      "filter_type": "book",
+      "status_code": 400,
+      "response_time": 0.211376,
+      "success": false,
+      "error": "{\"errors\":[{\"message\":\"Recommendation insights requires signal.interests.entities\"}]}"
+    },
+    {
+      "query": "Japanese minimalist fashion",
+      "filter_type": "restaurant",
+      "status_code": 400,
+      "response_time": 0.210888,
+      "success": false,
+      "error": "{\"errors\":[{\"message\":\"Recommendation insights requires signal.interests.entities\"}]}"
+    },
+    {
+      "query": "African textile patterns",
+      "filter_type": "brand",
+      "status_code": 400,
+      "response_time": 0.214511,
+      "success": false,
+      "error": "{\"errors\":[{\"message\":\"Recommendation insights requires signal.interests.entities\"}]}"
+    },
+    {
+      "query": "African textile patterns",
+      "filter_type": "product",
+      "status_code": 400,
+      "response_time": 0.225022,
+      "success": false,
+      "error": "{\"errors\":[{\"message\":\"Recommendation insights requires signal.interests.entities\"}]}"
+    },
+    {
+      "query": "African textile patterns",
+      "filter_type": "person",
+      "status_code": 400,
+      "response_time": 0.212762,
+      "success": false,
+      "error": "{\"errors\":[{\"message\":\"Recommendation insights requires signal.interests.entities\"}]}"
+    },
+    {
+      "query": "African textile patterns",
+      "filter_type": "location",
+      "status_code": 400,
+      "response_time": 0.20227,
+      "success": false,
+      "error": "{\"errors\":[{\"message\":\"Recommendation insights requires signal.interests.entities\"}]}"
+    },
+    {
+      "query": "African textile patterns",
+      "filter_type": "music",
+      "status_code": 400,
+      "response_time": 0.195543,
+      "success": false,
+      "error": "{\"errors\":[{\"message\":\"Recommendation insights requires signal.interests.entities\"}]}"
+    },
+    {
+      "query": "African textile patterns",
+      "filter_type": "film",
+      "status_code": 400,
+      "response_time": 0.243151,
+      "success": false,
+      "error": "{\"errors\":[{\"message\":\"Recommendation insights requires signal.interests.entities\"}]}"
+    },
+    {
+      "query": "African textile patterns",
+      "filter_type": "tv",
+      "status_code": 400,
+      "response_time": 0.194914,
+      "success": false,
+      "error": "{\"errors\":[{\"message\":\"Recommendation insights requires signal.interests.entities\"}]}"
+    },
+    {
+      "query": "African textile patterns",
+      "filter_type": "book",
+      "status_code": 400,
+      "response_time": 0.223266,
+      "success": false,
+      "error": "{\"errors\":[{\"message\":\"Recommendation insights requires signal.interests.entities\"}]}"
+    },
+    {
+      "query": "African textile patterns",
+      "filter_type": "restaurant",
+      "status_code": 400,
+      "response_time": 0.209118,
+      "success": false,
+      "error": "{\"errors\":[{\"message\":\"Recommendation insights requires signal.interests.entities\"}]}"
+    },
+    {
+      "query": "soft texture clothing",
+      "filter_type": "brand",
+      "status_code": 400,
+      "response_time": 0.198481,
+      "success": false,
+      "error": "{\"errors\":[{\"message\":\"Recommendation insights requires signal.interests.entities\"}]}"
+    },
+    {
+      "query": "soft texture clothing",
+      "filter_type": "product",
+      "status_code": 400,
+      "response_time": 0.208359,
+      "success": false,
+      "error": "{\"errors\":[{\"message\":\"Recommendation insights requires signal.interests.entities\"}]}"
+    },
+    {
+      "query": "soft texture clothing",
+      "filter_type": "person",
+      "status_code": 400,
+      "response_time": 0.214206,
+      "success": false,
+      "error": "{\"errors\":[{\"message\":\"Recommendation insights requires signal.interests.entities\"}]}"
+    },
+    {
+      "query": "soft texture clothing",
+      "filter_type": "location",
+      "status_code": 400,
+      "response_time": 0.211192,
+      "success": false,
+      "error": "{\"errors\":[{\"message\":\"Recommendation insights requires signal.interests.entities\"}]}"
+    },
+    {
+      "query": "soft texture clothing",
+      "filter_type": "music",
+      "status_code": 400,
+      "response_time": 0.218711,
+      "success": false,
+      "error": "{\"errors\":[{\"message\":\"Recommendation insights requires signal.interests.entities\"}]}"
+    },
+    {
+      "query": "soft texture clothing",
+      "filter_type": "film",
+      "status_code": 400,
+      "response_time": 0.211912,
+      "success": false,
+      "error": "{\"errors\":[{\"message\":\"Recommendation insights requires signal.interests.entities\"}]}"
+    },
+    {
+      "query": "soft texture clothing",
+      "filter_type": "tv",
+      "status_code": 400,
+      "response_time": 0.212479,
+      "success": false,
+      "error": "{\"errors\":[{\"message\":\"Recommendation insights requires signal.interests.entities\"}]}"
+    },
+    {
+      "query": "soft texture clothing",
+      "filter_type": "book",
+      "status_code": 400,
+      "response_time": 0.210489,
+      "success": false,
+      "error": "{\"errors\":[{\"message\":\"Recommendation insights requires signal.interests.entities\"}]}"
+    },
+    {
+      "query": "soft texture clothing",
+      "filter_type": "restaurant",
+      "status_code": 400,
+      "response_time": 0.224675,
+      "success": false,
+      "error": "{\"errors\":[{\"message\":\"Recommendation insights requires signal.interests.entities\"}]}"
+    },
+    {
+      "query": "comfortable weight clothing",
+      "filter_type": "brand",
+      "status_code": 400,
+      "response_time": 0.201919,
+      "success": false,
+      "error": "{\"errors\":[{\"message\":\"Recommendation insights requires signal.interests.entities\"}]}"
+    },
+    {
+      "query": "comfortable weight clothing",
+      "filter_type": "product",
+      "status_code": 400,
+      "response_time": 0.217759,
+      "success": false,
+      "error": "{\"errors\":[{\"message\":\"Recommendation insights requires signal.interests.entities\"}]}"
+    },
+    {
+      "query": "comfortable weight clothing",
+      "filter_type": "person",
+      "status_code": 400,
+      "response_time": 0.199911,
+      "success": false,
+      "error": "{\"errors\":[{\"message\":\"Recommendation insights requires signal.interests.entities\"}]}"
+    },
+    {
+      "query": "comfortable weight clothing",
+      "filter_type": "location",
+      "status_code": 400,
+      "response_time": 0.213261,
+      "success": false,
+      "error": "{\"errors\":[{\"message\":\"Recommendation insights requires signal.interests.entities\"}]}"
+    },
+    {
+      "query": "comfortable weight clothing",
+      "filter_type": "music",
+      "status_code": 400,
+      "response_time": 0.265373,
+      "success": false,
+      "error": "{\"errors\":[{\"message\":\"Recommendation insights requires signal.interests.entities\"}]}"
+    },
+    {
+      "query": "comfortable weight clothing",
+      "filter_type": "film",
+      "status_code": 400,
+      "response_time": 0.197194,
+      "success": false,
+      "error": "{\"errors\":[{\"message\":\"Recommendation insights requires signal.interests.entities\"}]}"
+    },
+    {
+      "query": "comfortable weight clothing",
+      "filter_type": "tv",
+      "status_code": 400,
+      "response_time": 0.212621,
+      "success": false,
+      "error": "{\"errors\":[{\"message\":\"Recommendation insights requires signal.interests.entities\"}]}"
+    },
+    {
+      "query": "comfortable weight clothing",
+      "filter_type": "book",
+      "status_code": 400,
+      "response_time": 0.223497,
+      "success": false,
+      "error": "{\"errors\":[{\"message\":\"Recommendation insights requires signal.interests.entities\"}]}"
+    },
+    {
+      "query": "comfortable weight clothing",
+      "filter_type": "restaurant",
+      "status_code": 400,
+      "response_time": 0.279217,
+      "success": false,
+      "error": "{\"errors\":[{\"message\":\"Recommendation insights requires signal.interests.entities\"}]}"
+    }
+  ],
+  "analysis": {
+    "overall_stats": {
+      "total_tests": 81,
+      "successful_api_calls": 0,
+      "tests_with_results": 0,
+      "api_success_rate": 0.0,
+      "results_success_rate": 0.0
+    },
+    "category_performance": {
+      "accessibility": {
+        "total_tests": 27,
+        "tests_with_results": 0,
+        "success_rate": 0.0
+      },
+      "cultural": {
+        "total_tests": 18,
+        "tests_with_results": 0,
+        "success_rate": 0.0
+      },
+      "multisensory": {
+        "total_tests": 18,
+        "tests_with_results": 0,
+        "success_rate": 0.0
+      },
+      "basic": {
+        "total_tests": 18,
+        "tests_with_results": 0,
+        "success_rate": 0.0
+      }
+    },
+    "blind_spots": [
+      {
+        "category": "accessibility",
+        "severity": "HIGH",
+        "success_rate": 0.0,
+        "description": "Poor performance on accessibility queries",
+        "business_impact": "Missing accessibility market segment"
+      },
+      {
+        "category": "cultural",
+        "severity": "MEDIUM",
+        "success_rate": 0.0,
+        "description": "Poor performance on cultural queries",
+        "business_impact": "Missing cultural market segment"
+      },
+      {
+        "category": "multisensory",
+        "severity": "HIGH",
+        "success_rate": 0.0,
+        "description": "Poor performance on multisensory queries",
+        "business_impact": "Missing multisensory market segment"
+      },
+      {
+        "category": "basic",
+        "severity": "MEDIUM",
+        "success_rate": 0.0,
+        "description": "Poor performance on basic queries",
+        "business_impact": "Missing basic market segment"
+      }
+    ],
+    "working_combinations": []
+  },
+  "strategic_insights": {
+    "qloo_problems": [
+      "API documentation is completely wrong (Bearer vs X-API-Key)",
+      "Required parameters not documented (filter.type)",
+      "Poor accessibility query performance",
+      "Limited multisensory intelligence",
+      "Developer adoption barriers due to broken docs"
+    ],
+    "our_opportunity": [
+      "We solve their biggest blind spot: accessibility market",
+      "Our multisensory approach fills massive gaps",
+      "We can provide the developer experience they're failing at",
+      "We offer the cultural intelligence they're missing"
+    ],
+    "winning_strategy": [
+      "Position as their accessibility market solution",
+      "Demonstrate superior developer experience",
+      "Show the revenue they're losing to poor API usability",
+      "Present as their regulatory compliance insurance"
+    ]
+  }
+}

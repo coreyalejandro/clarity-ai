@@ -1,0 +1,254 @@
+{
+  "auth_test_results": [
+    {
+      "auth_method": "Bearer Token in Authorization Header",
+      "endpoint": "/",
+      "status_code": 401,
+      "response_time": 0.187066,
+      "success": false,
+      "auth_error": "{ \"error\": { \"reason\": \"No API key found in request\", \"message\": \"Unauthorized\", \"code\": 401 } }"
+    },
+    {
+      "auth_method": "Bearer Token in Authorization Header",
+      "endpoint": "/v1/recommendations",
+      "status_code": 401,
+      "response_time": 0.177552,
+      "success": false,
+      "auth_error": "{ \"error\": { \"reason\": \"No API key found in request\", \"message\": \"Unauthorized\", \"code\": 401 } }"
+    },
+    {
+      "auth_method": "Bearer Token in Authorization Header",
+      "endpoint": "/v2/recommendations",
+      "status_code": 401,
+      "response_time": 0.1868,
+      "success": false,
+      "auth_error": "{ \"error\": { \"reason\": \"No API key found in request\", \"message\": \"Unauthorized\", \"code\": 401 } }"
+    },
+    {
+      "auth_method": "Bearer Token in Authorization Header",
+      "endpoint": "/recommendations",
+      "status_code": 401,
+      "response_time": 0.179767,
+      "success": false,
+      "auth_error": "{ \"error\": { \"reason\": \"No API key found in request\", \"message\": \"Unauthorized\", \"code\": 401 } }"
+    },
+    {
+      "auth_method": "Bearer Token in Authorization Header",
+      "endpoint": "/health",
+      "status_code": 401,
+      "response_time": 0.185032,
+      "success": false,
+      "auth_error": "{ \"error\": { \"reason\": \"No API key found in request\", \"message\": \"Unauthorized\", \"code\": 401 } }"
+    },
+    {
+      "auth_method": "Bearer Token in Authorization Header",
+      "endpoint": "/status",
+      "status_code": 401,
+      "response_time": 0.179352,
+      "success": false,
+      "auth_error": "{ \"error\": { \"reason\": \"No API key found in request\", \"message\": \"Unauthorized\", \"code\": 401 } }"
+    },
+    {
+      "auth_method": "API Key in Authorization Header",
+      "endpoint": "/",
+      "status_code": 401,
+      "response_time": 0.160407,
+      "success": false,
+      "auth_error": "{ \"error\": { \"reason\": \"No API key found in request\", \"message\": \"Unauthorized\", \"code\": 401 } }"
+    },
+    {
+      "auth_method": "API Key in Authorization Header",
+      "endpoint": "/v1/recommendations",
+      "status_code": 401,
+      "response_time": 0.163443,
+      "success": false,
+      "auth_error": "{ \"error\": { \"reason\": \"No API key found in request\", \"message\": \"Unauthorized\", \"code\": 401 } }"
+    },
+    {
+      "auth_method": "API Key in Authorization Header",
+      "endpoint": "/v2/recommendations",
+      "status_code": 401,
+      "response_time": 0.172109,
+      "success": false,
+      "auth_error": "{ \"error\": { \"reason\": \"No API key found in request\", \"message\": \"Unauthorized\", \"code\": 401 } }"
+    },
+    {
+      "auth_method": "API Key in Authorization Header",
+      "endpoint": "/recommendations",
+      "status_code": 401,
+      "response_time": 0.162622,
+      "success": false,
+      "auth_error": "{ \"error\": { \"reason\": \"No API key found in request\", \"message\": \"Unauthorized\", \"code\": 401 } }"
+    },
+    {
+      "auth_method": "API Key in Authorization Header",
+      "endpoint": "/health",
+      "status_code": 401,
+      "response_time": 0.181398,
+      "success": false,
+      "auth_error": "{ \"error\": { \"reason\": \"No API key found in request\", \"message\": \"Unauthorized\", \"code\": 401 } }"
+    },
+    {
+      "auth_method": "API Key in Authorization Header",
+      "endpoint": "/status",
+      "status_code": 401,
+      "response_time": 0.183901,
+      "success": false,
+      "auth_error": "{ \"error\": { \"reason\": \"No API key found in request\", \"message\": \"Unauthorized\", \"code\": 401 } }"
+    },
+    {
+      "auth_method": "X-API-Key Header",
+      "endpoint": "/",
+      "status_code": 404,
+      "response_time": 0.215028,
+      "success": true,
+      "other_response": "{\"error\":\"Not Found\"}"
+    },
+    {
+      "auth_method": "X-API-Key Header",
+      "endpoint": "/v1/recommendations",
+      "status_code": 404,
+      "response_time": 0.176876,
+      "success": true,
+      "other_response": "{\n    \"error\": {\n        \"code\": 404,\n        \"message\": \"The requested resource could not be found.\",\n        \"reason\": \"Not Found\"\n    }\n}"
+    },
+    {
+      "auth_method": "X-API-Key Header",
+      "endpoint": "/v2/recommendations",
+      "status_code": 400,
+      "response_time": 0.203498,
+      "success": true,
+      "other_response": "{\"errors\":[{\"message\":\"filter.type is required\"}]}"
+    },
+    {
+      "auth_method": "X-API-Key Header",
+      "endpoint": "/recommendations",
+      "status_code": 405,
+      "response_time": 0.215719,
+      "success": true,
+      "other_response": "{\"error\":{\"code\":405,\"reason\":\"Method Not Allowed\"}}"
+    },
+    {
+      "auth_method": "X-API-Key Header",
+      "endpoint": "/health",
+      "status_code": 404,
+      "response_time": 0.182948,
+      "success": true,
+      "other_response": "{\n    \"error\": {\n        \"code\": 404,\n        \"message\": \"The requested resource could not be found.\",\n        \"reason\": \"Not Found\"\n    }\n}"
+    },
+    {
+      "auth_method": "X-API-Key Header",
+      "endpoint": "/status",
+      "status_code": 404,
+      "response_time": 0.18653,
+      "success": true,
+      "other_response": "{\n    \"error\": {\n        \"code\": 404,\n        \"message\": \"The requested resource could not be found.\",\n        \"reason\": \"Not Found\"\n    }\n}"
+    },
+    {
+      "auth_method": "API Key in Query Parameter",
+      "endpoint": "/",
+      "status_code": 401,
+      "response_time": 0.181689,
+      "success": false,
+      "auth_error": "{ \"error\": { \"reason\": \"No API key found in request\", \"message\": \"Unauthorized\", \"code\": 401 } }"
+    },
+    {
+      "auth_method": "API Key in Query Parameter",
+      "endpoint": "/v1/recommendations",
+      "status_code": 401,
+      "response_time": 0.18243,
+      "success": false,
+      "auth_error": "{ \"error\": { \"reason\": \"No API key found in request\", \"message\": \"Unauthorized\", \"code\": 401 } }"
+    },
+    {
+      "auth_method": "API Key in Query Parameter",
+      "endpoint": "/v2/recommendations",
+      "status_code": 401,
+      "response_time": 0.18571,
+      "success": false,
+      "auth_error": "{ \"error\": { \"reason\": \"No API key found in request\", \"message\": \"Unauthorized\", \"code\": 401 } }"
+    },
+    {
+      "auth_method": "API Key in Query Parameter",
+      "endpoint": "/recommendations",
+      "status_code": 401,
+      "response_time": 0.193379,
+      "success": false,
+      "auth_error": "{ \"error\": { \"reason\": \"No API key found in request\", \"message\": \"Unauthorized\", \"code\": 401 } }"
+    },
+    {
+      "auth_method": "API Key in Query Parameter",
+      "endpoint": "/health",
+      "status_code": 401,
+      "response_time": 0.203601,
+      "success": false,
+      "auth_error": "{ \"error\": { \"reason\": \"No API key found in request\", \"message\": \"Unauthorized\", \"code\": 401 } }"
+    },
+    {
+      "auth_method": "API Key in Query Parameter",
+      "endpoint": "/status",
+      "status_code": 401,
+      "response_time": 0.181023,
+      "success": false,
+      "auth_error": "{ \"error\": { \"reason\": \"No API key found in request\", \"message\": \"Unauthorized\", \"code\": 401 } }"
+    },
+    {
+      "auth_method": "API Key in Request Body",
+      "endpoint": "/",
+      "status_code": 401,
+      "response_time": 0.17036,
+      "success": false,
+      "auth_error": "{ \"error\": { \"reason\": \"No API key found in request\", \"message\": \"Unauthorized\", \"code\": 401 } }"
+    },
+    {
+      "auth_method": "API Key in Request Body",
+      "endpoint": "/v1/recommendations",
+      "status_code": 401,
+      "response_time": 0.183673,
+      "success": false,
+      "auth_error": "{ \"error\": { \"reason\": \"No API key found in request\", \"message\": \"Unauthorized\", \"code\": 401 } }"
+    },
+    {
+      "auth_method": "API Key in Request Body",
+      "endpoint": "/v2/recommendations",
+      "status_code": 401,
+      "response_time": 0.177853,
+      "success": false,
+      "auth_error": "{ \"error\": { \"reason\": \"No API key found in request\", \"message\": \"Unauthorized\", \"code\": 401 } }"
+    },
+    {
+      "auth_method": "API Key in Request Body",
+      "endpoint": "/recommendations",
+      "status_code": 401,
+      "response_time": 0.181147,
+      "success": false,
+      "auth_error": "{ \"error\": { \"reason\": \"No API key found in request\", \"message\": \"Unauthorized\", \"code\": 401 } }"
+    },
+    {
+      "auth_method": "API Key in Request Body",
+      "endpoint": "/health",
+      "status_code": 401,
+      "response_time": 0.172993,
+      "success": false,
+      "auth_error": "{ \"error\": { \"reason\": \"No API key found in request\", \"message\": \"Unauthorized\", \"code\": 401 } }"
+    },
+    {
+      "auth_method": "API Key in Request Body",
+      "endpoint": "/status",
+      "status_code": 401,
+      "response_time": 0.182971,
+      "success": false,
+      "auth_error": "{ \"error\": { \"reason\": \"No API key found in request\", \"message\": \"Unauthorized\", \"code\": 401 } }"
+    }
+  ],
+  "docs_accessibility": {
+    "docs_accessible": true,
+    "status_code": 200,
+    "response_time": 0.69829
+  },
+  "summary": {
+    "total_tests": 30,
+    "successful_tests": 6,
+    "success_rate": 0.2
+  }
+}

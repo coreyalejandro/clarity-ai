@@ -1,0 +1,60 @@
+{
+  "demo_results": [
+    {
+      "segment": {
+        "title": "Accessible Fashion Revolution",
+        "content": "Today we're exploring adaptive clothing that puts comfort and functionality first",
+        "featured_item": "magnetic closure jacket"
+      },
+      "mood": "intimate",
+      "multisensory_description": {
+        "tactile": "Imagine the magnetic closure jacket against your skin - soft, warm, like being wrapped in security",
+        "auditory": "The magnetic closure jacket whispers gently as you move, never harsh or intrusive",
+        "emotional": "Wearing this magnetic closure jacket makes you feel grounded, confident, authentically yourself",
+        "cultural": "This magnetic closure jacket carries the warmth of craftsmanship and cultural respect"
+      },
+      "qloo_insights": "Mock data (API broken)",
+      "timestamp": "2025-08-01T10:00:49.267285"
+    },
+    {
+      "segment": {
+        "title": "Cultural Intelligence Spotlight",
+        "content": "Our data shows fascinating cross-cultural trends in sustainable fashion",
+        "featured_item": "globally-inspired sustainable dress"
+      },
+      "mood": "energetic",
+      "multisensory_description": {
+        "tactile": "Feel the globally-inspired sustainable dress's dynamic structure - supportive yet flexible for confident movement",
+        "auditory": "The globally-inspired sustainable dress creates a satisfying swish of fabric that announces your presence",
+        "emotional": "This globally-inspired sustainable dress energizes you, makes you want to stride with purpose",
+        "cultural": "The globally-inspired sustainable dress embodies the bold spirit of contemporary global fashion"
+      },
+      "qloo_insights": "Mock data (API broken)",
+      "timestamp": "2025-08-01T10:00:50.271650"
+    },
+    {
+      "segment": {
+        "title": "Multisensory Style Analysis",
+        "content": "Let's feel our way through this season's most exciting tactile innovations",
+        "featured_item": "sensory-friendly sweater"
+      },
+      "mood": "intimate",
+      "multisensory_description": {
+        "tactile": "Imagine the sensory-friendly sweater against your skin - soft, warm, like being wrapped in security",
+        "auditory": "The sensory-friendly sweater whispers gently as you move, never harsh or intrusive",
+        "emotional": "Wearing this sensory-friendly sweater makes you feel grounded, confident, authentically yourself",
+        "cultural": "This sensory-friendly sweater carries the warmth of craftsmanship and cultural respect"
+      },
+      "qloo_insights": "Mock data (API broken)",
+      "timestamp": "2025-08-01T10:00:51.276771"
+    }
+  ],
+  "timestamp": "2025-08-01T10:00:57.316873",
+  "status": "SUCCESS - Alternative Text Experience Agent working",
+  "next_steps": [
+    "Fix QLOO's broken documentation",
+    "Launch 10-workshop developer series",
+    "Enter $13B accessibility market",
+    "Build enterprise partnerships"
+  ]
+}
