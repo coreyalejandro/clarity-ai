@@ -1,0 +1,29 @@
+{
+  "experiment": "Domain Transfer (Fixed) - Medical/Technical Writing",
+  "timestamp": "2025-08-06T19:05:40.402885",
+  "model_used": "microsoft/DialoGPT-small",
+  "templates": {
+    "medical": "templates/medical_writing_fixed.yaml",
+    "technical": "templates/technical_writing_fixed.yaml"
+  },
+  "results": {
+    "medical": {
+      "baseline_score": 0.75,
+      "trained_score": 0.75,
+      "improvement": 0.0,
+      "improvement_pct": 0.0,
+      "status": "success",
+      "model_path": "./domain_transfer_medical_fixed",
+      "cross_domain_score": 0.8105263157894737
+    },
+    "technical": {
+      "baseline_score": 0.7368421052631579,
+      "trained_score": 0.7578947368421052,
+      "improvement": 0.021052631578947323,
+      "improvement_pct": 2.857142857142851,
+      "status": "success",
+      "model_path": "./domain_transfer_technical_fixed",
+      "cross_domain_score": 0.75
+    }
+  }
+}

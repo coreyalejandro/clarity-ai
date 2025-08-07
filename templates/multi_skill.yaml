@@ -1,0 +1,81 @@
+name: "Multi-Skill Writing Quality"
+description: "Evaluates comprehensive writing across multiple skill areas - general helpfulness, code docs, medical, and technical"
+
+scoring_criteria:
+  - name: "General Helpfulness"
+    weight: 25
+    description: "Clear, actionable, and practically useful information"
+    
+  - name: "Technical Accuracy"
+    weight: 25
+    description: "Correct technical or domain-specific information"
+    
+  - name: "Code/Implementation Focus"
+    weight: 20
+    description: "Practical implementation details and examples"
+    
+  - name: "Professional Communication"
+    weight: 15
+    description: "Appropriate tone and structure for professional contexts"
+    
+  - name: "Safety & Best Practices"
+    weight: 15
+    description: "Emphasizes safety, proper procedures, and industry standards"
+
+positive_indicators:
+  # General helpfulness (from demo template)
+  - "clear"
+  - "helpful" 
+  - "practical"
+  - "actionable"
+  - "step-by-step"
+  - "useful"
+  - "effective"
+  - "guide"
+  
+  # Technical/code indicators
+  - "implementation"
+  - "configuration"
+  - "optimization"
+  - "best practices"
+  - "procedure"
+  - "system"
+  - "database"
+  - "network"
+  - "code"
+  - "function"
+  - "API"
+  - "documentation"
+  
+  # Medical/safety indicators  
+  - "consult"
+  - "professional"
+  - "healthcare"
+  - "safety"
+  - "evidence-based"
+  - "proper"
+  - "warning"
+  - "risk"
+  - "prevention"
+  
+  # Communication quality
+  - "detailed"
+  - "comprehensive"
+  - "structured"
+  - "organized"
+  - "examples"
+  - "explanation"
+  - "instructions"
+  - "methodology"
+
+negative_indicators:
+  - "unclear"
+  - "confusing"
+  - "incomplete"
+  - "vague"
+  - "incorrect"
+  - "unsafe"
+  - "outdated"
+  - "contradictory"
+  - "unprofessional"
+  - "misleading"

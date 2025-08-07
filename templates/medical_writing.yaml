@@ -1,0 +1,49 @@
+name: "Medical Writing Quality"
+description: "Evaluates quality of medical/healthcare documentation and guides"
+
+scoring_criteria:
+  - name: "Medical Accuracy"
+    weight: 30
+    description: "Information is medically accurate and evidence-based"
+    
+  - name: "Clarity for Patients"
+    weight: 25
+    description: "Written in clear, understandable language for patients"
+    
+  - name: "Safety Emphasis"
+    weight: 20
+    description: "Emphasizes safety, proper procedures, and when to seek help"
+    
+  - name: "Completeness"
+    weight: 15
+    description: "Covers important aspects without overwhelming detail"
+    
+  - name: "Professional Tone"
+    weight: 10
+    description: "Maintains appropriate medical professional tone"
+
+positive_indicators:
+  - "evidence-based information"
+  - "clear explanations"
+  - "safety warnings"
+  - "when to consult doctor"
+  - "step-by-step instructions"
+  - "common symptoms"
+  - "treatment options"
+  - "prevention methods"
+  - "risk factors"
+  - "proper medical terminology"
+  - "patient-friendly language"
+  - "reliable sources mentioned"
+
+negative_indicators:
+  - "medical advice without qualification"
+  - "overly complex jargon"
+  - "incomplete information"
+  - "unsafe recommendations"
+  - "unsubstantiated claims"
+  - "fear-mongering language"
+  - "contradictory information"
+  - "outdated treatments"
+  - "diagnostic claims"
+  - "prescription recommendations"

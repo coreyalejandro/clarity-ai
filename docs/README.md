@@ -1,4 +1,4 @@
-# ClarityAI Complete Documentation
+    q# ClarityAI Complete Documentation
 
 > **IMPORTANT**: This documentation is designed with clear, step-by-step instructions. Each section builds on the previous one. Do not skip any steps.
 
@@ -345,10 +345,18 @@ rules:
 ```yaml
 - type: sentiment_positive
   weight: 1.5
+
+
+
+  
   params: {}
 ```
 
 **Parameters**: None (use empty `{}`)
+
+
+
+
 
 **Scoring**: 0.0 to 1.0 based on how positive the text sounds
 

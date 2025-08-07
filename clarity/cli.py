@@ -155,7 +155,9 @@ def train_command(args):
     """Handle the 'clarity train' command."""
     
     try:
-        from .trainer import train_model
+        import sys
+        sys.path.append('/Users/coreyalejandro/Repos/clarity-ai')
+        from fix_trainer_simple import train_model_real as train_model
         
         # Check that required files exist
         if not os.path.exists(args.template):
@@ -175,22 +177,18 @@ def train_command(args):
         result = train_model(
             model_name=args.model,
             template_path=args.template,
-            max_steps=args.steps,
+            num_epochs=max(1, args.steps // 5),  # Convert steps to epochs
             learning_rate=args.learning_rate,
-            batch_size=args.batch_size,
             output_dir=args.output,
         )
         
         if result["status"] == "success":
             print(f"\n✅ Training completed successfully!")
-            print(f"Run ID: {result['run_id']}")
-            print(f"Total steps: {result['total_steps']}")
-            print(f"Average reward: {result['average_reward']:.3f}")
-            print(f"Final reward: {result['final_reward']:.3f}")
-            print(f"Output directory: {result['output_dir']}")
+            print(f"Model saved to: {result['model_path']}")
+            print(f"Message: {result['message']}")
             return 0
         else:
-            print(f"\n❌ Training failed: {result['error']}")
+            print(f"\n❌ Training failed: {result.get('error', 'Unknown error')}")
             return 1
             
     except ImportError as e:

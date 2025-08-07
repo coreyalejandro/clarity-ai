@@ -1,0 +1,105 @@
+description: ''
+name: multi_skill_writing
+rules:
+- params:
+    min_matches: 2
+    phrases:
+    - clear
+    - helpful
+    - practical
+    - actionable
+    - step-by-step
+    - useful
+    - effective
+    - guide
+    - information
+    - advice
+    - comprehensive
+    - detailed
+    - structured
+    - examples
+  type: contains_phrase
+  weight: 2.5
+- params:
+    min_matches: 1
+    phrases:
+    - implementation
+    - configuration
+    - optimization
+    - system
+    - database
+    - network
+    - performance
+    - monitoring
+    - security
+    - deployment
+    - troubleshooting
+    - best practices
+    - procedures
+  type: contains_phrase
+  weight: 2.5
+- params:
+    min_matches: 1
+    phrases:
+    - code
+    - function
+    - API
+    - documentation
+    - example
+    - syntax
+    - parameter
+    - variable
+    - method
+    - class
+    - endpoint
+    - response
+    - request
+    - error handling
+  type: contains_phrase
+  weight: 2.0
+- params:
+    min_matches: 1
+    phrases:
+    - consult
+    - professional
+    - healthcare
+    - safety
+    - proper
+    - warning
+    - risk
+    - prevention
+    - evidence-based
+    - medical
+    - doctor
+    - provider
+    - treatment
+    - diagnosis
+    - symptoms
+  type: contains_phrase
+  weight: 2.0
+- params:
+    min_matches: 1
+    phrases:
+    - methodology
+    - framework
+    - analysis
+    - assessment
+    - standards
+    - protocol
+    - specification
+    - requirements
+    - documentation
+    - guidelines
+    - recommendations
+    - strategy
+  type: contains_phrase
+  weight: 1.5
+- params:
+    max_words: 250
+    min_words: 25
+  type: word_count
+  weight: 1.5
+- params:
+    min_score: 0.1
+  type: sentiment_positive
+  weight: 1.0

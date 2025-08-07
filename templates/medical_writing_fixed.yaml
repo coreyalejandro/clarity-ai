@@ -1,0 +1,62 @@
+description: ''
+name: medical_writing
+rules:
+- params:
+    min_matches: 2
+    phrases:
+    - consult your doctor
+    - healthcare provider
+    - medical professional
+    - evidence-based
+    - clinical studies
+    - FDA approved
+    - prescription
+    - symptoms include
+    - risk factors
+    - treatment options
+    - prevention
+    - safety
+    - side effects
+    - dosage
+    - medical history
+    - diagnosis
+  type: contains_phrase
+  weight: 3.0
+- params:
+    min_matches: 1
+    phrases:
+    - clear
+    - understand
+    - simple
+    - easy
+    - step-by-step
+    - practical
+    - helpful
+    - guide
+    - information
+    - explain
+  type: contains_phrase
+  weight: 2.5
+- params:
+    min_matches: 1
+    phrases:
+    - always consult
+    - seek immediate
+    - emergency
+    - warning
+    - do not
+    - avoid
+    - safely
+    - proper
+    - when to see
+  type: contains_phrase
+  weight: 2.0
+- params:
+    max_words: 200
+    min_words: 20
+  type: word_count
+  weight: 1.0
+- params:
+    min_score: 0.1
+  type: sentiment_positive
+  weight: 1.5

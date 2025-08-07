@@ -1,0 +1,4117 @@
+{
+  "samples": [
+    {
+      "text": "This strategy offers clear guidance with step-by-step examples and proven effectiveness.",
+      "clarity_score": 0.45454545454545453,
+      "rule_breakdown": [
+        {
+          "rule_type": "contains_phrase",
+          "weight": 2.0,
+          "raw_score": 0.0,
+          "weighted_score": 0.0,
+          "params": {
+            "phrase": "helpful"
+          }
+        },
+        {
+          "rule_type": "word_count",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "min_words": 10,
+            "max_words": 50
+          }
+        },
+        {
+          "rule_type": "sentiment_positive",
+          "weight": 1.5,
+          "raw_score": 0.3333333333333333,
+          "weighted_score": 0.5,
+          "params": {}
+        },
+        {
+          "rule_type": "regex_match",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "pattern": "[A-Z][a-z]+"
+          }
+        }
+      ],
+      "quality_tier": "medium"
+    },
+    {
+      "text": "Here are detailed instructions including helpful tips and professional recommendations for success.",
+      "clarity_score": 0.8181818181818182,
+      "quality_tier": "high",
+      "source": "variation"
+    },
+    {
+      "text": "This detailed documentation offers clear insights with detailed advice for excellence.",
+      "clarity_score": 0.45454545454545453,
+      "rule_breakdown": [
+        {
+          "rule_type": "contains_phrase",
+          "weight": 2.0,
+          "raw_score": 0.0,
+          "weighted_score": 0.0,
+          "params": {
+            "phrase": "helpful"
+          }
+        },
+        {
+          "rule_type": "word_count",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "min_words": 10,
+            "max_words": 50
+          }
+        },
+        {
+          "rule_type": "sentiment_positive",
+          "weight": 1.5,
+          "raw_score": 0.3333333333333333,
+          "weighted_score": 0.5,
+          "params": {}
+        },
+        {
+          "rule_type": "regex_match",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "pattern": "[A-Z][a-z]+"
+          }
+        }
+      ],
+      "quality_tier": "medium"
+    },
+    {
+      "text": "This clear instructions provides detailed strategies with step-by-step techniques for understanding.",
+      "clarity_score": 0.45454545454545453,
+      "rule_breakdown": [
+        {
+          "rule_type": "contains_phrase",
+          "weight": 2.0,
+          "raw_score": 0.0,
+          "weighted_score": 0.0,
+          "params": {
+            "phrase": "helpful"
+          }
+        },
+        {
+          "rule_type": "word_count",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "min_words": 10,
+            "max_words": 50
+          }
+        },
+        {
+          "rule_type": "sentiment_positive",
+          "weight": 1.5,
+          "raw_score": 0.3333333333333333,
+          "weighted_score": 0.5,
+          "params": {}
+        },
+        {
+          "rule_type": "regex_match",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "pattern": "[A-Z][a-z]+"
+          }
+        }
+      ],
+      "quality_tier": "medium"
+    },
+    {
+      "text": "Follow these systematic guidelines to create useful handbook with clear principles.",
+      "clarity_score": 0.45454545454545453,
+      "rule_breakdown": [
+        {
+          "rule_type": "contains_phrase",
+          "weight": 2.0,
+          "raw_score": 0.0,
+          "weighted_score": 0.0,
+          "params": {
+            "phrase": "helpful"
+          }
+        },
+        {
+          "rule_type": "word_count",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "min_words": 10,
+            "max_words": 50
+          }
+        },
+        {
+          "rule_type": "sentiment_positive",
+          "weight": 1.5,
+          "raw_score": 0.3333333333333333,
+          "weighted_score": 0.5,
+          "params": {}
+        },
+        {
+          "rule_type": "regex_match",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "pattern": "[A-Z][a-z]+"
+          }
+        }
+      ],
+      "quality_tier": "medium"
+    },
+    {
+      "text": "This detailed strategy provides step-by-step fundamentals with clear techniques for results.",
+      "clarity_score": 0.45454545454545453,
+      "rule_breakdown": [
+        {
+          "rule_type": "contains_phrase",
+          "weight": 2.0,
+          "raw_score": 0.0,
+          "weighted_score": 0.0,
+          "params": {
+            "phrase": "helpful"
+          }
+        },
+        {
+          "rule_type": "word_count",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "min_words": 10,
+            "max_words": 50
+          }
+        },
+        {
+          "rule_type": "sentiment_positive",
+          "weight": 1.5,
+          "raw_score": 0.3333333333333333,
+          "weighted_score": 0.5,
+          "params": {}
+        },
+        {
+          "rule_type": "regex_match",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "pattern": "[A-Z][a-z]+"
+          }
+        }
+      ],
+      "quality_tier": "medium"
+    },
+    {
+      "text": "This resource offers clear guidance with expert examples and proven results.",
+      "clarity_score": 0.45454545454545453,
+      "rule_breakdown": [
+        {
+          "rule_type": "contains_phrase",
+          "weight": 2.0,
+          "raw_score": 0.0,
+          "weighted_score": 0.0,
+          "params": {
+            "phrase": "helpful"
+          }
+        },
+        {
+          "rule_type": "word_count",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "min_words": 10,
+            "max_words": 50
+          }
+        },
+        {
+          "rule_type": "sentiment_positive",
+          "weight": 1.5,
+          "raw_score": 0.3333333333333333,
+          "weighted_score": 0.5,
+          "params": {}
+        },
+        {
+          "rule_type": "regex_match",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "pattern": "[A-Z][a-z]+"
+          }
+        }
+      ],
+      "quality_tier": "medium"
+    },
+    {
+      "text": "This practical framework provides clear tips with clear techniques for growth.",
+      "clarity_score": 0.45454545454545453,
+      "rule_breakdown": [
+        {
+          "rule_type": "contains_phrase",
+          "weight": 2.0,
+          "raw_score": 0.0,
+          "weighted_score": 0.0,
+          "params": {
+            "phrase": "helpful"
+          }
+        },
+        {
+          "rule_type": "word_count",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "min_words": 10,
+            "max_words": 50
+          }
+        },
+        {
+          "rule_type": "sentiment_positive",
+          "weight": 1.5,
+          "raw_score": 0.3333333333333333,
+          "weighted_score": 0.5,
+          "params": {}
+        },
+        {
+          "rule_type": "regex_match",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "pattern": "[A-Z][a-z]+"
+          }
+        }
+      ],
+      "quality_tier": "medium"
+    },
+    {
+      "text": "This clear framework provides valuable strategies with clear techniques for excellence.",
+      "clarity_score": 0.45454545454545453,
+      "rule_breakdown": [
+        {
+          "rule_type": "contains_phrase",
+          "weight": 2.0,
+          "raw_score": 0.0,
+          "weighted_score": 0.0,
+          "params": {
+            "phrase": "helpful"
+          }
+        },
+        {
+          "rule_type": "word_count",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "min_words": 10,
+            "max_words": 50
+          }
+        },
+        {
+          "rule_type": "sentiment_positive",
+          "weight": 1.5,
+          "raw_score": 0.3333333333333333,
+          "weighted_score": 0.5,
+          "params": {}
+        },
+        {
+          "rule_type": "regex_match",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "pattern": "[A-Z][a-z]+"
+          }
+        }
+      ],
+      "quality_tier": "medium"
+    },
+    {
+      "text": "Follow these detailed guidelines to create valuable tutorial with clear advice.",
+      "clarity_score": 0.45454545454545453,
+      "rule_breakdown": [
+        {
+          "rule_type": "contains_phrase",
+          "weight": 2.0,
+          "raw_score": 0.0,
+          "weighted_score": 0.0,
+          "params": {
+            "phrase": "helpful"
+          }
+        },
+        {
+          "rule_type": "word_count",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "min_words": 10,
+            "max_words": 50
+          }
+        },
+        {
+          "rule_type": "sentiment_positive",
+          "weight": 1.5,
+          "raw_score": 0.3333333333333333,
+          "weighted_score": 0.5,
+          "params": {}
+        },
+        {
+          "rule_type": "regex_match",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "pattern": "[A-Z][a-z]+"
+          }
+        }
+      ],
+      "quality_tier": "medium"
+    },
+    {
+      "text": "Follow these useful guidelines to create hands-on approach with clear guidance.",
+      "clarity_score": 0.45454545454545453,
+      "rule_breakdown": [
+        {
+          "rule_type": "contains_phrase",
+          "weight": 2.0,
+          "raw_score": 0.0,
+          "weighted_score": 0.0,
+          "params": {
+            "phrase": "helpful"
+          }
+        },
+        {
+          "rule_type": "word_count",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "min_words": 10,
+            "max_words": 50
+          }
+        },
+        {
+          "rule_type": "sentiment_positive",
+          "weight": 1.5,
+          "raw_score": 0.3333333333333333,
+          "weighted_score": 0.5,
+          "params": {}
+        },
+        {
+          "rule_type": "regex_match",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "pattern": "[A-Z][a-z]+"
+          }
+        }
+      ],
+      "quality_tier": "medium"
+    },
+    {
+      "text": "Follow these detailed guidelines to create actionable handbook with clear fundamentals.",
+      "clarity_score": 0.45454545454545453,
+      "rule_breakdown": [
+        {
+          "rule_type": "contains_phrase",
+          "weight": 2.0,
+          "raw_score": 0.0,
+          "weighted_score": 0.0,
+          "params": {
+            "phrase": "helpful"
+          }
+        },
+        {
+          "rule_type": "word_count",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "min_words": 10,
+            "max_words": 50
+          }
+        },
+        {
+          "rule_type": "sentiment_positive",
+          "weight": 1.5,
+          "raw_score": 0.3333333333333333,
+          "weighted_score": 0.5,
+          "params": {}
+        },
+        {
+          "rule_type": "regex_match",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "pattern": "[A-Z][a-z]+"
+          }
+        }
+      ],
+      "quality_tier": "medium"
+    },
+    {
+      "text": "Follow these detailed guidelines to create practical overview with clear solutions.",
+      "clarity_score": 0.45454545454545453,
+      "rule_breakdown": [
+        {
+          "rule_type": "contains_phrase",
+          "weight": 2.0,
+          "raw_score": 0.0,
+          "weighted_score": 0.0,
+          "params": {
+            "phrase": "helpful"
+          }
+        },
+        {
+          "rule_type": "word_count",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "min_words": 10,
+            "max_words": 50
+          }
+        },
+        {
+          "rule_type": "sentiment_positive",
+          "weight": 1.5,
+          "raw_score": 0.3333333333333333,
+          "weighted_score": 0.5,
+          "params": {}
+        },
+        {
+          "rule_type": "regex_match",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "pattern": "[A-Z][a-z]+"
+          }
+        }
+      ],
+      "quality_tier": "medium"
+    },
+    {
+      "text": "Follow these useful guidelines to create step-by-step overview with clear expertise.",
+      "clarity_score": 0.45454545454545453,
+      "rule_breakdown": [
+        {
+          "rule_type": "contains_phrase",
+          "weight": 2.0,
+          "raw_score": 0.0,
+          "weighted_score": 0.0,
+          "params": {
+            "phrase": "helpful"
+          }
+        },
+        {
+          "rule_type": "word_count",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "min_words": 10,
+            "max_words": 50
+          }
+        },
+        {
+          "rule_type": "sentiment_positive",
+          "weight": 1.5,
+          "raw_score": 0.3333333333333333,
+          "weighted_score": 0.5,
+          "params": {}
+        },
+        {
+          "rule_type": "regex_match",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "pattern": "[A-Z][a-z]+"
+          }
+        }
+      ],
+      "quality_tier": "medium"
+    },
+    {
+      "text": "This useful tutorial offers clear instructions with helpful examples and techniques.",
+      "clarity_score": 0.9090909090909091,
+      "quality_tier": "high",
+      "source": "variation"
+    },
+    {
+      "text": "Follow these proven guidelines to create hands-on documentation with clear fundamentals.",
+      "clarity_score": 0.45454545454545453,
+      "rule_breakdown": [
+        {
+          "rule_type": "contains_phrase",
+          "weight": 2.0,
+          "raw_score": 0.0,
+          "weighted_score": 0.0,
+          "params": {
+            "phrase": "helpful"
+          }
+        },
+        {
+          "rule_type": "word_count",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "min_words": 10,
+            "max_words": 50
+          }
+        },
+        {
+          "rule_type": "sentiment_positive",
+          "weight": 1.5,
+          "raw_score": 0.3333333333333333,
+          "weighted_score": 0.5,
+          "params": {}
+        },
+        {
+          "rule_type": "regex_match",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "pattern": "[A-Z][a-z]+"
+          }
+        }
+      ],
+      "quality_tier": "medium"
+    },
+    {
+      "text": "This detailed instructions offers clear insights with expert advice for proficiency.",
+      "clarity_score": 0.45454545454545453,
+      "rule_breakdown": [
+        {
+          "rule_type": "contains_phrase",
+          "weight": 2.0,
+          "raw_score": 0.0,
+          "weighted_score": 0.0,
+          "params": {
+            "phrase": "helpful"
+          }
+        },
+        {
+          "rule_type": "word_count",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "min_words": 10,
+            "max_words": 50
+          }
+        },
+        {
+          "rule_type": "sentiment_positive",
+          "weight": 1.5,
+          "raw_score": 0.3333333333333333,
+          "weighted_score": 0.5,
+          "params": {}
+        },
+        {
+          "rule_type": "regex_match",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "pattern": "[A-Z][a-z]+"
+          }
+        }
+      ],
+      "quality_tier": "medium"
+    },
+    {
+      "text": "This detailed manual offers clear insights with clear advice for effectiveness.",
+      "clarity_score": 0.45454545454545453,
+      "rule_breakdown": [
+        {
+          "rule_type": "contains_phrase",
+          "weight": 2.0,
+          "raw_score": 0.0,
+          "weighted_score": 0.0,
+          "params": {
+            "phrase": "helpful"
+          }
+        },
+        {
+          "rule_type": "word_count",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "min_words": 10,
+            "max_words": 50
+          }
+        },
+        {
+          "rule_type": "sentiment_positive",
+          "weight": 1.5,
+          "raw_score": 0.3333333333333333,
+          "weighted_score": 0.5,
+          "params": {}
+        },
+        {
+          "rule_type": "regex_match",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "pattern": "[A-Z][a-z]+"
+          }
+        }
+      ],
+      "quality_tier": "medium"
+    },
+    {
+      "text": "Follow these valuable guidelines to create practical best practices with clear examples.",
+      "clarity_score": 0.45454545454545453,
+      "rule_breakdown": [
+        {
+          "rule_type": "contains_phrase",
+          "weight": 2.0,
+          "raw_score": 0.0,
+          "weighted_score": 0.0,
+          "params": {
+            "phrase": "helpful"
+          }
+        },
+        {
+          "rule_type": "word_count",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "min_words": 10,
+            "max_words": 50
+          }
+        },
+        {
+          "rule_type": "sentiment_positive",
+          "weight": 1.5,
+          "raw_score": 0.3333333333333333,
+          "weighted_score": 0.5,
+          "params": {}
+        },
+        {
+          "rule_type": "regex_match",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "pattern": "[A-Z][a-z]+"
+          }
+        }
+      ],
+      "quality_tier": "medium"
+    },
+    {
+      "text": "Here is clear guidance with comprehensive steps and valuable examples.",
+      "clarity_score": 0.45454545454545453,
+      "rule_breakdown": [
+        {
+          "rule_type": "contains_phrase",
+          "weight": 2.0,
+          "raw_score": 0.0,
+          "weighted_score": 0.0,
+          "params": {
+            "phrase": "helpful"
+          }
+        },
+        {
+          "rule_type": "word_count",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "min_words": 10,
+            "max_words": 50
+          }
+        },
+        {
+          "rule_type": "sentiment_positive",
+          "weight": 1.5,
+          "raw_score": 0.3333333333333333,
+          "weighted_score": 0.5,
+          "params": {}
+        },
+        {
+          "rule_type": "regex_match",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "pattern": "[A-Z][a-z]+"
+          }
+        }
+      ],
+      "quality_tier": "medium"
+    },
+    {
+      "text": "This step-by-step resource contains clear information and actionable insights for excellence.",
+      "clarity_score": 0.45454545454545453,
+      "rule_breakdown": [
+        {
+          "rule_type": "contains_phrase",
+          "weight": 2.0,
+          "raw_score": 0.0,
+          "weighted_score": 0.0,
+          "params": {
+            "phrase": "helpful"
+          }
+        },
+        {
+          "rule_type": "word_count",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "min_words": 10,
+            "max_words": 50
+          }
+        },
+        {
+          "rule_type": "sentiment_positive",
+          "weight": 1.5,
+          "raw_score": 0.3333333333333333,
+          "weighted_score": 0.5,
+          "params": {}
+        },
+        {
+          "rule_type": "regex_match",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "pattern": "[A-Z][a-z]+"
+          }
+        }
+      ],
+      "quality_tier": "medium"
+    },
+    {
+      "text": "Follow these informative guidelines to create detailed guidelines with clear recommendations.",
+      "clarity_score": 0.45454545454545453,
+      "rule_breakdown": [
+        {
+          "rule_type": "contains_phrase",
+          "weight": 2.0,
+          "raw_score": 0.0,
+          "weighted_score": 0.0,
+          "params": {
+            "phrase": "helpful"
+          }
+        },
+        {
+          "rule_type": "word_count",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "min_words": 10,
+            "max_words": 50
+          }
+        },
+        {
+          "rule_type": "sentiment_positive",
+          "weight": 1.5,
+          "raw_score": 0.3333333333333333,
+          "weighted_score": 0.5,
+          "params": {}
+        },
+        {
+          "rule_type": "regex_match",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "pattern": "[A-Z][a-z]+"
+          }
+        }
+      ],
+      "quality_tier": "medium"
+    },
+    {
+      "text": "Follow these expert guidelines to create expert approach with clear strategies.",
+      "clarity_score": 0.45454545454545453,
+      "rule_breakdown": [
+        {
+          "rule_type": "contains_phrase",
+          "weight": 2.0,
+          "raw_score": 0.0,
+          "weighted_score": 0.0,
+          "params": {
+            "phrase": "helpful"
+          }
+        },
+        {
+          "rule_type": "word_count",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "min_words": 10,
+            "max_words": 50
+          }
+        },
+        {
+          "rule_type": "sentiment_positive",
+          "weight": 1.5,
+          "raw_score": 0.3333333333333333,
+          "weighted_score": 0.5,
+          "params": {}
+        },
+        {
+          "rule_type": "regex_match",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "pattern": "[A-Z][a-z]+"
+          }
+        }
+      ],
+      "quality_tier": "medium"
+    },
+    {
+      "text": "This step-by-step resource contains clear information and actionable advice for success.",
+      "clarity_score": 0.45454545454545453,
+      "rule_breakdown": [
+        {
+          "rule_type": "contains_phrase",
+          "weight": 2.0,
+          "raw_score": 0.0,
+          "weighted_score": 0.0,
+          "params": {
+            "phrase": "helpful"
+          }
+        },
+        {
+          "rule_type": "word_count",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "min_words": 10,
+            "max_words": 50
+          }
+        },
+        {
+          "rule_type": "sentiment_positive",
+          "weight": 1.5,
+          "raw_score": 0.3333333333333333,
+          "weighted_score": 0.5,
+          "params": {}
+        },
+        {
+          "rule_type": "regex_match",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "pattern": "[A-Z][a-z]+"
+          }
+        }
+      ],
+      "quality_tier": "medium"
+    },
+    {
+      "text": "This professional approach provides clear methods and proven strategies for success.",
+      "clarity_score": 0.45454545454545453,
+      "rule_breakdown": [
+        {
+          "rule_type": "contains_phrase",
+          "weight": 2.0,
+          "raw_score": 0.0,
+          "weighted_score": 0.0,
+          "params": {
+            "phrase": "helpful"
+          }
+        },
+        {
+          "rule_type": "word_count",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "min_words": 10,
+            "max_words": 50
+          }
+        },
+        {
+          "rule_type": "sentiment_positive",
+          "weight": 1.5,
+          "raw_score": 0.3333333333333333,
+          "weighted_score": 0.5,
+          "params": {}
+        },
+        {
+          "rule_type": "regex_match",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "pattern": "[A-Z][a-z]+"
+          }
+        }
+      ],
+      "quality_tier": "medium"
+    },
+    {
+      "text": "This detailed methodology provides informative solutions with clear techniques for improvement.",
+      "clarity_score": 0.45454545454545453,
+      "rule_breakdown": [
+        {
+          "rule_type": "contains_phrase",
+          "weight": 2.0,
+          "raw_score": 0.0,
+          "weighted_score": 0.0,
+          "params": {
+            "phrase": "helpful"
+          }
+        },
+        {
+          "rule_type": "word_count",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "min_words": 10,
+            "max_words": 50
+          }
+        },
+        {
+          "rule_type": "sentiment_positive",
+          "weight": 1.5,
+          "raw_score": 0.3333333333333333,
+          "weighted_score": 0.5,
+          "params": {}
+        },
+        {
+          "rule_type": "regex_match",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "pattern": "[A-Z][a-z]+"
+          }
+        }
+      ],
+      "quality_tier": "medium"
+    },
+    {
+      "text": "Follow these hands-on guidelines to create step-by-step instructions with clear techniques.",
+      "clarity_score": 0.45454545454545453,
+      "rule_breakdown": [
+        {
+          "rule_type": "contains_phrase",
+          "weight": 2.0,
+          "raw_score": 0.0,
+          "weighted_score": 0.0,
+          "params": {
+            "phrase": "helpful"
+          }
+        },
+        {
+          "rule_type": "word_count",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "min_words": 10,
+            "max_words": 50
+          }
+        },
+        {
+          "rule_type": "sentiment_positive",
+          "weight": 1.5,
+          "raw_score": 0.3333333333333333,
+          "weighted_score": 0.5,
+          "params": {}
+        },
+        {
+          "rule_type": "regex_match",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "pattern": "[A-Z][a-z]+"
+          }
+        }
+      ],
+      "quality_tier": "medium"
+    },
+    {
+      "text": "Follow these informative guidelines to create practical resource with clear methods.",
+      "clarity_score": 0.45454545454545453,
+      "rule_breakdown": [
+        {
+          "rule_type": "contains_phrase",
+          "weight": 2.0,
+          "raw_score": 0.0,
+          "weighted_score": 0.0,
+          "params": {
+            "phrase": "helpful"
+          }
+        },
+        {
+          "rule_type": "word_count",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "min_words": 10,
+            "max_words": 50
+          }
+        },
+        {
+          "rule_type": "sentiment_positive",
+          "weight": 1.5,
+          "raw_score": 0.3333333333333333,
+          "weighted_score": 0.5,
+          "params": {}
+        },
+        {
+          "rule_type": "regex_match",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "pattern": "[A-Z][a-z]+"
+          }
+        }
+      ],
+      "quality_tier": "medium"
+    },
+    {
+      "text": "Follow these proven guidelines to create clear methodology with clear key points.",
+      "clarity_score": 0.45454545454545453,
+      "rule_breakdown": [
+        {
+          "rule_type": "contains_phrase",
+          "weight": 2.0,
+          "raw_score": 0.0,
+          "weighted_score": 0.0,
+          "params": {
+            "phrase": "helpful"
+          }
+        },
+        {
+          "rule_type": "word_count",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "min_words": 10,
+            "max_words": 50
+          }
+        },
+        {
+          "rule_type": "sentiment_positive",
+          "weight": 1.5,
+          "raw_score": 0.3333333333333333,
+          "weighted_score": 0.5,
+          "params": {}
+        },
+        {
+          "rule_type": "regex_match",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "pattern": "[A-Z][a-z]+"
+          }
+        }
+      ],
+      "quality_tier": "medium"
+    },
+    {
+      "text": "These step-by-step techniques offer clear solutions with comprehensive key points.",
+      "clarity_score": 0.45454545454545453,
+      "rule_breakdown": [
+        {
+          "rule_type": "contains_phrase",
+          "weight": 2.0,
+          "raw_score": 0.0,
+          "weighted_score": 0.0,
+          "params": {
+            "phrase": "helpful"
+          }
+        },
+        {
+          "rule_type": "word_count",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "min_words": 10,
+            "max_words": 50
+          }
+        },
+        {
+          "rule_type": "sentiment_positive",
+          "weight": 1.5,
+          "raw_score": 0.3333333333333333,
+          "weighted_score": 0.5,
+          "params": {}
+        },
+        {
+          "rule_type": "regex_match",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "pattern": "[A-Z][a-z]+"
+          }
+        }
+      ],
+      "quality_tier": "medium"
+    },
+    {
+      "text": "Follow these valuable guidelines to create step-by-step strategy with clear techniques.",
+      "clarity_score": 0.45454545454545453,
+      "rule_breakdown": [
+        {
+          "rule_type": "contains_phrase",
+          "weight": 2.0,
+          "raw_score": 0.0,
+          "weighted_score": 0.0,
+          "params": {
+            "phrase": "helpful"
+          }
+        },
+        {
+          "rule_type": "word_count",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "min_words": 10,
+            "max_words": 50
+          }
+        },
+        {
+          "rule_type": "sentiment_positive",
+          "weight": 1.5,
+          "raw_score": 0.3333333333333333,
+          "weighted_score": 0.5,
+          "params": {}
+        },
+        {
+          "rule_type": "regex_match",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "pattern": "[A-Z][a-z]+"
+          }
+        }
+      ],
+      "quality_tier": "medium"
+    },
+    {
+      "text": "Here are detailed instructions with helpful tips and professional recommendations for success.",
+      "clarity_score": 0.8181818181818182,
+      "rule_breakdown": [
+        {
+          "rule_type": "contains_phrase",
+          "weight": 2.0,
+          "raw_score": 1.0,
+          "weighted_score": 2.0,
+          "params": {
+            "phrase": "helpful"
+          }
+        },
+        {
+          "rule_type": "word_count",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "min_words": 10,
+            "max_words": 50
+          }
+        },
+        {
+          "rule_type": "sentiment_positive",
+          "weight": 1.5,
+          "raw_score": 0.3333333333333333,
+          "weighted_score": 0.5,
+          "params": {}
+        },
+        {
+          "rule_type": "regex_match",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "pattern": "[A-Z][a-z]+"
+          }
+        }
+      ],
+      "quality_tier": "high"
+    },
+    {
+      "text": "This approach offers effective guidance with clear examples and proven excellence.",
+      "clarity_score": 0.45454545454545453,
+      "rule_breakdown": [
+        {
+          "rule_type": "contains_phrase",
+          "weight": 2.0,
+          "raw_score": 0.0,
+          "weighted_score": 0.0,
+          "params": {
+            "phrase": "helpful"
+          }
+        },
+        {
+          "rule_type": "word_count",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "min_words": 10,
+            "max_words": 50
+          }
+        },
+        {
+          "rule_type": "sentiment_positive",
+          "weight": 1.5,
+          "raw_score": 0.3333333333333333,
+          "weighted_score": 0.5,
+          "params": {}
+        },
+        {
+          "rule_type": "regex_match",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "pattern": "[A-Z][a-z]+"
+          }
+        }
+      ],
+      "quality_tier": "medium"
+    },
+    {
+      "text": "Follow these hands-on guidelines to create professional strategy with clear fundamentals.",
+      "clarity_score": 0.45454545454545453,
+      "rule_breakdown": [
+        {
+          "rule_type": "contains_phrase",
+          "weight": 2.0,
+          "raw_score": 0.0,
+          "weighted_score": 0.0,
+          "params": {
+            "phrase": "helpful"
+          }
+        },
+        {
+          "rule_type": "word_count",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "min_words": 10,
+            "max_words": 50
+          }
+        },
+        {
+          "rule_type": "sentiment_positive",
+          "weight": 1.5,
+          "raw_score": 0.3333333333333333,
+          "weighted_score": 0.5,
+          "params": {}
+        },
+        {
+          "rule_type": "regex_match",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "pattern": "[A-Z][a-z]+"
+          }
+        }
+      ],
+      "quality_tier": "medium"
+    },
+    {
+      "text": "Follow these effective guidelines to create detailed techniques with clear examples.",
+      "clarity_score": 0.45454545454545453,
+      "rule_breakdown": [
+        {
+          "rule_type": "contains_phrase",
+          "weight": 2.0,
+          "raw_score": 0.0,
+          "weighted_score": 0.0,
+          "params": {
+            "phrase": "helpful"
+          }
+        },
+        {
+          "rule_type": "word_count",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "min_words": 10,
+            "max_words": 50
+          }
+        },
+        {
+          "rule_type": "sentiment_positive",
+          "weight": 1.5,
+          "raw_score": 0.3333333333333333,
+          "weighted_score": 0.5,
+          "params": {}
+        },
+        {
+          "rule_type": "regex_match",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "pattern": "[A-Z][a-z]+"
+          }
+        }
+      ],
+      "quality_tier": "medium"
+    },
+    {
+      "text": "This useful tutorial provides clear instructions with helpful examples and techniques.",
+      "clarity_score": 0.9090909090909091,
+      "rule_breakdown": [
+        {
+          "rule_type": "contains_phrase",
+          "weight": 2.0,
+          "raw_score": 1.0,
+          "weighted_score": 2.0,
+          "params": {
+            "phrase": "helpful"
+          }
+        },
+        {
+          "rule_type": "word_count",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "min_words": 10,
+            "max_words": 50
+          }
+        },
+        {
+          "rule_type": "sentiment_positive",
+          "weight": 1.5,
+          "raw_score": 0.6666666666666666,
+          "weighted_score": 1.0,
+          "params": {}
+        },
+        {
+          "rule_type": "regex_match",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "pattern": "[A-Z][a-z]+"
+          }
+        }
+      ],
+      "quality_tier": "high"
+    },
+    {
+      "text": "This detailed framework offers step-by-step insights with clear advice for proficiency.",
+      "clarity_score": 0.45454545454545453,
+      "rule_breakdown": [
+        {
+          "rule_type": "contains_phrase",
+          "weight": 2.0,
+          "raw_score": 0.0,
+          "weighted_score": 0.0,
+          "params": {
+            "phrase": "helpful"
+          }
+        },
+        {
+          "rule_type": "word_count",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "min_words": 10,
+            "max_words": 50
+          }
+        },
+        {
+          "rule_type": "sentiment_positive",
+          "weight": 1.5,
+          "raw_score": 0.3333333333333333,
+          "weighted_score": 0.5,
+          "params": {}
+        },
+        {
+          "rule_type": "regex_match",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "pattern": "[A-Z][a-z]+"
+          }
+        }
+      ],
+      "quality_tier": "medium"
+    },
+    {
+      "text": "Follow these practical guidelines to create effective best practices with clear tips.",
+      "clarity_score": 0.45454545454545453,
+      "rule_breakdown": [
+        {
+          "rule_type": "contains_phrase",
+          "weight": 2.0,
+          "raw_score": 0.0,
+          "weighted_score": 0.0,
+          "params": {
+            "phrase": "helpful"
+          }
+        },
+        {
+          "rule_type": "word_count",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "min_words": 10,
+            "max_words": 50
+          }
+        },
+        {
+          "rule_type": "sentiment_positive",
+          "weight": 1.5,
+          "raw_score": 0.3333333333333333,
+          "weighted_score": 0.5,
+          "params": {}
+        },
+        {
+          "rule_type": "regex_match",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "pattern": "[A-Z][a-z]+"
+          }
+        }
+      ],
+      "quality_tier": "medium"
+    },
+    {
+      "text": "Here is clear guidance with clear steps and valuable advice.",
+      "clarity_score": 0.45454545454545453,
+      "rule_breakdown": [
+        {
+          "rule_type": "contains_phrase",
+          "weight": 2.0,
+          "raw_score": 0.0,
+          "weighted_score": 0.0,
+          "params": {
+            "phrase": "helpful"
+          }
+        },
+        {
+          "rule_type": "word_count",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "min_words": 10,
+            "max_words": 50
+          }
+        },
+        {
+          "rule_type": "sentiment_positive",
+          "weight": 1.5,
+          "raw_score": 0.3333333333333333,
+          "weighted_score": 0.5,
+          "params": {}
+        },
+        {
+          "rule_type": "regex_match",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "pattern": "[A-Z][a-z]+"
+          }
+        }
+      ],
+      "quality_tier": "medium"
+    },
+    {
+      "text": "This detailed resource offers step-by-step insights with clear advice for understanding.",
+      "clarity_score": 0.45454545454545453,
+      "rule_breakdown": [
+        {
+          "rule_type": "contains_phrase",
+          "weight": 2.0,
+          "raw_score": 0.0,
+          "weighted_score": 0.0,
+          "params": {
+            "phrase": "helpful"
+          }
+        },
+        {
+          "rule_type": "word_count",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "min_words": 10,
+            "max_words": 50
+          }
+        },
+        {
+          "rule_type": "sentiment_positive",
+          "weight": 1.5,
+          "raw_score": 0.3333333333333333,
+          "weighted_score": 0.5,
+          "params": {}
+        },
+        {
+          "rule_type": "regex_match",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "pattern": "[A-Z][a-z]+"
+          }
+        }
+      ],
+      "quality_tier": "medium"
+    },
+    {
+      "text": "Follow these hands-on guidelines to create practical techniques with clear recommendations.",
+      "clarity_score": 0.45454545454545453,
+      "rule_breakdown": [
+        {
+          "rule_type": "contains_phrase",
+          "weight": 2.0,
+          "raw_score": 0.0,
+          "weighted_score": 0.0,
+          "params": {
+            "phrase": "helpful"
+          }
+        },
+        {
+          "rule_type": "word_count",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "min_words": 10,
+            "max_words": 50
+          }
+        },
+        {
+          "rule_type": "sentiment_positive",
+          "weight": 1.5,
+          "raw_score": 0.3333333333333333,
+          "weighted_score": 0.5,
+          "params": {}
+        },
+        {
+          "rule_type": "regex_match",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "pattern": "[A-Z][a-z]+"
+          }
+        }
+      ],
+      "quality_tier": "medium"
+    },
+    {
+      "text": "This informative resource contains clear information and actionable key points for excellence.",
+      "clarity_score": 0.45454545454545453,
+      "rule_breakdown": [
+        {
+          "rule_type": "contains_phrase",
+          "weight": 2.0,
+          "raw_score": 0.0,
+          "weighted_score": 0.0,
+          "params": {
+            "phrase": "helpful"
+          }
+        },
+        {
+          "rule_type": "word_count",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "min_words": 10,
+            "max_words": 50
+          }
+        },
+        {
+          "rule_type": "sentiment_positive",
+          "weight": 1.5,
+          "raw_score": 0.3333333333333333,
+          "weighted_score": 0.5,
+          "params": {}
+        },
+        {
+          "rule_type": "regex_match",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "pattern": "[A-Z][a-z]+"
+          }
+        }
+      ],
+      "quality_tier": "medium"
+    },
+    {
+      "text": "Here is clear guidance with hands-on steps and valuable recommendations.",
+      "clarity_score": 0.45454545454545453,
+      "rule_breakdown": [
+        {
+          "rule_type": "contains_phrase",
+          "weight": 2.0,
+          "raw_score": 0.0,
+          "weighted_score": 0.0,
+          "params": {
+            "phrase": "helpful"
+          }
+        },
+        {
+          "rule_type": "word_count",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "min_words": 10,
+            "max_words": 50
+          }
+        },
+        {
+          "rule_type": "sentiment_positive",
+          "weight": 1.5,
+          "raw_score": 0.3333333333333333,
+          "weighted_score": 0.5,
+          "params": {}
+        },
+        {
+          "rule_type": "regex_match",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "pattern": "[A-Z][a-z]+"
+          }
+        }
+      ],
+      "quality_tier": "medium"
+    },
+    {
+      "text": "This hands-on approach provides clear methods and proven strategies for excellence.",
+      "clarity_score": 0.45454545454545453,
+      "rule_breakdown": [
+        {
+          "rule_type": "contains_phrase",
+          "weight": 2.0,
+          "raw_score": 0.0,
+          "weighted_score": 0.0,
+          "params": {
+            "phrase": "helpful"
+          }
+        },
+        {
+          "rule_type": "word_count",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "min_words": 10,
+            "max_words": 50
+          }
+        },
+        {
+          "rule_type": "sentiment_positive",
+          "weight": 1.5,
+          "raw_score": 0.3333333333333333,
+          "weighted_score": 0.5,
+          "params": {}
+        },
+        {
+          "rule_type": "regex_match",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "pattern": "[A-Z][a-z]+"
+          }
+        }
+      ],
+      "quality_tier": "medium"
+    },
+    {
+      "text": "This techniques offers clear guidance with expert examples and proven excellence.",
+      "clarity_score": 0.45454545454545453,
+      "rule_breakdown": [
+        {
+          "rule_type": "contains_phrase",
+          "weight": 2.0,
+          "raw_score": 0.0,
+          "weighted_score": 0.0,
+          "params": {
+            "phrase": "helpful"
+          }
+        },
+        {
+          "rule_type": "word_count",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "min_words": 10,
+            "max_words": 50
+          }
+        },
+        {
+          "rule_type": "sentiment_positive",
+          "weight": 1.5,
+          "raw_score": 0.3333333333333333,
+          "weighted_score": 0.5,
+          "params": {}
+        },
+        {
+          "rule_type": "regex_match",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "pattern": "[A-Z][a-z]+"
+          }
+        }
+      ],
+      "quality_tier": "medium"
+    },
+    {
+      "text": "This useful tutorial provides clear instructions including helpful examples and techniques.",
+      "clarity_score": 0.9090909090909091,
+      "quality_tier": "high",
+      "source": "variation"
+    },
+    {
+      "text": "This detailed manual offers detailed insights with clear advice for growth.",
+      "clarity_score": 0.45454545454545453,
+      "rule_breakdown": [
+        {
+          "rule_type": "contains_phrase",
+          "weight": 2.0,
+          "raw_score": 0.0,
+          "weighted_score": 0.0,
+          "params": {
+            "phrase": "helpful"
+          }
+        },
+        {
+          "rule_type": "word_count",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "min_words": 10,
+            "max_words": 50
+          }
+        },
+        {
+          "rule_type": "sentiment_positive",
+          "weight": 1.5,
+          "raw_score": 0.3333333333333333,
+          "weighted_score": 0.5,
+          "params": {}
+        },
+        {
+          "rule_type": "regex_match",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "pattern": "[A-Z][a-z]+"
+          }
+        }
+      ],
+      "quality_tier": "medium"
+    },
+    {
+      "text": "This valuable resource contains clear information and actionable guidance for success.",
+      "clarity_score": 0.45454545454545453,
+      "rule_breakdown": [
+        {
+          "rule_type": "contains_phrase",
+          "weight": 2.0,
+          "raw_score": 0.0,
+          "weighted_score": 0.0,
+          "params": {
+            "phrase": "helpful"
+          }
+        },
+        {
+          "rule_type": "word_count",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "min_words": 10,
+            "max_words": 50
+          }
+        },
+        {
+          "rule_type": "sentiment_positive",
+          "weight": 1.5,
+          "raw_score": 0.3333333333333333,
+          "weighted_score": 0.5,
+          "params": {}
+        },
+        {
+          "rule_type": "regex_match",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "pattern": "[A-Z][a-z]+"
+          }
+        }
+      ],
+      "quality_tier": "medium"
+    },
+    {
+      "text": "This effective strategy provides clear guidance with professional techniques for mastery.",
+      "clarity_score": 0.45454545454545453,
+      "rule_breakdown": [
+        {
+          "rule_type": "contains_phrase",
+          "weight": 2.0,
+          "raw_score": 0.0,
+          "weighted_score": 0.0,
+          "params": {
+            "phrase": "helpful"
+          }
+        },
+        {
+          "rule_type": "word_count",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "min_words": 10,
+            "max_words": 50
+          }
+        },
+        {
+          "rule_type": "sentiment_positive",
+          "weight": 1.5,
+          "raw_score": 0.3333333333333333,
+          "weighted_score": 0.5,
+          "params": {}
+        },
+        {
+          "rule_type": "regex_match",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "pattern": "[A-Z][a-z]+"
+          }
+        }
+      ],
+      "quality_tier": "medium"
+    },
+    {
+      "text": "Follow these effective guidelines to create comprehensive best practices with clear essentials.",
+      "clarity_score": 0.45454545454545453,
+      "rule_breakdown": [
+        {
+          "rule_type": "contains_phrase",
+          "weight": 2.0,
+          "raw_score": 0.0,
+          "weighted_score": 0.0,
+          "params": {
+            "phrase": "helpful"
+          }
+        },
+        {
+          "rule_type": "word_count",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "min_words": 10,
+            "max_words": 50
+          }
+        },
+        {
+          "rule_type": "sentiment_positive",
+          "weight": 1.5,
+          "raw_score": 0.3333333333333333,
+          "weighted_score": 0.5,
+          "params": {}
+        },
+        {
+          "rule_type": "regex_match",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "pattern": "[A-Z][a-z]+"
+          }
+        }
+      ],
+      "quality_tier": "medium"
+    },
+    {
+      "text": "Follow these clear guidelines to create expert methodology with clear essentials.",
+      "clarity_score": 0.45454545454545453,
+      "rule_breakdown": [
+        {
+          "rule_type": "contains_phrase",
+          "weight": 2.0,
+          "raw_score": 0.0,
+          "weighted_score": 0.0,
+          "params": {
+            "phrase": "helpful"
+          }
+        },
+        {
+          "rule_type": "word_count",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "min_words": 10,
+            "max_words": 50
+          }
+        },
+        {
+          "rule_type": "sentiment_positive",
+          "weight": 1.5,
+          "raw_score": 0.3333333333333333,
+          "weighted_score": 0.5,
+          "params": {}
+        },
+        {
+          "rule_type": "regex_match",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "pattern": "[A-Z][a-z]+"
+          }
+        }
+      ],
+      "quality_tier": "medium"
+    },
+    {
+      "text": "This detailed manual offers clear insights with expert advice for proficiency.",
+      "clarity_score": 0.45454545454545453,
+      "rule_breakdown": [
+        {
+          "rule_type": "contains_phrase",
+          "weight": 2.0,
+          "raw_score": 0.0,
+          "weighted_score": 0.0,
+          "params": {
+            "phrase": "helpful"
+          }
+        },
+        {
+          "rule_type": "word_count",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "min_words": 10,
+            "max_words": 50
+          }
+        },
+        {
+          "rule_type": "sentiment_positive",
+          "weight": 1.5,
+          "raw_score": 0.3333333333333333,
+          "weighted_score": 0.5,
+          "params": {}
+        },
+        {
+          "rule_type": "regex_match",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "pattern": "[A-Z][a-z]+"
+          }
+        }
+      ],
+      "quality_tier": "medium"
+    },
+    {
+      "text": "Here is clear guidance with expert steps and valuable essentials.",
+      "clarity_score": 0.45454545454545453,
+      "rule_breakdown": [
+        {
+          "rule_type": "contains_phrase",
+          "weight": 2.0,
+          "raw_score": 0.0,
+          "weighted_score": 0.0,
+          "params": {
+            "phrase": "helpful"
+          }
+        },
+        {
+          "rule_type": "word_count",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "min_words": 10,
+            "max_words": 50
+          }
+        },
+        {
+          "rule_type": "sentiment_positive",
+          "weight": 1.5,
+          "raw_score": 0.3333333333333333,
+          "weighted_score": 0.5,
+          "params": {}
+        },
+        {
+          "rule_type": "regex_match",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "pattern": "[A-Z][a-z]+"
+          }
+        }
+      ],
+      "quality_tier": "medium"
+    },
+    {
+      "text": "Here is clear guidance with comprehensive steps and valuable key points.",
+      "clarity_score": 0.45454545454545453,
+      "rule_breakdown": [
+        {
+          "rule_type": "contains_phrase",
+          "weight": 2.0,
+          "raw_score": 0.0,
+          "weighted_score": 0.0,
+          "params": {
+            "phrase": "helpful"
+          }
+        },
+        {
+          "rule_type": "word_count",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "min_words": 10,
+            "max_words": 50
+          }
+        },
+        {
+          "rule_type": "sentiment_positive",
+          "weight": 1.5,
+          "raw_score": 0.3333333333333333,
+          "weighted_score": 0.5,
+          "params": {}
+        },
+        {
+          "rule_type": "regex_match",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "pattern": "[A-Z][a-z]+"
+          }
+        }
+      ],
+      "quality_tier": "medium"
+    },
+    {
+      "text": "This valuable handbook provides valuable examples with clear techniques for mastery.",
+      "clarity_score": 0.45454545454545453,
+      "rule_breakdown": [
+        {
+          "rule_type": "contains_phrase",
+          "weight": 2.0,
+          "raw_score": 0.0,
+          "weighted_score": 0.0,
+          "params": {
+            "phrase": "helpful"
+          }
+        },
+        {
+          "rule_type": "word_count",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "min_words": 10,
+            "max_words": 50
+          }
+        },
+        {
+          "rule_type": "sentiment_positive",
+          "weight": 1.5,
+          "raw_score": 0.3333333333333333,
+          "weighted_score": 0.5,
+          "params": {}
+        },
+        {
+          "rule_type": "regex_match",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "pattern": "[A-Z][a-z]+"
+          }
+        }
+      ],
+      "quality_tier": "medium"
+    },
+    {
+      "text": "Here is a useful tutorial provides clear instructions with helpful examples and techniques.",
+      "clarity_score": 0.9090909090909091,
+      "quality_tier": "high",
+      "source": "variation"
+    },
+    {
+      "text": "Follow these informative guidelines to create step-by-step tutorial with clear methods.",
+      "clarity_score": 0.45454545454545453,
+      "rule_breakdown": [
+        {
+          "rule_type": "contains_phrase",
+          "weight": 2.0,
+          "raw_score": 0.0,
+          "weighted_score": 0.0,
+          "params": {
+            "phrase": "helpful"
+          }
+        },
+        {
+          "rule_type": "word_count",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "min_words": 10,
+            "max_words": 50
+          }
+        },
+        {
+          "rule_type": "sentiment_positive",
+          "weight": 1.5,
+          "raw_score": 0.3333333333333333,
+          "weighted_score": 0.5,
+          "params": {}
+        },
+        {
+          "rule_type": "regex_match",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "pattern": "[A-Z][a-z]+"
+          }
+        }
+      ],
+      "quality_tier": "medium"
+    },
+    {
+      "text": "Follow these informative guidelines to create professional best practices with clear techniques.",
+      "clarity_score": 0.45454545454545453,
+      "rule_breakdown": [
+        {
+          "rule_type": "contains_phrase",
+          "weight": 2.0,
+          "raw_score": 0.0,
+          "weighted_score": 0.0,
+          "params": {
+            "phrase": "helpful"
+          }
+        },
+        {
+          "rule_type": "word_count",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "min_words": 10,
+            "max_words": 50
+          }
+        },
+        {
+          "rule_type": "sentiment_positive",
+          "weight": 1.5,
+          "raw_score": 0.3333333333333333,
+          "weighted_score": 0.5,
+          "params": {}
+        },
+        {
+          "rule_type": "regex_match",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "pattern": "[A-Z][a-z]+"
+          }
+        }
+      ],
+      "quality_tier": "medium"
+    },
+    {
+      "text": "Follow these effective guidelines to create useful tutorial with clear essentials.",
+      "clarity_score": 0.45454545454545453,
+      "rule_breakdown": [
+        {
+          "rule_type": "contains_phrase",
+          "weight": 2.0,
+          "raw_score": 0.0,
+          "weighted_score": 0.0,
+          "params": {
+            "phrase": "helpful"
+          }
+        },
+        {
+          "rule_type": "word_count",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "min_words": 10,
+            "max_words": 50
+          }
+        },
+        {
+          "rule_type": "sentiment_positive",
+          "weight": 1.5,
+          "raw_score": 0.3333333333333333,
+          "weighted_score": 0.5,
+          "params": {}
+        },
+        {
+          "rule_type": "regex_match",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "pattern": "[A-Z][a-z]+"
+          }
+        }
+      ],
+      "quality_tier": "medium"
+    },
+    {
+      "text": "Follow these informative guidelines to create step-by-step strategy with clear tips.",
+      "clarity_score": 0.45454545454545453,
+      "rule_breakdown": [
+        {
+          "rule_type": "contains_phrase",
+          "weight": 2.0,
+          "raw_score": 0.0,
+          "weighted_score": 0.0,
+          "params": {
+            "phrase": "helpful"
+          }
+        },
+        {
+          "rule_type": "word_count",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "min_words": 10,
+            "max_words": 50
+          }
+        },
+        {
+          "rule_type": "sentiment_positive",
+          "weight": 1.5,
+          "raw_score": 0.3333333333333333,
+          "weighted_score": 0.5,
+          "params": {}
+        },
+        {
+          "rule_type": "regex_match",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "pattern": "[A-Z][a-z]+"
+          }
+        }
+      ],
+      "quality_tier": "medium"
+    },
+    {
+      "text": "Follow these informative guidelines to create useful techniques with clear examples.",
+      "clarity_score": 0.45454545454545453,
+      "rule_breakdown": [
+        {
+          "rule_type": "contains_phrase",
+          "weight": 2.0,
+          "raw_score": 0.0,
+          "weighted_score": 0.0,
+          "params": {
+            "phrase": "helpful"
+          }
+        },
+        {
+          "rule_type": "word_count",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "min_words": 10,
+            "max_words": 50
+          }
+        },
+        {
+          "rule_type": "sentiment_positive",
+          "weight": 1.5,
+          "raw_score": 0.3333333333333333,
+          "weighted_score": 0.5,
+          "params": {}
+        },
+        {
+          "rule_type": "regex_match",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "pattern": "[A-Z][a-z]+"
+          }
+        }
+      ],
+      "quality_tier": "medium"
+    },
+    {
+      "text": "This systematic instructions provides effective insights with clear techniques for optimization.",
+      "clarity_score": 0.45454545454545453,
+      "rule_breakdown": [
+        {
+          "rule_type": "contains_phrase",
+          "weight": 2.0,
+          "raw_score": 0.0,
+          "weighted_score": 0.0,
+          "params": {
+            "phrase": "helpful"
+          }
+        },
+        {
+          "rule_type": "word_count",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "min_words": 10,
+            "max_words": 50
+          }
+        },
+        {
+          "rule_type": "sentiment_positive",
+          "weight": 1.5,
+          "raw_score": 0.3333333333333333,
+          "weighted_score": 0.5,
+          "params": {}
+        },
+        {
+          "rule_type": "regex_match",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "pattern": "[A-Z][a-z]+"
+          }
+        }
+      ],
+      "quality_tier": "medium"
+    },
+    {
+      "text": "This informative guide provides useful fundamentals with clear techniques for results.",
+      "clarity_score": 0.45454545454545453,
+      "rule_breakdown": [
+        {
+          "rule_type": "contains_phrase",
+          "weight": 2.0,
+          "raw_score": 0.0,
+          "weighted_score": 0.0,
+          "params": {
+            "phrase": "helpful"
+          }
+        },
+        {
+          "rule_type": "word_count",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "min_words": 10,
+            "max_words": 50
+          }
+        },
+        {
+          "rule_type": "sentiment_positive",
+          "weight": 1.5,
+          "raw_score": 0.3333333333333333,
+          "weighted_score": 0.5,
+          "params": {}
+        },
+        {
+          "rule_type": "regex_match",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "pattern": "[A-Z][a-z]+"
+          }
+        }
+      ],
+      "quality_tier": "medium"
+    },
+    {
+      "text": "These hands-on recommendations provide clear solutions with expert key points.",
+      "clarity_score": 0.45454545454545453,
+      "rule_breakdown": [
+        {
+          "rule_type": "contains_phrase",
+          "weight": 2.0,
+          "raw_score": 0.0,
+          "weighted_score": 0.0,
+          "params": {
+            "phrase": "helpful"
+          }
+        },
+        {
+          "rule_type": "word_count",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "min_words": 10,
+            "max_words": 50
+          }
+        },
+        {
+          "rule_type": "sentiment_positive",
+          "weight": 1.5,
+          "raw_score": 0.3333333333333333,
+          "weighted_score": 0.5,
+          "params": {}
+        },
+        {
+          "rule_type": "regex_match",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "pattern": "[A-Z][a-z]+"
+          }
+        }
+      ],
+      "quality_tier": "medium"
+    },
+    {
+      "text": "This manual offers useful guidance with clear examples and proven excellence.",
+      "clarity_score": 0.45454545454545453,
+      "rule_breakdown": [
+        {
+          "rule_type": "contains_phrase",
+          "weight": 2.0,
+          "raw_score": 0.0,
+          "weighted_score": 0.0,
+          "params": {
+            "phrase": "helpful"
+          }
+        },
+        {
+          "rule_type": "word_count",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "min_words": 10,
+            "max_words": 50
+          }
+        },
+        {
+          "rule_type": "sentiment_positive",
+          "weight": 1.5,
+          "raw_score": 0.3333333333333333,
+          "weighted_score": 0.5,
+          "params": {}
+        },
+        {
+          "rule_type": "regex_match",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "pattern": "[A-Z][a-z]+"
+          }
+        }
+      ],
+      "quality_tier": "medium"
+    },
+    {
+      "text": "This professional resource contains clear information and actionable examples for proficiency.",
+      "clarity_score": 0.45454545454545453,
+      "rule_breakdown": [
+        {
+          "rule_type": "contains_phrase",
+          "weight": 2.0,
+          "raw_score": 0.0,
+          "weighted_score": 0.0,
+          "params": {
+            "phrase": "helpful"
+          }
+        },
+        {
+          "rule_type": "word_count",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "min_words": 10,
+            "max_words": 50
+          }
+        },
+        {
+          "rule_type": "sentiment_positive",
+          "weight": 1.5,
+          "raw_score": 0.3333333333333333,
+          "weighted_score": 0.5,
+          "params": {}
+        },
+        {
+          "rule_type": "regex_match",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "pattern": "[A-Z][a-z]+"
+          }
+        }
+      ],
+      "quality_tier": "medium"
+    },
+    {
+      "text": "This clear overview provides step-by-step solutions with expert techniques for proficiency.",
+      "clarity_score": 0.45454545454545453,
+      "rule_breakdown": [
+        {
+          "rule_type": "contains_phrase",
+          "weight": 2.0,
+          "raw_score": 0.0,
+          "weighted_score": 0.0,
+          "params": {
+            "phrase": "helpful"
+          }
+        },
+        {
+          "rule_type": "word_count",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "min_words": 10,
+            "max_words": 50
+          }
+        },
+        {
+          "rule_type": "sentiment_positive",
+          "weight": 1.5,
+          "raw_score": 0.3333333333333333,
+          "weighted_score": 0.5,
+          "params": {}
+        },
+        {
+          "rule_type": "regex_match",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "pattern": "[A-Z][a-z]+"
+          }
+        }
+      ],
+      "quality_tier": "medium"
+    },
+    {
+      "text": "This detailed guidelines offers clear insights with informative advice for proficiency.",
+      "clarity_score": 0.45454545454545453,
+      "rule_breakdown": [
+        {
+          "rule_type": "contains_phrase",
+          "weight": 2.0,
+          "raw_score": 0.0,
+          "weighted_score": 0.0,
+          "params": {
+            "phrase": "helpful"
+          }
+        },
+        {
+          "rule_type": "word_count",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "min_words": 10,
+            "max_words": 50
+          }
+        },
+        {
+          "rule_type": "sentiment_positive",
+          "weight": 1.5,
+          "raw_score": 0.3333333333333333,
+          "weighted_score": 0.5,
+          "params": {}
+        },
+        {
+          "rule_type": "regex_match",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "pattern": "[A-Z][a-z]+"
+          }
+        }
+      ],
+      "quality_tier": "medium"
+    },
+    {
+      "text": "This proven documentation provides expert essentials with clear techniques for mastery.",
+      "clarity_score": 0.45454545454545453,
+      "rule_breakdown": [
+        {
+          "rule_type": "contains_phrase",
+          "weight": 2.0,
+          "raw_score": 0.0,
+          "weighted_score": 0.0,
+          "params": {
+            "phrase": "helpful"
+          }
+        },
+        {
+          "rule_type": "word_count",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "min_words": 10,
+            "max_words": 50
+          }
+        },
+        {
+          "rule_type": "sentiment_positive",
+          "weight": 1.5,
+          "raw_score": 0.3333333333333333,
+          "weighted_score": 0.5,
+          "params": {}
+        },
+        {
+          "rule_type": "regex_match",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "pattern": "[A-Z][a-z]+"
+          }
+        }
+      ],
+      "quality_tier": "medium"
+    },
+    {
+      "text": "Follow these proven guidelines to create systematic documentation with clear tips.",
+      "clarity_score": 0.45454545454545453,
+      "rule_breakdown": [
+        {
+          "rule_type": "contains_phrase",
+          "weight": 2.0,
+          "raw_score": 0.0,
+          "weighted_score": 0.0,
+          "params": {
+            "phrase": "helpful"
+          }
+        },
+        {
+          "rule_type": "word_count",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "min_words": 10,
+            "max_words": 50
+          }
+        },
+        {
+          "rule_type": "sentiment_positive",
+          "weight": 1.5,
+          "raw_score": 0.3333333333333333,
+          "weighted_score": 0.5,
+          "params": {}
+        },
+        {
+          "rule_type": "regex_match",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "pattern": "[A-Z][a-z]+"
+          }
+        }
+      ],
+      "quality_tier": "medium"
+    },
+    {
+      "text": "This hands-on framework provides proven solutions with clear techniques for understanding.",
+      "clarity_score": 0.45454545454545453,
+      "rule_breakdown": [
+        {
+          "rule_type": "contains_phrase",
+          "weight": 2.0,
+          "raw_score": 0.0,
+          "weighted_score": 0.0,
+          "params": {
+            "phrase": "helpful"
+          }
+        },
+        {
+          "rule_type": "word_count",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "min_words": 10,
+            "max_words": 50
+          }
+        },
+        {
+          "rule_type": "sentiment_positive",
+          "weight": 1.5,
+          "raw_score": 0.3333333333333333,
+          "weighted_score": 0.5,
+          "params": {}
+        },
+        {
+          "rule_type": "regex_match",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "pattern": "[A-Z][a-z]+"
+          }
+        }
+      ],
+      "quality_tier": "medium"
+    },
+    {
+      "text": "This detailed documentation offers detailed insights with clear advice for understanding.",
+      "clarity_score": 0.45454545454545453,
+      "rule_breakdown": [
+        {
+          "rule_type": "contains_phrase",
+          "weight": 2.0,
+          "raw_score": 0.0,
+          "weighted_score": 0.0,
+          "params": {
+            "phrase": "helpful"
+          }
+        },
+        {
+          "rule_type": "word_count",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "min_words": 10,
+            "max_words": 50
+          }
+        },
+        {
+          "rule_type": "sentiment_positive",
+          "weight": 1.5,
+          "raw_score": 0.3333333333333333,
+          "weighted_score": 0.5,
+          "params": {}
+        },
+        {
+          "rule_type": "regex_match",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "pattern": "[A-Z][a-z]+"
+          }
+        }
+      ],
+      "quality_tier": "medium"
+    },
+    {
+      "text": "Here are clear techniques and expert recommendations for achieving optimization.",
+      "clarity_score": 0.45454545454545453,
+      "rule_breakdown": [
+        {
+          "rule_type": "contains_phrase",
+          "weight": 2.0,
+          "raw_score": 0.0,
+          "weighted_score": 0.0,
+          "params": {
+            "phrase": "helpful"
+          }
+        },
+        {
+          "rule_type": "word_count",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "min_words": 10,
+            "max_words": 50
+          }
+        },
+        {
+          "rule_type": "sentiment_positive",
+          "weight": 1.5,
+          "raw_score": 0.3333333333333333,
+          "weighted_score": 0.5,
+          "params": {}
+        },
+        {
+          "rule_type": "regex_match",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "pattern": "[A-Z][a-z]+"
+          }
+        }
+      ],
+      "quality_tier": "medium"
+    },
+    {
+      "text": "Follow these step-by-step guidelines to create practical framework with clear methods.",
+      "clarity_score": 0.45454545454545453,
+      "rule_breakdown": [
+        {
+          "rule_type": "contains_phrase",
+          "weight": 2.0,
+          "raw_score": 0.0,
+          "weighted_score": 0.0,
+          "params": {
+            "phrase": "helpful"
+          }
+        },
+        {
+          "rule_type": "word_count",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "min_words": 10,
+            "max_words": 50
+          }
+        },
+        {
+          "rule_type": "sentiment_positive",
+          "weight": 1.5,
+          "raw_score": 0.3333333333333333,
+          "weighted_score": 0.5,
+          "params": {}
+        },
+        {
+          "rule_type": "regex_match",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "pattern": "[A-Z][a-z]+"
+          }
+        }
+      ],
+      "quality_tier": "medium"
+    },
+    {
+      "text": "Here are clear techniques and professional recommendations for achieving mastery.",
+      "clarity_score": 0.45454545454545453,
+      "rule_breakdown": [
+        {
+          "rule_type": "contains_phrase",
+          "weight": 2.0,
+          "raw_score": 0.0,
+          "weighted_score": 0.0,
+          "params": {
+            "phrase": "helpful"
+          }
+        },
+        {
+          "rule_type": "word_count",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "min_words": 10,
+            "max_words": 50
+          }
+        },
+        {
+          "rule_type": "sentiment_positive",
+          "weight": 1.5,
+          "raw_score": 0.3333333333333333,
+          "weighted_score": 0.5,
+          "params": {}
+        },
+        {
+          "rule_type": "regex_match",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "pattern": "[A-Z][a-z]+"
+          }
+        }
+      ],
+      "quality_tier": "medium"
+    },
+    {
+      "text": "Follow these systematic guidelines to create practical framework with clear advice.",
+      "clarity_score": 0.45454545454545453,
+      "rule_breakdown": [
+        {
+          "rule_type": "contains_phrase",
+          "weight": 2.0,
+          "raw_score": 0.0,
+          "weighted_score": 0.0,
+          "params": {
+            "phrase": "helpful"
+          }
+        },
+        {
+          "rule_type": "word_count",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "min_words": 10,
+            "max_words": 50
+          }
+        },
+        {
+          "rule_type": "sentiment_positive",
+          "weight": 1.5,
+          "raw_score": 0.3333333333333333,
+          "weighted_score": 0.5,
+          "params": {}
+        },
+        {
+          "rule_type": "regex_match",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "pattern": "[A-Z][a-z]+"
+          }
+        }
+      ],
+      "quality_tier": "medium"
+    },
+    {
+      "text": "This detailed overview offers clear insights with practical advice for optimization.",
+      "clarity_score": 0.45454545454545453,
+      "rule_breakdown": [
+        {
+          "rule_type": "contains_phrase",
+          "weight": 2.0,
+          "raw_score": 0.0,
+          "weighted_score": 0.0,
+          "params": {
+            "phrase": "helpful"
+          }
+        },
+        {
+          "rule_type": "word_count",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "min_words": 10,
+            "max_words": 50
+          }
+        },
+        {
+          "rule_type": "sentiment_positive",
+          "weight": 1.5,
+          "raw_score": 0.3333333333333333,
+          "weighted_score": 0.5,
+          "params": {}
+        },
+        {
+          "rule_type": "regex_match",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "pattern": "[A-Z][a-z]+"
+          }
+        }
+      ],
+      "quality_tier": "medium"
+    },
+    {
+      "text": "Follow these practical guidelines to create effective documentation with clear examples.",
+      "clarity_score": 0.45454545454545453,
+      "rule_breakdown": [
+        {
+          "rule_type": "contains_phrase",
+          "weight": 2.0,
+          "raw_score": 0.0,
+          "weighted_score": 0.0,
+          "params": {
+            "phrase": "helpful"
+          }
+        },
+        {
+          "rule_type": "word_count",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "min_words": 10,
+            "max_words": 50
+          }
+        },
+        {
+          "rule_type": "sentiment_positive",
+          "weight": 1.5,
+          "raw_score": 0.3333333333333333,
+          "weighted_score": 0.5,
+          "params": {}
+        },
+        {
+          "rule_type": "regex_match",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "pattern": "[A-Z][a-z]+"
+          }
+        }
+      ],
+      "quality_tier": "medium"
+    },
+    {
+      "text": "Follow these useful guidelines to create detailed approach with clear essentials.",
+      "clarity_score": 0.45454545454545453,
+      "rule_breakdown": [
+        {
+          "rule_type": "contains_phrase",
+          "weight": 2.0,
+          "raw_score": 0.0,
+          "weighted_score": 0.0,
+          "params": {
+            "phrase": "helpful"
+          }
+        },
+        {
+          "rule_type": "word_count",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "min_words": 10,
+            "max_words": 50
+          }
+        },
+        {
+          "rule_type": "sentiment_positive",
+          "weight": 1.5,
+          "raw_score": 0.3333333333333333,
+          "weighted_score": 0.5,
+          "params": {}
+        },
+        {
+          "rule_type": "regex_match",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "pattern": "[A-Z][a-z]+"
+          }
+        }
+      ],
+      "quality_tier": "medium"
+    },
+    {
+      "text": "Follow these proven guidelines to create systematic guidelines with clear solutions.",
+      "clarity_score": 0.45454545454545453,
+      "rule_breakdown": [
+        {
+          "rule_type": "contains_phrase",
+          "weight": 2.0,
+          "raw_score": 0.0,
+          "weighted_score": 0.0,
+          "params": {
+            "phrase": "helpful"
+          }
+        },
+        {
+          "rule_type": "word_count",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "min_words": 10,
+            "max_words": 50
+          }
+        },
+        {
+          "rule_type": "sentiment_positive",
+          "weight": 1.5,
+          "raw_score": 0.3333333333333333,
+          "weighted_score": 0.5,
+          "params": {}
+        },
+        {
+          "rule_type": "regex_match",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "pattern": "[A-Z][a-z]+"
+          }
+        }
+      ],
+      "quality_tier": "medium"
+    },
+    {
+      "text": "Follow these useful guidelines to create comprehensive framework with clear solutions.",
+      "clarity_score": 0.45454545454545453,
+      "rule_breakdown": [
+        {
+          "rule_type": "contains_phrase",
+          "weight": 2.0,
+          "raw_score": 0.0,
+          "weighted_score": 0.0,
+          "params": {
+            "phrase": "helpful"
+          }
+        },
+        {
+          "rule_type": "word_count",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "min_words": 10,
+            "max_words": 50
+          }
+        },
+        {
+          "rule_type": "sentiment_positive",
+          "weight": 1.5,
+          "raw_score": 0.3333333333333333,
+          "weighted_score": 0.5,
+          "params": {}
+        },
+        {
+          "rule_type": "regex_match",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "pattern": "[A-Z][a-z]+"
+          }
+        }
+      ],
+      "quality_tier": "medium"
+    },
+    {
+      "text": "This comprehensive resource contains clear information and actionable fundamentals for improvement.",
+      "clarity_score": 0.45454545454545453,
+      "rule_breakdown": [
+        {
+          "rule_type": "contains_phrase",
+          "weight": 2.0,
+          "raw_score": 0.0,
+          "weighted_score": 0.0,
+          "params": {
+            "phrase": "helpful"
+          }
+        },
+        {
+          "rule_type": "word_count",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "min_words": 10,
+            "max_words": 50
+          }
+        },
+        {
+          "rule_type": "sentiment_positive",
+          "weight": 1.5,
+          "raw_score": 0.3333333333333333,
+          "weighted_score": 0.5,
+          "params": {}
+        },
+        {
+          "rule_type": "regex_match",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "pattern": "[A-Z][a-z]+"
+          }
+        }
+      ],
+      "quality_tier": "medium"
+    },
+    {
+      "text": "This clear resource contains actionable information and actionable principles for success.",
+      "clarity_score": 0.45454545454545453,
+      "rule_breakdown": [
+        {
+          "rule_type": "contains_phrase",
+          "weight": 2.0,
+          "raw_score": 0.0,
+          "weighted_score": 0.0,
+          "params": {
+            "phrase": "helpful"
+          }
+        },
+        {
+          "rule_type": "word_count",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "min_words": 10,
+            "max_words": 50
+          }
+        },
+        {
+          "rule_type": "sentiment_positive",
+          "weight": 1.5,
+          "raw_score": 0.3333333333333333,
+          "weighted_score": 0.5,
+          "params": {}
+        },
+        {
+          "rule_type": "regex_match",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "pattern": "[A-Z][a-z]+"
+          }
+        }
+      ],
+      "quality_tier": "medium"
+    },
+    {
+      "text": "This valuable resource contains clear information and actionable guidance for success.",
+      "clarity_score": 0.45454545454545453,
+      "rule_breakdown": [
+        {
+          "rule_type": "contains_phrase",
+          "weight": 2.0,
+          "raw_score": 0.0,
+          "weighted_score": 0.0,
+          "params": {
+            "phrase": "helpful"
+          }
+        },
+        {
+          "rule_type": "word_count",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "min_words": 10,
+            "max_words": 50
+          }
+        },
+        {
+          "rule_type": "sentiment_positive",
+          "weight": 1.5,
+          "raw_score": 0.3333333333333333,
+          "weighted_score": 0.5,
+          "params": {}
+        },
+        {
+          "rule_type": "regex_match",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "pattern": "[A-Z][a-z]+"
+          }
+        }
+      ],
+      "quality_tier": "medium"
+    },
+    {
+      "text": "This clear methodology provides clear key points with actionable techniques for understanding.",
+      "clarity_score": 0.45454545454545453,
+      "rule_breakdown": [
+        {
+          "rule_type": "contains_phrase",
+          "weight": 2.0,
+          "raw_score": 0.0,
+          "weighted_score": 0.0,
+          "params": {
+            "phrase": "helpful"
+          }
+        },
+        {
+          "rule_type": "word_count",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "min_words": 10,
+            "max_words": 50
+          }
+        },
+        {
+          "rule_type": "sentiment_positive",
+          "weight": 1.5,
+          "raw_score": 0.3333333333333333,
+          "weighted_score": 0.5,
+          "params": {}
+        },
+        {
+          "rule_type": "regex_match",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "pattern": "[A-Z][a-z]+"
+          }
+        }
+      ],
+      "quality_tier": "medium"
+    },
+    {
+      "text": "This useful tutorial provides clear instructions with helpful examples and methods.",
+      "clarity_score": 0.9090909090909091,
+      "quality_tier": "high",
+      "source": "variation"
+    },
+    {
+      "text": "Follow these systematic guidelines to create proven tutorial with clear expertise.",
+      "clarity_score": 0.45454545454545453,
+      "rule_breakdown": [
+        {
+          "rule_type": "contains_phrase",
+          "weight": 2.0,
+          "raw_score": 0.0,
+          "weighted_score": 0.0,
+          "params": {
+            "phrase": "helpful"
+          }
+        },
+        {
+          "rule_type": "word_count",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "min_words": 10,
+            "max_words": 50
+          }
+        },
+        {
+          "rule_type": "sentiment_positive",
+          "weight": 1.5,
+          "raw_score": 0.3333333333333333,
+          "weighted_score": 0.5,
+          "params": {}
+        },
+        {
+          "rule_type": "regex_match",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "pattern": "[A-Z][a-z]+"
+          }
+        }
+      ],
+      "quality_tier": "medium"
+    },
+    {
+      "text": "This detailed techniques offers clear insights with actionable advice for improvement.",
+      "clarity_score": 0.45454545454545453,
+      "rule_breakdown": [
+        {
+          "rule_type": "contains_phrase",
+          "weight": 2.0,
+          "raw_score": 0.0,
+          "weighted_score": 0.0,
+          "params": {
+            "phrase": "helpful"
+          }
+        },
+        {
+          "rule_type": "word_count",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "min_words": 10,
+            "max_words": 50
+          }
+        },
+        {
+          "rule_type": "sentiment_positive",
+          "weight": 1.5,
+          "raw_score": 0.3333333333333333,
+          "weighted_score": 0.5,
+          "params": {}
+        },
+        {
+          "rule_type": "regex_match",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "pattern": "[A-Z][a-z]+"
+          }
+        }
+      ],
+      "quality_tier": "medium"
+    },
+    {
+      "text": "Follow these effective guidelines to create detailed manual with clear recommendations.",
+      "clarity_score": 0.45454545454545453,
+      "rule_breakdown": [
+        {
+          "rule_type": "contains_phrase",
+          "weight": 2.0,
+          "raw_score": 0.0,
+          "weighted_score": 0.0,
+          "params": {
+            "phrase": "helpful"
+          }
+        },
+        {
+          "rule_type": "word_count",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "min_words": 10,
+            "max_words": 50
+          }
+        },
+        {
+          "rule_type": "sentiment_positive",
+          "weight": 1.5,
+          "raw_score": 0.3333333333333333,
+          "weighted_score": 0.5,
+          "params": {}
+        },
+        {
+          "rule_type": "regex_match",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "pattern": "[A-Z][a-z]+"
+          }
+        }
+      ],
+      "quality_tier": "medium"
+    },
+    {
+      "text": "Follow these informative guidelines to create practical manual with clear guidance.",
+      "clarity_score": 0.45454545454545453,
+      "rule_breakdown": [
+        {
+          "rule_type": "contains_phrase",
+          "weight": 2.0,
+          "raw_score": 0.0,
+          "weighted_score": 0.0,
+          "params": {
+            "phrase": "helpful"
+          }
+        },
+        {
+          "rule_type": "word_count",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "min_words": 10,
+            "max_words": 50
+          }
+        },
+        {
+          "rule_type": "sentiment_positive",
+          "weight": 1.5,
+          "raw_score": 0.3333333333333333,
+          "weighted_score": 0.5,
+          "params": {}
+        },
+        {
+          "rule_type": "regex_match",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "pattern": "[A-Z][a-z]+"
+          }
+        }
+      ],
+      "quality_tier": "medium"
+    },
+    {
+      "text": "Follow these proven guidelines to create detailed approach with clear strategies.",
+      "clarity_score": 0.45454545454545453,
+      "rule_breakdown": [
+        {
+          "rule_type": "contains_phrase",
+          "weight": 2.0,
+          "raw_score": 0.0,
+          "weighted_score": 0.0,
+          "params": {
+            "phrase": "helpful"
+          }
+        },
+        {
+          "rule_type": "word_count",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "min_words": 10,
+            "max_words": 50
+          }
+        },
+        {
+          "rule_type": "sentiment_positive",
+          "weight": 1.5,
+          "raw_score": 0.3333333333333333,
+          "weighted_score": 0.5,
+          "params": {}
+        },
+        {
+          "rule_type": "regex_match",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "pattern": "[A-Z][a-z]+"
+          }
+        }
+      ],
+      "quality_tier": "medium"
+    },
+    {
+      "text": "This clear resource contains comprehensive information and actionable examples for optimization.",
+      "clarity_score": 0.45454545454545453,
+      "rule_breakdown": [
+        {
+          "rule_type": "contains_phrase",
+          "weight": 2.0,
+          "raw_score": 0.0,
+          "weighted_score": 0.0,
+          "params": {
+            "phrase": "helpful"
+          }
+        },
+        {
+          "rule_type": "word_count",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "min_words": 10,
+            "max_words": 50
+          }
+        },
+        {
+          "rule_type": "sentiment_positive",
+          "weight": 1.5,
+          "raw_score": 0.3333333333333333,
+          "weighted_score": 0.5,
+          "params": {}
+        },
+        {
+          "rule_type": "regex_match",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "pattern": "[A-Z][a-z]+"
+          }
+        }
+      ],
+      "quality_tier": "medium"
+    },
+    {
+      "text": "Follow these practical guidelines to create useful best practices with clear fundamentals.",
+      "clarity_score": 0.45454545454545453,
+      "rule_breakdown": [
+        {
+          "rule_type": "contains_phrase",
+          "weight": 2.0,
+          "raw_score": 0.0,
+          "weighted_score": 0.0,
+          "params": {
+            "phrase": "helpful"
+          }
+        },
+        {
+          "rule_type": "word_count",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "min_words": 10,
+            "max_words": 50
+          }
+        },
+        {
+          "rule_type": "sentiment_positive",
+          "weight": 1.5,
+          "raw_score": 0.3333333333333333,
+          "weighted_score": 0.5,
+          "params": {}
+        },
+        {
+          "rule_type": "regex_match",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "pattern": "[A-Z][a-z]+"
+          }
+        }
+      ],
+      "quality_tier": "medium"
+    },
+    {
+      "text": "This clear resource contains detailed information and actionable principles for mastery.",
+      "clarity_score": 0.45454545454545453,
+      "rule_breakdown": [
+        {
+          "rule_type": "contains_phrase",
+          "weight": 2.0,
+          "raw_score": 0.0,
+          "weighted_score": 0.0,
+          "params": {
+            "phrase": "helpful"
+          }
+        },
+        {
+          "rule_type": "word_count",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "min_words": 10,
+            "max_words": 50
+          }
+        },
+        {
+          "rule_type": "sentiment_positive",
+          "weight": 1.5,
+          "raw_score": 0.3333333333333333,
+          "weighted_score": 0.5,
+          "params": {}
+        },
+        {
+          "rule_type": "regex_match",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "pattern": "[A-Z][a-z]+"
+          }
+        }
+      ],
+      "quality_tier": "medium"
+    },
+    {
+      "text": "This detailed resource offers step-by-step insights with clear advice for success.",
+      "clarity_score": 0.45454545454545453,
+      "rule_breakdown": [
+        {
+          "rule_type": "contains_phrase",
+          "weight": 2.0,
+          "raw_score": 0.0,
+          "weighted_score": 0.0,
+          "params": {
+            "phrase": "helpful"
+          }
+        },
+        {
+          "rule_type": "word_count",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "min_words": 10,
+            "max_words": 50
+          }
+        },
+        {
+          "rule_type": "sentiment_positive",
+          "weight": 1.5,
+          "raw_score": 0.3333333333333333,
+          "weighted_score": 0.5,
+          "params": {}
+        },
+        {
+          "rule_type": "regex_match",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "pattern": "[A-Z][a-z]+"
+          }
+        }
+      ],
+      "quality_tier": "medium"
+    },
+    {
+      "text": "These useful recommendations provide clear solutions with expert key points.",
+      "clarity_score": 0.45454545454545453,
+      "rule_breakdown": [
+        {
+          "rule_type": "contains_phrase",
+          "weight": 2.0,
+          "raw_score": 0.0,
+          "weighted_score": 0.0,
+          "params": {
+            "phrase": "helpful"
+          }
+        },
+        {
+          "rule_type": "word_count",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "min_words": 10,
+            "max_words": 50
+          }
+        },
+        {
+          "rule_type": "sentiment_positive",
+          "weight": 1.5,
+          "raw_score": 0.3333333333333333,
+          "weighted_score": 0.5,
+          "params": {}
+        },
+        {
+          "rule_type": "regex_match",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "pattern": "[A-Z][a-z]+"
+          }
+        }
+      ],
+      "quality_tier": "medium"
+    },
+    {
+      "text": "This valuable framework provides clear expertise with clear techniques for effectiveness.",
+      "clarity_score": 0.45454545454545453,
+      "rule_breakdown": [
+        {
+          "rule_type": "contains_phrase",
+          "weight": 2.0,
+          "raw_score": 0.0,
+          "weighted_score": 0.0,
+          "params": {
+            "phrase": "helpful"
+          }
+        },
+        {
+          "rule_type": "word_count",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "min_words": 10,
+            "max_words": 50
+          }
+        },
+        {
+          "rule_type": "sentiment_positive",
+          "weight": 1.5,
+          "raw_score": 0.3333333333333333,
+          "weighted_score": 0.5,
+          "params": {}
+        },
+        {
+          "rule_type": "regex_match",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "pattern": "[A-Z][a-z]+"
+          }
+        }
+      ],
+      "quality_tier": "medium"
+    },
+    {
+      "text": "Here is actionable guidance with clear steps and valuable methods.",
+      "clarity_score": 0.45454545454545453,
+      "rule_breakdown": [
+        {
+          "rule_type": "contains_phrase",
+          "weight": 2.0,
+          "raw_score": 0.0,
+          "weighted_score": 0.0,
+          "params": {
+            "phrase": "helpful"
+          }
+        },
+        {
+          "rule_type": "word_count",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "min_words": 10,
+            "max_words": 50
+          }
+        },
+        {
+          "rule_type": "sentiment_positive",
+          "weight": 1.5,
+          "raw_score": 0.3333333333333333,
+          "weighted_score": 0.5,
+          "params": {}
+        },
+        {
+          "rule_type": "regex_match",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "pattern": "[A-Z][a-z]+"
+          }
+        }
+      ],
+      "quality_tier": "medium"
+    },
+    {
+      "text": "Follow these step-by-step guidelines to create comprehensive guide with clear expertise.",
+      "clarity_score": 0.45454545454545453,
+      "rule_breakdown": [
+        {
+          "rule_type": "contains_phrase",
+          "weight": 2.0,
+          "raw_score": 0.0,
+          "weighted_score": 0.0,
+          "params": {
+            "phrase": "helpful"
+          }
+        },
+        {
+          "rule_type": "word_count",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "min_words": 10,
+            "max_words": 50
+          }
+        },
+        {
+          "rule_type": "sentiment_positive",
+          "weight": 1.5,
+          "raw_score": 0.3333333333333333,
+          "weighted_score": 0.5,
+          "params": {}
+        },
+        {
+          "rule_type": "regex_match",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "pattern": "[A-Z][a-z]+"
+          }
+        }
+      ],
+      "quality_tier": "medium"
+    },
+    {
+      "text": "Follow these systematic guidelines to create expert framework with clear techniques.",
+      "clarity_score": 0.45454545454545453,
+      "rule_breakdown": [
+        {
+          "rule_type": "contains_phrase",
+          "weight": 2.0,
+          "raw_score": 0.0,
+          "weighted_score": 0.0,
+          "params": {
+            "phrase": "helpful"
+          }
+        },
+        {
+          "rule_type": "word_count",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "min_words": 10,
+            "max_words": 50
+          }
+        },
+        {
+          "rule_type": "sentiment_positive",
+          "weight": 1.5,
+          "raw_score": 0.3333333333333333,
+          "weighted_score": 0.5,
+          "params": {}
+        },
+        {
+          "rule_type": "regex_match",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "pattern": "[A-Z][a-z]+"
+          }
+        }
+      ],
+      "quality_tier": "medium"
+    },
+    {
+      "text": "Follow these step-by-step guidelines to create valuable handbook with clear methods.",
+      "clarity_score": 0.45454545454545453,
+      "rule_breakdown": [
+        {
+          "rule_type": "contains_phrase",
+          "weight": 2.0,
+          "raw_score": 0.0,
+          "weighted_score": 0.0,
+          "params": {
+            "phrase": "helpful"
+          }
+        },
+        {
+          "rule_type": "word_count",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "min_words": 10,
+            "max_words": 50
+          }
+        },
+        {
+          "rule_type": "sentiment_positive",
+          "weight": 1.5,
+          "raw_score": 0.3333333333333333,
+          "weighted_score": 0.5,
+          "params": {}
+        },
+        {
+          "rule_type": "regex_match",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "pattern": "[A-Z][a-z]+"
+          }
+        }
+      ],
+      "quality_tier": "medium"
+    },
+    {
+      "text": "Follow these proven guidelines to create informative tutorial with clear fundamentals.",
+      "clarity_score": 0.45454545454545453,
+      "rule_breakdown": [
+        {
+          "rule_type": "contains_phrase",
+          "weight": 2.0,
+          "raw_score": 0.0,
+          "weighted_score": 0.0,
+          "params": {
+            "phrase": "helpful"
+          }
+        },
+        {
+          "rule_type": "word_count",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "min_words": 10,
+            "max_words": 50
+          }
+        },
+        {
+          "rule_type": "sentiment_positive",
+          "weight": 1.5,
+          "raw_score": 0.3333333333333333,
+          "weighted_score": 0.5,
+          "params": {}
+        },
+        {
+          "rule_type": "regex_match",
+          "weight": 1.0,
+          "raw_score": 1.0,
+          "weighted_score": 1.0,
+          "params": {
+            "pattern": "[A-Z][a-z]+"
+          }
+        }
+      ],
+      "quality_tier": "medium"
+    }
+  ],
+  "statistics": {
+    "total_count": 102,
+    "average_score": 0.48395721925133683,
+    "quality_distribution": {
+      "high": 7,
+      "medium": 0,
+      "total": 102
+    }
+  }
+}

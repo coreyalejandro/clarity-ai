@@ -1,0 +1,37 @@
+{
+  "experiment": "Multi-Skill Model Training",
+  "timestamp": "2025-08-06T19:09:23.496979",
+  "results": {
+    "model_name": "microsoft/DialoGPT-small",
+    "training_samples": 5,
+    "output_path": "./multi_skill_model",
+    "baseline_scores": {
+      "general": 0.16363636363636364,
+      "medical": 0.75,
+      "technical": 0.7368421052631579,
+      "multi_skill": 0.8076923076923077
+    },
+    "trained_scores": {
+      "general": 0.10909090909090909,
+      "medical": 0.75,
+      "technical": 0.7368421052631579,
+      "multi_skill": 0.8076923076923077
+    },
+    "improvements": {
+      "general": -33.333333333333336,
+      "medical": 0.0,
+      "technical": 0.0,
+      "multi_skill": 0.0
+    },
+    "overall_improvement": -2.218944878235013,
+    "best_skill": [
+      "multi_skill",
+      0.8076923076923077
+    ],
+    "worst_skill": [
+      "general",
+      0.10909090909090909
+    ],
+    "skill_balance_range": 0.6986013986013986
+  }
+}

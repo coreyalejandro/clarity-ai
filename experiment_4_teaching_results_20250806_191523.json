@@ -1,0 +1,40 @@
+{
+  "experiment": "Multi-Skill Training (Teaching-Based)",
+  "timestamp": "2025-08-06T19:15:23.158265",
+  "teaching_principles": [
+    "Explicit step-by-step structure",
+    "Concrete examples with context",
+    "Clear actionable instructions",
+    "Safety warnings and cautions",
+    "Success criteria definition",
+    "Multi-domain vocabulary integration"
+  ],
+  "results": {
+    "approach": "teaching_based_multi_skill",
+    "model_name": "microsoft/DialoGPT-small",
+    "template_used": "templates/teaching_multi_skill.yaml",
+    "training_data": "datasets/teaching_multi_skill/train.jsonl",
+    "baseline_scores": {
+      "general": 0.07272727272727272,
+      "medical": 0.75,
+      "technical": 0.7368421052631579,
+      "teaching_multi": 0.8372093023255814
+    },
+    "trained_scores": {
+      "general": 0.07272727272727272,
+      "medical": 0.75,
+      "technical": 0.7368421052631579,
+      "teaching_multi": 0.8372093023255814
+    },
+    "improvements": {
+      "general": 0.0,
+      "medical": 0.0,
+      "technical": 0.0,
+      "teaching_multi": 0.0
+    },
+    "overall_improvement": 0.0,
+    "success_rate": 0.0,
+    "skill_balance_range": 0.7644820295983087,
+    "output_path": "./teaching_multi_skill_model"
+  }
+}

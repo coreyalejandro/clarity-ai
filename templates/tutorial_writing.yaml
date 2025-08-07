@@ -1,0 +1,52 @@
+name: "Tutorial Writing Quality"
+description: "Evaluates quality of educational tutorials and guides"
+
+scoring_criteria:
+  - name: "Learning Progression"
+    weight: 25
+    description: "Logical step-by-step progression from basic to advanced"
+    
+  - name: "Practical Application"
+    weight: 20
+    description: "Hands-on exercises and real-world examples"
+    
+  - name: "Clarity & Accessibility"
+    weight: 20
+    description: "Easy to understand for the target audience"
+    
+  - name: "Completeness"
+    weight: 15
+    description: "Covers the topic thoroughly without gaps"
+    
+  - name: "Engagement"
+    weight: 10
+    description: "Engaging writing style that maintains interest"
+    
+  - name: "Troubleshooting Support"
+    weight: 10
+    description: "Anticipates and addresses common issues"
+
+positive_indicators:
+  - "Clear learning objectives"
+  - "Step-by-step instructions"
+  - "Hands-on exercises"
+  - "Screenshots/visuals"
+  - "Code walkthroughs"
+  - "Common mistakes section"
+  - "Prerequisites listed"
+  - "Summary/recap sections"
+  - "Further reading suggestions"
+  - "Interactive elements"
+  - "Progress checkpoints"
+
+negative_indicators:
+  - "Unclear objectives"
+  - "Missing steps"
+  - "No practical exercises"
+  - "Too much jargon"
+  - "Broken examples"
+  - "No troubleshooting"
+  - "Assumes too much knowledge"
+  - "Poor organization"
+  - "Outdated information"
+  - "No visual aids"

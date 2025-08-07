@@ -1,0 +1,130 @@
+description: ''
+name: teaching_multi_skill
+rules:
+- params:
+    min_matches: 2
+    phrases:
+    - first
+    - second
+    - third
+    - next
+    - then
+    - finally
+    - step 1
+    - step 2
+    - step 3
+    - step-by-step
+    - begin by
+    - start with
+    - follow these steps
+    - here's how
+    - the process
+    - sequence
+    - order
+  type: contains_phrase
+  weight: 4.0
+- params:
+    min_matches: 1
+    phrases:
+    - for example
+    - such as
+    - like this
+    - here's an example
+    - specifically
+    - in particular
+    - instance
+    - case study
+    - demonstrated by
+    - illustrated by
+    - shown in
+    - 'example:'
+  type: contains_phrase
+  weight: 3.5
+- params:
+    min_matches: 2
+    phrases:
+    - you should
+    - you can
+    - you need to
+    - you must
+    - do this
+    - follow this
+    - use this
+    - apply this
+    - implement
+    - configure
+    - setup
+    - install
+    - create
+    - write
+    - code
+    - build
+    - design
+    - test
+    - check
+  type: contains_phrase
+  weight: 3.0
+- params:
+    min_matches: 1
+    phrases:
+    - 'important:'
+    - 'warning:'
+    - 'caution:'
+    - 'note:'
+    - 'remember:'
+    - always
+    - never
+    - don't
+    - avoid
+    - ensure
+    - make sure
+    - be careful
+    - pay attention
+    - double-check
+    - verify
+  type: contains_phrase
+  weight: 3.0
+- params:
+    min_matches: 1
+    phrases:
+    - you'll know it's working when
+    - success looks like
+    - completed when
+    - finished if
+    - done correctly
+    - properly configured
+    - working properly
+    - should result in
+    - expect to see
+    - indicates success
+  type: contains_phrase
+  weight: 2.5
+- params:
+    min_matches: 1
+    phrases:
+    - healthcare system
+    - medical device
+    - patient data
+    - HIPAA compliance
+    - documentation standards
+    - code review
+    - best practices
+    - industry standards
+    - security protocol
+    - backup procedure
+    - disaster recovery
+    - risk assessment
+    - practical implementation
+    - real-world application
+    - professional context
+  type: contains_phrase
+  weight: 2.0
+- params:
+    max_words: 300
+    min_words: 50
+  type: word_count
+  weight: 2.0
+- params:
+    min_score: 0.2
+  type: sentiment_positive
+  weight: 1.5

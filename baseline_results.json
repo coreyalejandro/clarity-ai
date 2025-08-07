@@ -1,0 +1,32 @@
+{
+  "timestamp": "2025-08-06T18:30:08.291893",
+  "model": "microsoft/DialoGPT-small",
+  "average_score": 0.03636363636363636,
+  "results": [
+    {
+      "prompt": "Write a helpful guide:",
+      "generated": "",
+      "score": 0.0
+    },
+    {
+      "prompt": "Create useful content:",
+      "generated": "D",
+      "score": 0.0
+    },
+    {
+      "prompt": "Provide clear information:",
+      "generated": "",
+      "score": 0.0
+    },
+    {
+      "prompt": "Make helpful documentation:",
+      "generated": "",
+      "score": 0.0
+    },
+    {
+      "prompt": "Give practical advice:",
+      "generated": "don't use a phone",
+      "score": 0.18181818181818182
+    }
+  ]
+}

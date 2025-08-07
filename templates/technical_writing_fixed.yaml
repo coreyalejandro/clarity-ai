@@ -1,0 +1,72 @@
+description: ''
+name: technical_writing
+rules:
+- params:
+    min_matches: 2
+    phrases:
+    - configuration
+    - implementation
+    - optimization
+    - performance
+    - system
+    - database
+    - network
+    - security
+    - deployment
+    - monitoring
+    - troubleshooting
+    - best practices
+    - procedures
+    - requirements
+    - specifications
+    - testing
+    - maintenance
+  type: contains_phrase
+  weight: 2.5
+- params:
+    min_matches: 1
+    phrases:
+    - step-by-step
+    - how to
+    - implementation
+    - configure
+    - install
+    - setup
+    - execute
+    - run
+    - commands
+    - scripts
+    - examples
+    - code
+    - tutorial
+    - guide
+    - instructions
+  type: contains_phrase
+  weight: 2.5
+- params:
+    min_matches: 1
+    phrases:
+    - analysis
+    - assessment
+    - methodology
+    - framework
+    - architecture
+    - design
+    - standards
+    - protocols
+    - metrics
+    - benchmarks
+    - documentation
+    - specifications
+  type: contains_phrase
+  weight: 2.0
+- params:
+    max_words: 300
+    min_words: 30
+  type: word_count
+  weight: 1.5
+- params:
+    min_matches: 2
+    pattern: \. [A-Z]
+  type: regex_match
+  weight: 1.0

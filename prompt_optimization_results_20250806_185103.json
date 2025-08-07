@@ -1,0 +1,183 @@
+{
+  "experiment": "Manual Prompt Optimization (DSPy Simulation)",
+  "timestamp": "2025-08-06T18:51:03.381695",
+  "best_strategy": "goal_oriented",
+  "best_score": 0.45454545454545453,
+  "all_results": {
+    "direct": {
+      "average_score": 0.36363636363636365,
+      "scores": [
+        0.36363636363636365,
+        0.36363636363636365,
+        0.36363636363636365,
+        0.36363636363636365
+      ],
+      "results": [
+        {
+          "topic": "Python functions",
+          "prompt": "Write helpful documentation about Python functions.",
+          "content": "This is a guide about Python functions. It covers basic concepts and provides useful information.",
+          "score": 0.36363636363636365
+        },
+        {
+          "topic": "API design",
+          "prompt": "Write helpful documentation about API design.",
+          "content": "This is a guide about API design. It covers basic concepts and provides useful information.",
+          "score": 0.36363636363636365
+        },
+        {
+          "topic": "Database optimization",
+          "prompt": "Write helpful documentation about Database optimization.",
+          "content": "This is a guide about Database optimization. It covers basic concepts and provides useful information.",
+          "score": 0.36363636363636365
+        },
+        {
+          "topic": "React components",
+          "prompt": "Write helpful documentation about React components.",
+          "content": "This is a guide about React components. It covers basic concepts and provides useful information.",
+          "score": 0.36363636363636365
+        }
+      ]
+    },
+    "structured": {
+      "average_score": 0.36363636363636365,
+      "scores": [
+        0.36363636363636365,
+        0.36363636363636365,
+        0.36363636363636365,
+        0.36363636363636365
+      ],
+      "results": [
+        {
+          "topic": "Python functions",
+          "prompt": "Create a comprehensive guide for Python functions. Include clear examples and step-by-step instructions.",
+          "content": "# Python functions Guide\n\n## Overview\nPython functions is important for development. Here are key steps:\n1. Understand basics\n2. Apply concepts\n3. Practice implementation",
+          "score": 0.36363636363636365
+        },
+        {
+          "topic": "API design",
+          "prompt": "Create a comprehensive guide for API design. Include clear examples and step-by-step instructions.",
+          "content": "# API design Guide\n\n## Overview\nAPI design is important for development. Here are key steps:\n1. Understand basics\n2. Apply concepts\n3. Practice implementation",
+          "score": 0.36363636363636365
+        },
+        {
+          "topic": "Database optimization",
+          "prompt": "Create a comprehensive guide for Database optimization. Include clear examples and step-by-step instructions.",
+          "content": "# Database optimization Guide\n\n## Overview\nDatabase optimization is important for development. Here are key steps:\n1. Understand basics\n2. Apply concepts\n3. Practice implementation",
+          "score": 0.36363636363636365
+        },
+        {
+          "topic": "React components",
+          "prompt": "Create a comprehensive guide for React components. Include clear examples and step-by-step instructions.",
+          "content": "# React components Guide\n\n## Overview\nReact components is important for development. Here are key steps:\n1. Understand basics\n2. Apply concepts\n3. Practice implementation",
+          "score": 0.36363636363636365
+        }
+      ]
+    },
+    "goal_oriented": {
+      "average_score": 0.45454545454545453,
+      "scores": [
+        0.45454545454545453,
+        0.45454545454545453,
+        0.45454545454545453,
+        0.45454545454545453
+      ],
+      "results": [
+        {
+          "topic": "Python functions",
+          "prompt": "Help users understand Python functions by providing practical, actionable information with clear explanations.",
+          "content": "To master Python functions, follow these proven approaches with clear examples. This comprehensive resource provides actionable strategies for success.",
+          "score": 0.45454545454545453
+        },
+        {
+          "topic": "API design",
+          "prompt": "Help users understand API design by providing practical, actionable information with clear explanations.",
+          "content": "To master API design, follow these proven approaches with clear examples. This comprehensive resource provides actionable strategies for success.",
+          "score": 0.45454545454545453
+        },
+        {
+          "topic": "Database optimization",
+          "prompt": "Help users understand Database optimization by providing practical, actionable information with clear explanations.",
+          "content": "To master Database optimization, follow these proven approaches with clear examples. This comprehensive resource provides actionable strategies for success.",
+          "score": 0.45454545454545453
+        },
+        {
+          "topic": "React components",
+          "prompt": "Help users understand React components by providing practical, actionable information with clear explanations.",
+          "content": "To master React components, follow these proven approaches with clear examples. This comprehensive resource provides actionable strategies for success.",
+          "score": 0.45454545454545453
+        }
+      ]
+    },
+    "example_focused": {
+      "average_score": 0.36363636363636365,
+      "scores": [
+        0.36363636363636365,
+        0.36363636363636365,
+        0.36363636363636365,
+        0.36363636363636365
+      ],
+      "results": [
+        {
+          "topic": "Python functions",
+          "prompt": "Explain Python functions with clear examples and detailed explanations that help users implement solutions.",
+          "content": "Here's how to use Python functions effectively:\n\nExample 1: Basic implementation\n```code example```\nExample 2: Advanced usage\n```advanced example```\n\nThese examples show practical applications.",
+          "score": 0.36363636363636365
+        },
+        {
+          "topic": "API design",
+          "prompt": "Explain API design with clear examples and detailed explanations that help users implement solutions.",
+          "content": "Here's how to use API design effectively:\n\nExample 1: Basic implementation\n```code example```\nExample 2: Advanced usage\n```advanced example```\n\nThese examples show practical applications.",
+          "score": 0.36363636363636365
+        },
+        {
+          "topic": "Database optimization",
+          "prompt": "Explain Database optimization with clear examples and detailed explanations that help users implement solutions.",
+          "content": "Here's how to use Database optimization effectively:\n\nExample 1: Basic implementation\n```code example```\nExample 2: Advanced usage\n```advanced example```\n\nThese examples show practical applications.",
+          "score": 0.36363636363636365
+        },
+        {
+          "topic": "React components",
+          "prompt": "Explain React components with clear examples and detailed explanations that help users implement solutions.",
+          "content": "Here's how to use React components effectively:\n\nExample 1: Basic implementation\n```code example```\nExample 2: Advanced usage\n```advanced example```\n\nThese examples show practical applications.",
+          "score": 0.36363636363636365
+        }
+      ]
+    },
+    "problem_solving": {
+      "average_score": 0.45454545454545453,
+      "scores": [
+        0.45454545454545453,
+        0.45454545454545453,
+        0.45454545454545453,
+        0.45454545454545453
+      ],
+      "results": [
+        {
+          "topic": "Python functions",
+          "prompt": "Address common challenges with Python functions by providing proven solutions and best practices.",
+          "content": "Common Python functions challenges and solutions:\n\nProblem: Implementation issues\nSolution: Use these proven techniques with clear documentation and examples for best results.",
+          "score": 0.45454545454545453
+        },
+        {
+          "topic": "API design",
+          "prompt": "Address common challenges with API design by providing proven solutions and best practices.",
+          "content": "Common API design challenges and solutions:\n\nProblem: Implementation issues\nSolution: Use these proven techniques with clear documentation and examples for best results.",
+          "score": 0.45454545454545453
+        },
+        {
+          "topic": "Database optimization",
+          "prompt": "Address common challenges with Database optimization by providing proven solutions and best practices.",
+          "content": "Common Database optimization challenges and solutions:\n\nProblem: Implementation issues\nSolution: Use these proven techniques with clear documentation and examples for best results.",
+          "score": 0.45454545454545453
+        },
+        {
+          "topic": "React components",
+          "prompt": "Address common challenges with React components by providing proven solutions and best practices.",
+          "content": "Common React components challenges and solutions:\n\nProblem: Implementation issues\nSolution: Use these proven techniques with clear documentation and examples for best results.",
+          "score": 0.45454545454545453
+        }
+      ]
+    }
+  }
+}

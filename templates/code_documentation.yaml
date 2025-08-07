@@ -1,0 +1,51 @@
+name: "Code Documentation Quality"
+description: "Evaluates quality of code documentation and explanations"
+
+scoring_criteria:
+  - name: "Technical Accuracy"
+    weight: 25
+    description: "Code examples are correct and functional"
+    
+  - name: "Clarity of Explanation"
+    weight: 20
+    description: "Explanations are clear and easy to understand"
+    
+  - name: "Completeness"
+    weight: 20
+    description: "Covers all important aspects of the topic"
+    
+  - name: "Code Quality"
+    weight: 15
+    description: "Code follows best practices and conventions"
+    
+  - name: "Practical Examples"
+    weight: 10
+    description: "Includes relevant, working examples"
+    
+  - name: "Structure & Organization"
+    weight: 10
+    description: "Well-organized with logical flow"
+
+positive_indicators:
+  - "Working code examples"
+  - "Step-by-step explanations"
+  - "Clear variable names"
+  - "Proper syntax highlighting"
+  - "Error handling examples"
+  - "Best practices mentioned"
+  - "Common pitfalls addressed"
+  - "Performance considerations"
+  - "Testing examples"
+  - "Documentation strings"
+
+negative_indicators:
+  - "Broken code examples"
+  - "Missing explanations"
+  - "Poor variable naming"
+  - "No error handling"
+  - "Incomplete examples"
+  - "Outdated syntax"
+  - "Security vulnerabilities"
+  - "No context provided"
+  - "Copy-paste errors"
+  - "Missing imports"

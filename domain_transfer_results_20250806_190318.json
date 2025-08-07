@@ -1,0 +1,88 @@
+{
+  "experiment": "Domain Transfer - Medical/Technical Writing",
+  "timestamp": "2025-08-06T19:03:18.343033",
+  "training_data_sizes": {
+    "medical": 3,
+    "technical": 3
+  },
+  "results": {
+    "medical": {
+      "gpt2": {
+        "display_name": "GPT-2 Base",
+        "baseline_score": 0.0,
+        "trained_score": 0.0,
+        "improvement": 0.0,
+        "improvement_pct": 0,
+        "status": "success",
+        "model_path": "./domain_transfer_medical_gpt2",
+        "cross_domain_score": 0.0
+      },
+      "microsoft/DialoGPT-small": {
+        "display_name": "DialoGPT-small",
+        "baseline_score": 0.0,
+        "trained_score": 0.0,
+        "improvement": 0.0,
+        "improvement_pct": 0,
+        "status": "success",
+        "model_path": "./domain_transfer_medical_microsoft_DialoGPT_small",
+        "cross_domain_score": 0.0
+      }
+    },
+    "technical": {
+      "gpt2": {
+        "display_name": "GPT-2 Base",
+        "baseline_score": 0.0,
+        "trained_score": 0.0,
+        "improvement": 0.0,
+        "improvement_pct": 0,
+        "status": "success",
+        "model_path": "./domain_transfer_technical_gpt2",
+        "cross_domain_score": 0.0
+      },
+      "microsoft/DialoGPT-small": {
+        "display_name": "DialoGPT-small",
+        "baseline_score": 0.0,
+        "trained_score": 0.0,
+        "improvement": 0.0,
+        "improvement_pct": 0,
+        "status": "success",
+        "model_path": "./domain_transfer_technical_microsoft_DialoGPT_small",
+        "cross_domain_score": 0.0
+      }
+    }
+  },
+  "successful_transfers": [
+    {
+      "domain": "medical",
+      "model": "GPT-2 Base",
+      "improvement": 0,
+      "baseline": 0.0,
+      "specialized": 0.0,
+      "cross_domain": 0.0
+    },
+    {
+      "domain": "medical",
+      "model": "DialoGPT-small",
+      "improvement": 0,
+      "baseline": 0.0,
+      "specialized": 0.0,
+      "cross_domain": 0.0
+    },
+    {
+      "domain": "technical",
+      "model": "GPT-2 Base",
+      "improvement": 0,
+      "baseline": 0.0,
+      "specialized": 0.0,
+      "cross_domain": 0.0
+    },
+    {
+      "domain": "technical",
+      "model": "DialoGPT-small",
+      "improvement": 0,
+      "baseline": 0.0,
+      "specialized": 0.0,
+      "cross_domain": 0.0
+    }
+  ]
+}

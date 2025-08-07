@@ -1,0 +1,52 @@
+name: "API Documentation Quality" 
+description: "Evaluates quality of API documentation and guides"
+
+scoring_criteria:
+  - name: "Endpoint Accuracy"
+    weight: 25
+    description: "API endpoints, parameters, and responses are correct"
+    
+  - name: "Usage Examples"
+    weight: 20
+    description: "Clear, working code examples for API usage"
+    
+  - name: "Parameter Documentation"
+    weight: 20
+    description: "All parameters documented with types and descriptions"
+    
+  - name: "Response Format"
+    weight: 15
+    description: "Clear documentation of response structure and status codes"
+    
+  - name: "Authentication Guide"
+    weight: 10
+    description: "Clear explanation of authentication requirements"
+    
+  - name: "Error Handling"
+    weight: 10
+    description: "Documents error responses and troubleshooting"
+
+positive_indicators:
+  - "Complete endpoint URLs"
+  - "HTTP method specified"
+  - "Request/response examples"
+  - "Parameter types and formats"
+  - "Status code explanations"
+  - "Authentication examples"
+  - "Rate limiting information"
+  - "Error response samples"
+  - "SDK code examples"
+  - "Postman/curl examples"
+  - "Response schema definitions"
+
+negative_indicators:
+  - "Missing endpoint details"
+  - "No request examples"
+  - "Undefined parameters"
+  - "Missing response format"
+  - "No authentication info"
+  - "Broken code samples"
+  - "Outdated API versions"
+  - "No error documentation"
+  - "Missing required headers"
+  - "Incomplete schemas"

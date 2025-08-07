@@ -28,7 +28,7 @@
 
 ```
 START
-  ▼
+  ▼                                                                                                                           
 ┌─────────────────┐
 │ Install         │
 │ ClarityAI       │

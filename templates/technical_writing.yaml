@@ -1,0 +1,50 @@
+name: "Technical Writing Quality"
+description: "Evaluates quality of technical documentation and engineering content"
+
+scoring_criteria:
+  - name: "Technical Accuracy"
+    weight: 25
+    description: "Information is technically correct and up-to-date"
+    
+  - name: "Practical Applicability"
+    weight: 25
+    description: "Provides actionable, implementable information"
+    
+  - name: "Clarity and Structure"
+    weight: 20
+    description: "Well-organized with clear explanations"
+    
+  - name: "Completeness"
+    weight: 15
+    description: "Covers necessary details without information overload"
+    
+  - name: "Professional Standards"
+    weight: 15
+    description: "Follows technical writing best practices"
+
+positive_indicators:
+  - "specific technical details"
+  - "implementation steps"
+  - "troubleshooting guidance"
+  - "performance considerations"
+  - "best practices"
+  - "industry standards"
+  - "practical examples"
+  - "configuration details"
+  - "system requirements"
+  - "error handling"
+  - "optimization techniques"
+  - "testing procedures"
+  - "maintenance guidelines"
+
+negative_indicators:
+  - "vague descriptions"
+  - "outdated information"
+  - "missing critical steps"
+  - "unrealistic expectations"
+  - "poor organization"
+  - "excessive jargon"
+  - "incomplete procedures"
+  - "safety risks ignored"
+  - "compatibility issues ignored"
+  - "no troubleshooting help"

@@ -1,0 +1,35 @@
+{
+  "timestamp": "2025-08-06T18:31:23.518061",
+  "model_path": "./trained_model_v2",
+  "trained_score": 0.4909090909090909,
+  "baseline_score": 0.03636363636363636,
+  "improvement": 0.45454545454545453,
+  "improvement_percent": 1250.0,
+  "results": [
+    {
+      "prompt": "Write a helpful guide:",
+      "generated": "learn these effective techniques with clear examples.step-by-best practices for understanding and masteryable key points. create professional strategy to provide step overview of excellence results essentials including proficiency",
+      "score": 0.45454545454545453
+    },
+    {
+      "prompt": "Create useful content:",
+      "generated": "with clear information and valuable examples.on step-by-step techniques for success offers professional expert solutions including key points of proficiency provides detailed advice.",
+      "score": 0.45454545454545453
+    },
+    {
+      "prompt": "Provide clear information:",
+      "generated": "success.html with expert techniques for proficiency and mastery.",
+      "score": 0.18181818181818182
+    },
+    {
+      "prompt": "Make helpful documentation:",
+      "generated": "create useful recommendations with clear essentials.js for understanding and actionable key points framework including best practices.",
+      "score": 0.45454545454545453
+    },
+    {
+      "prompt": "Give practical advice:",
+      "generated": "create professional best practices for excellence.step-by-steps and proven proficiency with clear essentials step by expert key points. provides helpful methods including mastery, techniques framework offers informative insights useful solutions to success of",
+      "score": 0.9090909090909091
+    }
+  ]
+}
