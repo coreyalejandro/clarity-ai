@@ -1,5 +1,7 @@
 # ClarityAI
 
+> **Status:** hackathon prototype (July–August 2025), kept for the record. See [CORRECTIONS.md](CORRECTIONS.md).
+
 > **Train LLMs with teacher-style rubrics**
 
 ClarityAI lets you train AI language models the way a teacher grades students: build a scoring rubric, test it on sample text, then use it to improve AI models.
